@@ -458,3 +458,49 @@
   // ---------- START ----------
   window.addEventListener("DOMContentLoaded", init);
 })();
+
+/* -------------------------------------------
+   Newsletter subscribe handler (Formspree)
+   ------------------------------------------- */
+(function () {
+  window.addEventListener('DOMContentLoaded', function () {
+    const form   = document.getElementById('sub-form');
+    const email  = document.getElementById('sub-email');
+    const status = document.getElementById('sub-status');
+    if (!form || !email || !status) return;
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      status.textContent = 'Submitting…';
+
+      if (!email.value || !email.checkValidity()) {
+        status.textContent = 'Please enter a valid email.';
+        email.focus();
+        return;
+      }
+
+      try {
+        const fd = new FormData(form);
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: fd,
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (res.ok) {
+          form.reset();
+          status.textContent = 'Thanks! Please check your email to confirm.';
+        } else {
+          let msg = 'Sorry, there was a problem. Please try again.';
+          try {
+            const data = await res.json();
+            if (data?.errors?.length) msg = data.errors.map(e => e.message).join(' ');
+          } catch {}
+          status.textContent = msg;
+        }
+      } catch {
+        status.textContent = 'Network error. Please try again.';
+      }
+    }, false);
+  }, { once: true });
+})();
