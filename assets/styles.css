@@ -128,9 +128,11 @@ hr.sep { border:0; border-top:1px solid var(--border); margin:14px 0; }
   align-items: center;
   margin: 6px 0;
 }
+/* Style both name (text) and email inputs in the subscribe box */
+.subscribe input[type="text"],
 .subscribe input[type="email"] {
-  flex: 1;                      /* take remaining width */
-  min-width: 220px;             /* don't collapse too small */
+  flex: 1;
+  min-width: 220px;
   padding: 10px 12px;
   border: 1px solid #d0d5dd;
   border-radius: 10px;
