@@ -51,6 +51,39 @@
         <button id="next">Next ▶</button>
       </nav>
 
+      <!-- ===========================
+           Subscribe box (drop-in)
+           - Replace FORM_ACTION_URL with your Formspree endpoint, e.g. https://formspree.io/f/abcd1234
+           - This block sits AFTER pagination and BEFORE the checklist.
+           =========================== -->
+      <section class="subscribe" id="subscribe">
+        <h2>Get new AI research tools, weekly</h2>
+        <p class="small">Curated additions across the academic workflow—no spam, unsubscribe anytime.</p>
+
+        <form id="sub-form" action="FORM_ACTION_URL" method="POST" novalidate>
+          <label for="sub-email" class="sr-only">Email address</label>
+          <input type="email"
+                 id="sub-email"
+                 name="email"
+                 placeholder="you@university.edu"
+                 autocomplete="email"
+                 required>
+          <input type="text" name="_gotcha" style="display:none">
+          <label class="consent">
+            <input type="checkbox" name="consent" required>
+            I agree to receive weekly updates about new tools and site changes.
+          </label>
+          <button type="submit" aria-label="Subscribe to weekly updates">Subscribe</button>
+          <span id="sub-status" aria-live="polite" class="small" style="margin-left:8px;"></span>
+        </form>
+
+        <p class="small" style="margin-top:8px;">
+          We’ll only use your email to send updates about this directory. See our
+          <a href="privacy.html">privacy notice</a>.
+        </p>
+      </section>
+      <!-- =========================== -->
+
       <details class="checklist">
         <summary><strong>60-Second Tool Selection Checklist</strong></summary>
         <ul>
