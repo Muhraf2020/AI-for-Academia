@@ -330,7 +330,7 @@
     "id": "pandasai",
     "slug": "pandasai",
     "name": "PandasAI",
-    "url": "https://github.com/gventuri/pandas-ai",
+    "url": "https://pandas-ai.com/",
     "tagline": "Natural language to pandas.",
     "description": "Ask questions of your DataFrames; inspects and generates Python code for you to run.",
     "pricing": "free",
