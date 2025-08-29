@@ -79,3 +79,23 @@ hr.sep { border:0; border-top:1px solid var(--border); margin:14px 0; }
   border-color: #0b5fff;
 }
 
+/* -------------------------------------------
+   Category chip counts (little number badges)
+   - Shows a small rounded badge with the count
+   - Turns inverted when the chip is active
+   ------------------------------------------- */
+
+/* Default badge on all chips */
+.chip .chip-count {
+  margin-left: .4rem;     /* space between label and badge */
+  background: #eee;       /* light gray badge background */
+  border-radius: 10px;    /* pill shape */
+  padding: 0 .45rem;      /* horizontal padding for legibility */
+  font-size: .85em;       /* slightly smaller than chip text */
+}
+
+/* When a chip is active/pressed, invert the badge for contrast */
+.chip.active .chip-count {
+  background: #111;       /* match active chip’s dark background */
+  color: #fff;            /* white text for contrast */
+}
