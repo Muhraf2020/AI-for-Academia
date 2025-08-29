@@ -90,6 +90,53 @@
   }
   function slugify(s) { return String(s||"").toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/(^-|-$)/g,""); }
 
+  // ----- PAGINATION HELPERS -----
+  function getPageWindow(curr, total, width = 5) {
+    const half = Math.floor(width / 2);
+    let start = Math.max(1, curr - half);
+    let end = Math.min(total, start + width - 1);
+    start = Math.max(1, end - width + 1);
+    return { start, end };
+  }
+  function ensurePagerNumbersContainer() {
+    let el = elPagination.querySelector('.pager-numbers');
+    if (!el) {
+      el = document.createElement('div');
+      el.className = 'pager-numbers';
+      // insert before Next ▶ button so layout is: Prev | numbers | Next
+      elPagination.insertBefore(el, elNext);
+    }
+    return el;
+  }
+  function renderPaginationNumbers(totalPages) {
+    const container = ensurePagerNumbersContainer();
+    if (totalPages <= 1) { container.innerHTML = ''; return; }
+
+    const { start, end } = getPageWindow(currentPage, totalPages, 5);
+    let html = '';
+
+    // First page + leading ellipsis
+    if (start > 1) {
+      html += `<button class="page-btn" data-page="1" aria-label="Go to page 1">1</button>`;
+      if (start > 2) html += `<span class="dots" aria-hidden="true">…</span>`;
+    }
+
+    // Window pages
+    for (let p = start; p <= end; p++) {
+      const active = p === currentPage ? ' active' : '';
+      const ariaCur = p === currentPage ? ` aria-current="page"` : '';
+      html += `<button class="page-btn${active}" data-page="${p}"${ariaCur} aria-label="Go to page ${p}">${p}</button>`;
+    }
+
+    // Trailing ellipsis + last page
+    if (end < totalPages) {
+      if (end < totalPages - 1) html += `<span class="dots" aria-hidden="true">…</span>`;
+      html += `<button class="page-btn" data-page="${totalPages}" aria-label="Go to page ${totalPages}">${totalPages}</button>`;
+    }
+
+    container.innerHTML = html;
+  }
+
   // ---------- CHIPS ----------
   function renderChips() {
     elChips.innerHTML = CATEGORIES.map(cat => {
@@ -215,6 +262,17 @@
       if (currentPage<totalPages){ currentPage++; setQueryParam("page", currentPage); render(); }
     });
 
+    // Click any numbered page (event delegation)
+    elPagination.addEventListener('click', (e) => {
+      const btn = e.target.closest('[data-page]');
+      if (!btn || !elPagination.contains(btn)) return;
+      const p = parseInt(btn.dataset.page, 10);
+      if (!Number.isFinite(p) || p === currentPage) return;
+      currentPage = p;
+      setQueryParam('page', currentPage);
+      render();
+    });
+
     applyFilters(true);
   }
 
@@ -255,6 +313,9 @@
     elNext.disabled = currentPage>=totalPages;
     elPage.textContent = `Page ${currentPage} of ${totalPages}`;
     elPagination.hidden = total<=CONFIG.ITEMS_PER_PAGE;
+
+    // Numbered pagination (sliding window)
+    renderPaginationNumbers(totalPages);
 
     const start = (currentPage-1) * CONFIG.ITEMS_PER_PAGE;
     const pageItems = visible.slice(start, start + CONFIG.ITEMS_PER_PAGE);
