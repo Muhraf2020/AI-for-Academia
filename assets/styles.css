@@ -54,3 +54,10 @@ hr.sep { border:0; border-top:1px solid var(--border); margin:14px 0; }
 .tool-hero .logo { width:80px; height:80px; font-size:1.2rem; }
 .related { display:grid; grid-template-columns: repeat(1, minmax(0,1fr)); gap: var(--gap); }
 @media (min-width:700px){ .related{ grid-template-columns: repeat(2, minmax(0,1fr)); } }
+
+/* button styles (added 2025-08-24) */
+.pager-numbers { display: inline-flex; gap: 6px; align-items: center; margin: 0 10px; flex-wrap: wrap; }
+.page-btn { border: 1px solid #ddd; background: #fff; border-radius: 8px; padding: 4px 10px; font-size: 0.95rem; cursor: pointer; }
+.page-btn:hover { background: #f6f6f6; }
+.page-btn.active { background: #111; color: #fff; border-color: #111; }
+.dots { color: #999; padding: 0 2px; }
