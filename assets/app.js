@@ -154,6 +154,16 @@
       btn.setAttribute("aria-pressed", on ? "true" : "false");
     });
   }
+  // Paint a count badge on each chip (expects keys by category slug)
+  function updateChipCounts(countsBySlug) {
+    elChips.querySelectorAll(".chip").forEach(btn => {
+      const slug = btn.getAttribute("data-slug");
+      const catName = (CATEGORIES.find(c => c.slug === slug) || {}).name || slug;
+      const n = countsBySlug[slug] || 0;
+      btn.innerHTML = `${esc(catName)} <span class="chip-count">${n}</span>`;
+    });
+  }
+
 
   // ---------- FETCH & INIT ----------
   async function init() {
@@ -313,29 +323,55 @@
   }
 
   // ---------- FILTERING ----------
+  // ---------- FILTERING ----------
   function applyFilters(first=false) {
     const catFilter = Array.from(selectedCategories);
     let arr = tools.slice();
 
-    if (catFilter.length>0) {
+    // 1) Apply category filter (multi-select)
+    if (catFilter.length > 0) {
       arr = arr.filter(t =>
         t.categories.some(c => catFilter.includes(slugify(c)) || catFilter.includes(c))
       );
     }
 
+    // 2) Apply pricing filter
     if (currentPricing !== "all") {
       arr = arr.filter(t => t.pricing === currentPricing);
     }
 
+    // 3) Apply search filter (Fuse) to the working set
     if (currentQuery) {
       const results = fuse.search(currentQuery);
       arr = results.map(r => r.item);
     }
 
+    // --- CATEGORY COUNTS (reflect current search + pricing, but NOT the category selection) ---
+    // Build a "pool" that only considers pricing + search
+    let pool = tools.filter(t => (currentPricing === 'all' || t.pricing === currentPricing));
+    if (currentQuery) {
+      // Reuse Fuse results for the base pool (not the category-filtered arr)
+      const poolResults = new Set(fuse.search(currentQuery).map(r => r.item));
+      pool = pool.filter(t => poolResults.has(t));
+    }
+
+    // Count per category slug
+    const countsBySlug = {};
+    for (const t of pool) {
+      for (const c of (t.categories || [])) {
+        const slug = CATEGORY_SLUG_SET.has(c) ? c : slugify(c);
+        countsBySlug[slug] = (countsBySlug[slug] || 0) + 1;
+      }
+    }
+    // Update chip labels to include counts
+    updateChipCounts(countsBySlug);
+    // --- END CATEGORY COUNTS ---
+
     visible = arr;
     if (first) injectItemListJSONLD();
     render();
   }
+
 
   // ---------- RENDER ----------
   function render() {
