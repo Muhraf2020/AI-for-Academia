@@ -62,12 +62,20 @@ hr.sep { border:0; border-top:1px solid var(--border); margin:14px 0; }
 .page-btn.active { background: #111; color: #fff; border-color: #111; }
 .dots { color: #999; padding: 0 2px; }
 
-/* Clear Filters button: blue variant */
-#clear-filters.chip {
+/* Primary (blue) chip */
+.chip--primary {
   background: #0b5fff;
   color: #fff;
   border-color: #0b5fff;
 }
-#clear-filters.chip:hover { background: #0a52e3; border-color: #0a52e3; }
-#clear-filters.chip:active { transform: translateY(1px); }
-#clear-filters.chip:focus-visible { outline: 2px solid #0b5fff; outline-offset: 2px; }
+.chip--primary:hover { background: #0a52e3; border-color: #0a52e3; }
+.chip--primary:active { transform: translateY(1px); }
+.chip--primary:focus-visible { outline: 2px solid #0b5fff; outline-offset: 2px; }
+
+/* Extra safety: if the element has the id, make it blue even without the class */
+#clear-filters {
+  background: #0b5fff;
+  color: #fff;
+  border-color: #0b5fff;
+}
+
