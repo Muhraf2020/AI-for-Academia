@@ -1,0 +1,4008 @@
+[
+  {
+    "id": "perplexity",
+    "slug": "perplexity",
+    "name": "Perplexity",
+    "url": "https://www.perplexity.ai/",
+    "tagline": "Answer engine with citations.",
+    "description": "Source-grounded answers for scoping questions. Verify primary sources for critical claims.",
+    "pricing": "freemium",
+    "categories": [
+      "General research assistants & chatbots"
+    ],
+    "tags": [
+      "Q&A",
+      "search",
+      "citations"
+    ],
+    "logo": "assets/logos/generic.png",
+    "evidence_cites": true,
+    "local_onprem": false,
+    "edu_discount": false,
+    "free_tier": true,
+    "beta": false,
+    "created_at": "2025-08-29"
+  },
+  {
+    "id": "notebooklm",
+    "slug": "notebooklm",
+    "name": "NotebookLM",
+    "url": "https://notebooklm.google/",
+    "tagline": "Source-grounded AI notebooks.",
+    "description": "Upload sources \u2192 ask questions, get outlines and summaries tied to your material.",
+    "pricing": "freemium",
+    "categories": [
+      "General research assistants & chatbots"
+    ],
+    "tags": [
+      "notebooks",
+      "summaries",
+      "grounded"
+    ],
+    "logo": "assets/logos/generic.png",
+    "evidence_cites": true,
+    "local_onprem": false,
+    "edu_discount": true,
+    "free_tier": true,
+    "beta": false,
+    "created_at": "2025-08-29"
+  },
+  {
+    "id": "semantic-scholar",
+    "slug": "semantic-scholar",
+    "name": "Semantic Scholar",
+    "url": "https://www.semanticscholar.org/",
+    "tagline": "AI-driven academic search.",
+    "description": "Find relevant papers across disciplines; handy TLDR summaries and citation graphs.",
+    "pricing": "free",
+    "categories": [
+      "Discover & map literature"
+    ],
+    "tags": [
+      "search",
+      "papers",
+      "summaries"
+    ],
+    "logo": "assets/logos/generic.png",
+    "evidence_cites": true,
+    "local_onprem": false,
+    "edu_discount": false,
+    "free_tier": true,
+    "beta": false,
+    "created_at": "2025-08-29"
+  },
+  {
+    "id": "elicit",
+    "slug": "elicit",
+    "name": "Elicit",
+    "url": "https://elicit.org/",
+    "tagline": "Research discovery Q&A.",
+    "description": "Natural-language queries return relevant papers and extracted key points to jumpstart reviews.",
+    "pricing": "freemium",
+    "categories": [
+      "Discover & map literature"
+    ],
+    "tags": [
+      "search",
+      "extract"
+    ],
+    "logo": "assets/logos/generic.png",
+    "evidence_cites": true,
+    "local_onprem": false,
+    "edu_discount": false,
+    "free_tier": true,
+    "beta": false,
+    "created_at": "2025-08-29"
+  },
+  {
+    "id": "scispace",
+    "slug": "scispace-copilot",
+    "name": "SciSpace Copilot",
+    "url": "https://typeset.io/",
+    "tagline": "Explain papers as you read.",
+    "description": "Ask questions alongside PDFs; get simpler explanations of math, tables, and graphs.",
+    "pricing": "freemium",
+    "categories": [
+      "Read, summarize, & extract"
+    ],
+    "tags": [
+      "pdf",
+      "explain",
+      "summarize"
+    ],
+    "logo": "assets/logos/generic.png",
+    "evidence_cites": true,
+    "local_onprem": false,
+    "edu_discount": false,
+    "free_tier": true,
+    "beta": false,
+    "created_at": "2025-08-29"
+  },
+  {
+    "id": "chatpdf",
+    "slug": "chatpdf",
+    "name": "ChatPDF",
+    "url": "https://www.chatpdf.com/",
+    "tagline": "Chat with your PDFs.",
+    "description": "Upload papers and ask targeted questions to extract passages and summaries.",
+    "pricing": "freemium",
+    "categories": [
+      "Read, summarize, & extract"
+    ],
+    "tags": [
+      "pdf",
+      "qa"
+    ],
+    "logo": "assets/logos/generic.png",
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": false,
+    "free_tier": true,
+    "beta": false,
+    "created_at": "2025-08-29"
+  },
+  {
+    "id": "scite",
+    "slug": "scite",
+    "name": "Scite",
+    "url": "https://scite.ai",
+    "tagline": "Smart citation statements.",
+    "description": "See whether later studies support or contrast a paper\u2019s claims with classification labels.",
+    "pricing": "freemium",
+    "categories": [
+      "Evaluate claims & citations"
+    ],
+    "tags": [
+      "citations",
+      "evidence"
+    ],
+    "logo": "assets/logos/generic.png",
+    "evidence_cites": true,
+    "local_onprem": false,
+    "edu_discount": true,
+    "free_tier": true,
+    "beta": false,
+    "created_at": "2025-08-29"
+  },
+  {
+    "id": "consensus",
+    "slug": "consensus",
+    "name": "Consensus",
+    "url": "https://consensus.app",
+    "tagline": "Cited answers from papers.",
+    "description": "Synthesizes findings from multiple papers to answer research questions with citations.",
+    "pricing": "freemium",
+    "categories": [
+      "Evaluate claims & citations"
+    ],
+    "tags": [
+      "qa",
+      "synthesis"
+    ],
+    "logo": "assets/logos/generic.png",
+    "evidence_cites": true,
+    "local_onprem": false,
+    "edu_discount": false,
+    "free_tier": true,
+    "beta": true,
+    "created_at": "2025-08-29"
+  },
+  {
+    "id": "zotero",
+    "slug": "zotero",
+    "name": "Zotero",
+    "url": "https://www.zotero.org",
+    "tagline": "Open-source reference manager.",
+    "description": "Collect and organize PDFs, cite in your documents; extensible via plugins.",
+    "pricing": "free",
+    "categories": [
+      "Citation & reference management"
+    ],
+    "tags": [
+      "references",
+      "bibtex",
+      "ris"
+    ],
+    "logo": "assets/logos/generic.png",
+    "evidence_cites": false,
+    "local_onprem": true,
+    "edu_discount": false,
+    "free_tier": true,
+    "beta": false,
+    "created_at": "2025-08-29"
+  },
+  {
+    "id": "paperpile",
+    "slug": "paperpile",
+    "name": "Paperpile",
+    "url": "https://paperpile.com",
+    "tagline": "Reference manager for Google Docs.",
+    "description": "Clean browser-based manager with fast PDF handling and citation insertion.",
+    "pricing": "paid",
+    "categories": [
+      "Citation & reference management"
+    ],
+    "tags": [
+      "references",
+      "google-docs"
+    ],
+    "logo": "assets/logos/generic.png",
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": true,
+    "free_tier": false,
+    "beta": false,
+    "created_at": "2025-08-29"
+  },
+  {
+    "id": "writefull",
+    "slug": "writefull",
+    "name": "Writefull",
+    "url": "https://writefull.com",
+    "tagline": "AI writing aid for academia.",
+    "description": "Improves grammar and phrasing tailored to scientific styles; integrates with editors.",
+    "pricing": "freemium",
+    "categories": [
+      "Writing & publishing"
+    ],
+    "tags": [
+      "grammar",
+      "academic"
+    ],
+    "logo": "assets/logos/generic.png",
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": true,
+    "free_tier": true,
+    "beta": false,
+    "created_at": "2025-08-29"
+  },
+  {
+    "id": "grammarly",
+    "slug": "grammarly",
+    "name": "Grammarly",
+    "url": "https://www.grammarly.com",
+    "tagline": "Popular writing assistant.",
+    "description": "Grammar and style suggestions; use cautiously for technical text.",
+    "pricing": "freemium",
+    "categories": [
+      "Writing & publishing"
+    ],
+    "tags": [
+      "grammar",
+      "style"
+    ],
+    "logo": "assets/logos/generic.png",
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": false,
+    "free_tier": true,
+    "beta": false,
+    "created_at": "2025-08-29"
+  },
+  {
+    "id": "copilot",
+    "slug": "github-copilot",
+    "name": "GitHub Copilot",
+    "url": "https://github.com/features/copilot",
+    "tagline": "AI pair programmer.",
+    "description": "Autocomplete and code suggestions in IDEs; always review and test outputs.",
+    "pricing": "paid",
+    "categories": [
+      "Coding, stats, & automation"
+    ],
+    "tags": [
+      "coding",
+      "ide"
+    ],
+    "logo": "assets/logos/generic.png",
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": true,
+    "free_tier": false,
+    "beta": false,
+    "created_at": "2025-08-29"
+  },
+  {
+    "id": "openai-ada",
+    "slug": "chatgpt-advanced-data-analysis",
+    "name": "ChatGPT (Advanced Data Analysis)",
+    "url": "https://openai.com/chatgpt",
+    "tagline": "Chat + Python sandbox.",
+    "description": "Upload datasets and get code, charts, and analyses\u2014verify all stats and methods.",
+    "pricing": "paid",
+    "categories": [
+      "Coding, stats, & automation"
+    ],
+    "tags": [
+      "python",
+      "analysis"
+    ],
+    "logo": "assets/logos/generic.png",
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": false,
+    "free_tier": false,
+    "beta": true,
+    "created_at": "2025-08-29"
+  },
+  {
+    "id": "pandasai",
+    "slug": "pandasai",
+    "name": "PandasAI",
+    "url": "https://github.com/gventuri/pandas-ai",
+    "tagline": "Natural language to pandas.",
+    "description": "Ask questions of your DataFrames; inspects and generates Python code for you to run.",
+    "pricing": "free",
+    "categories": [
+      "Data wrangling, analysis, & visualization"
+    ],
+    "tags": [
+      "python",
+      "pandas"
+    ],
+    "logo": "assets/logos/generic.png",
+    "evidence_cites": false,
+    "local_onprem": true,
+    "edu_discount": false,
+    "free_tier": true,
+    "beta": true,
+    "created_at": "2025-08-29"
+  },
+  {
+    "id": "kanaries",
+    "slug": "kanaries-rath",
+    "name": "Kanaries RATH",
+    "url": "https://kanaries.net",
+    "tagline": "AI-assisted EDA and charts.",
+    "description": "Auto-insights and visualization generation; helpful for exploration.",
+    "pricing": "freemium",
+    "categories": [
+      "Data wrangling, analysis, & visualization"
+    ],
+    "tags": [
+      "viz",
+      "eda"
+    ],
+    "logo": "assets/logos/generic.png",
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": false,
+    "free_tier": true,
+    "beta": true,
+    "created_at": "2025-08-29"
+  },
+  {
+    "id": "nvivo",
+    "slug": "nvivo",
+    "name": "NVivo",
+    "url": "https://lumivero.com/products/nvivo",
+    "tagline": "QDA with ML autocoding.",
+    "description": "Code qualitative data, use ML to auto-suggest themes; review manually for accuracy.",
+    "pricing": "paid",
+    "categories": [
+      "Qualitative analysis"
+    ],
+    "tags": [
+      "qda",
+      "coding"
+    ],
+    "logo": "assets/logos/generic.png",
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": true,
+    "free_tier": false,
+    "beta": false,
+    "created_at": "2025-08-29"
+  },
+  {
+    "id": "atlasti",
+    "slug": "atlas-ti",
+    "name": "ATLAS.ti",
+    "url": "https://atlasti.com",
+    "tagline": "QDA with AI Coding (beta).",
+    "description": "Auto-generate descriptive codes and summaries\u2014use with caution for sensitive data.",
+    "pricing": "paid",
+    "categories": [
+      "Qualitative analysis"
+    ],
+    "tags": [
+      "qda",
+      "coding"
+    ],
+    "logo": "assets/logos/generic.png",
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": true,
+    "free_tier": false,
+    "beta": true,
+    "created_at": "2025-08-29"
+  },
+  {
+    "id": "otter",
+    "slug": "otter-ai",
+    "name": "Otter.ai",
+    "url": "https://otter.ai",
+    "tagline": "Meeting transcription & summaries.",
+    "description": "Record meetings and interviews, generate notes and highlights; proofread for accuracy.",
+    "pricing": "freemium",
+    "categories": [
+      "Transcription & meeting notes"
+    ],
+    "tags": [
+      "transcription",
+      "meetings"
+    ],
+    "logo": "assets/logos/generic.png",
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": true,
+    "free_tier": true,
+    "beta": false,
+    "created_at": "2025-08-29"
+  },
+  {
+    "id": "whisper",
+    "slug": "openai-whisper",
+    "name": "OpenAI Whisper",
+    "url": "https://github.com/openai/whisper",
+    "tagline": "Open-source speech-to-text.",
+    "description": "Run locally for privacy; strong multilingual accuracy; CLI usage required.",
+    "pricing": "free",
+    "categories": [
+      "Transcription & meeting notes"
+    ],
+    "tags": [
+      "speech",
+      "transcription"
+    ],
+    "logo": "assets/logos/generic.png",
+    "evidence_cites": false,
+    "local_onprem": true,
+    "edu_discount": false,
+    "free_tier": true,
+    "beta": false,
+    "created_at": "2025-08-29"
+  },
+  {
+    "id": "qualtrics",
+    "slug": "qualtrics",
+    "name": "Qualtrics XM (Text iQ)",
+    "url": "https://www.qualtrics.com",
+    "tagline": "Enterprise survey + text analytics.",
+    "description": "Theme detection and sentiment for open-ended responses; best with large samples.",
+    "pricing": "paid",
+    "categories": [
+      "Surveys & text analytics"
+    ],
+    "tags": [
+      "survey",
+      "text-mining"
+    ],
+    "logo": "assets/logos/generic.png",
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": true,
+    "free_tier": false,
+    "beta": false,
+    "created_at": "2025-08-29"
+  },
+  {
+    "id": "surveymonkey",
+    "slug": "surveymonkey",
+    "name": "SurveyMonkey + Genius",
+    "url": "https://www.surveymonkey.com",
+    "tagline": "AI-assisted survey building.",
+    "description": "Draft surveys and summarize results; pilot test AI-generated questions.",
+    "pricing": "freemium",
+    "categories": [
+      "Surveys & text analytics"
+    ],
+    "tags": [
+      "survey",
+      "builder"
+    ],
+    "logo": "assets/logos/generic.png",
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": true,
+    "free_tier": true,
+    "beta": false,
+    "created_at": "2025-08-29"
+  },
+  {
+    "id": "biorender",
+    "slug": "biorender",
+    "name": "BioRender",
+    "url": "https://www.biorender.com",
+    "tagline": "Scientific figures fast.",
+    "description": "Drag-and-drop templates and icons for accurate schematics; good for papers and talks.",
+    "pricing": "freemium",
+    "categories": [
+      "Figures, images & visualizations"
+    ],
+    "tags": [
+      "figures",
+      "diagrams"
+    ],
+    "logo": "assets/logos/generic.png",
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": true,
+    "free_tier": true,
+    "beta": false,
+    "created_at": "2025-08-29"
+  },
+  {
+    "id": "dalle3",
+    "slug": "dalle-3",
+    "name": "DALL\u00b7E 3",
+    "url": "https://openai.com/dall-e-3",
+    "tagline": "Text-to-image generation.",
+    "description": "Produce conceptual illustrations\u2014label AI images and avoid misuse for scientific evidence.",
+    "pricing": "paid",
+    "categories": [
+      "Figures, images & visualizations"
+    ],
+    "tags": [
+      "images",
+      "generation"
+    ],
+    "logo": "assets/logos/generic.png",
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": false,
+    "free_tier": false,
+    "beta": true,
+    "created_at": "2025-08-29"
+  },
+  {
+    "id": "gradescope",
+    "slug": "gradescope",
+    "name": "Gradescope",
+    "url": "https://www.gradescope.com",
+    "tagline": "Assistive grading for problem sets.",
+    "description": "Group similar answers to speed grading; instructors verify groups.",
+    "pricing": "paid",
+    "categories": [
+      "Teaching & assessment"
+    ],
+    "tags": [
+      "grading",
+      "education"
+    ],
+    "logo": "assets/logos/generic.png",
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": true,
+    "free_tier": false,
+    "beta": false,
+    "created_at": "2025-08-29"
+  },
+  {
+    "id": "turnitin",
+    "slug": "turnitin-originality",
+    "name": "Turnitin (Originality & AI Writing)",
+    "url": "https://www.turnitin.com",
+    "tagline": "Similarity checking + AI detection.",
+    "description": "Use similarity reports to open dialogue; AI detectors can be unreliable\u2014interpret cautiously.",
+    "pricing": "paid",
+    "categories": [
+      "Integrity & compliance"
+    ],
+    "tags": [
+      "similarity",
+      "integrity"
+    ],
+    "logo": "assets/logos/generic.png",
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": true,
+    "free_tier": false,
+    "beta": false,
+    "created_at": "2025-08-29"
+  },
+  {
+    "id": "benchling",
+    "slug": "benchling",
+    "name": "Benchling",
+    "url": "https://www.benchling.com",
+    "tagline": "Modern ELN for life sciences.",
+    "description": "Collaborative lab notebook with AI helpers and inventory; institutional tool.",
+    "pricing": "paid",
+    "categories": [
+      "Project & experiment tracking"
+    ],
+    "tags": [
+      "eln",
+      "lab"
+    ],
+    "logo": "assets/logos/generic.png",
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": true,
+    "free_tier": false,
+    "beta": false,
+    "created_at": "2025-08-29"
+  },
+  {
+    "id": "protocol-builder",
+    "slug": "protocol-builder",
+    "name": "Protocol Builder",
+    "url": "https://www.brany.com/protocol-builder",
+    "tagline": "IRB protocol assistant.",
+    "description": "Templates and AI-assisted text for protocols and consent\u2014requires thorough review.",
+    "pricing": "paid",
+    "categories": [
+      "Policy & ethics support"
+    ],
+    "tags": [
+      "irb",
+      "ethics"
+    ],
+    "logo": "assets/logos/generic.png",
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": false,
+    "free_tier": false,
+    "beta": false,
+    "created_at": "2025-08-29"
+  },
+  {
+    "id": "notion-ai",
+    "slug": "notion-ai",
+    "name": "Notion AI",
+    "url": "https://www.notion.so/product/ai",
+    "tagline": "AI in your team wiki.",
+    "description": "Ask questions of your workspace and summarize notes; mind privacy and accuracy.",
+    "pricing": "freemium",
+    "categories": [
+      "Collaboration & knowledge management"
+    ],
+    "tags": [
+      "notes",
+      "wiki"
+    ],
+    "logo": "assets/logos/generic.png",
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": true,
+    "free_tier": true,
+    "beta": false,
+    "created_at": "2025-08-29"
+  },
+  {
+    "id": "slack-gpt",
+    "slug": "slack-gpt",
+    "name": "Slack GPT",
+    "url": "https://slack.com",
+    "tagline": "Summarize threads, draft replies.",
+    "description": "Experimental features that help keep up with busy channels\u2014use with team guidelines.",
+    "pricing": "paid",
+    "categories": [
+      "Collaboration & knowledge management"
+    ],
+    "tags": [
+      "chat",
+      "summaries"
+    ],
+    "logo": "assets/logos/generic.png",
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": true,
+    "free_tier": false,
+    "beta": true,
+    "created_at": "2025-08-29"
+  },
+  {
+    "name": "ChatGPT",
+    "tagline": "Large language model assistant.",
+    "description": "Generative conversational assistant using GPT architecture; answers questions, brainstorms, and drafts text. Outputs may not be grounded in sources\u2014verify information.",
+    "pricing": "freemium",
+    "categories": [
+      "General research assistants & chatbots"
+    ],
+    "tags": [
+      "chatbot",
+      "LLM"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": false,
+    "free_tier": true,
+    "beta": false,
+    "slug": "chatgpt",
+    "id": "chatgpt",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://openai.com/chatgpt"
+  },
+  {
+    "name": "Claude",
+    "tagline": "Helpful conversational AI.",
+    "description": "Anthropic\u2019s assistant designed for helpful and honest responses; good for summarizing, brainstorming, and Q&A with a focus on safety.",
+    "pricing": "freemium",
+    "categories": [
+      "General research assistants & chatbots"
+    ],
+    "tags": [
+      "chatbot",
+      "LLM"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": false,
+    "free_tier": true,
+    "beta": false,
+    "slug": "claude",
+    "id": "claude",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://claude.ai"
+  },
+  {
+    "name": "Gemini (Bard)",
+    "tagline": "Google\u2019s generative companion.",
+    "description": "Google\u2019s large language model integrated with search; provides conversational answers, drafts and coding help; verify details against primary sources.",
+    "pricing": "freemium",
+    "categories": [
+      "General research assistants & chatbots"
+    ],
+    "tags": [
+      "chatbot",
+      "search"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": false,
+    "free_tier": true,
+    "beta": false,
+    "slug": "gemini-bard",
+    "id": "gemini-bard",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://ai.google.com/gemini"
+  },
+  {
+    "name": "YouChat",
+    "tagline": "Search and chat combined.",
+    "description": "Part of the You.com platform, offering generative answers with clickable citations; useful for quick facts and brainstorming, but sources vary in quality.",
+    "pricing": "freemium",
+    "categories": [
+      "General research assistants & chatbots"
+    ],
+    "tags": [
+      "search",
+      "chat"
+    ],
+    "evidence_cites": true,
+    "local_onprem": false,
+    "edu_discount": false,
+    "free_tier": true,
+    "beta": false,
+    "slug": "youchat",
+    "id": "youchat",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://you.com"
+  },
+  {
+    "name": "Research Buddy",
+    "tagline": "Student-friendly research assistant.",
+    "description": "AI tool aimed at students for literature reviews, Q&A and dataset discovery; provides templated outputs; always verify citations.",
+    "pricing": "freemium",
+    "categories": [
+      "General research assistants & chatbots"
+    ],
+    "tags": [
+      "research",
+      "students"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": false,
+    "free_tier": true,
+    "beta": true,
+    "slug": "research-buddy",
+    "id": "research-buddy",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://researchbuddy.ai"
+  },
+  {
+    "name": "MirrorThink",
+    "tagline": "Methods Q&A assistant.",
+    "description": "Narrowly focused assistant to answer methods and paper questions quickly; limited public documentation, so cross-check outputs with trusted sources.",
+    "pricing": "freemium",
+    "categories": [
+      "General research assistants & chatbots"
+    ],
+    "tags": [
+      "methods",
+      "Q&A"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": false,
+    "free_tier": true,
+    "beta": true,
+    "slug": "mirrorthink",
+    "id": "mirrorthink",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://mirrorthink.com"
+  },
+  {
+    "name": "Iris.ai",
+    "tagline": "Science workspace and chat.",
+    "description": "Platform providing smart search, reading list analysis, data extraction and citation-backed chat; emphasises provenance and is geared toward enterprise R&D.",
+    "pricing": "paid",
+    "categories": [
+      "General research assistants & chatbots"
+    ],
+    "tags": [
+      "search",
+      "analysis"
+    ],
+    "evidence_cites": true,
+    "local_onprem": false,
+    "edu_discount": true,
+    "free_tier": false,
+    "beta": false,
+    "slug": "iris-ai",
+    "id": "iris-ai",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://iris.ai"
+  },
+  {
+    "name": "ChatSonic",
+    "tagline": "Conversational AI with personalities.",
+    "description": "Chatbot that builds on GPT models and can adopt various personas; includes web search and image generation; verify factual accuracy.",
+    "pricing": "freemium",
+    "categories": [
+      "General research assistants & chatbots"
+    ],
+    "tags": [
+      "chatbot",
+      "persona"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": false,
+    "free_tier": true,
+    "beta": false,
+    "slug": "chatsonic",
+    "id": "chatsonic",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://writesonic.com/chatsonic"
+  },
+  {
+    "name": "Paperguide",
+    "tagline": "Search, summarize and organize papers.",
+    "description": "All-in-one co\u2011pilot for scoping reviews: searches literature, summarizes papers, and organizes them into projects with source-linked notes.",
+    "pricing": "freemium",
+    "categories": [
+      "Discover & map literature"
+    ],
+    "tags": [
+      "search",
+      "summaries",
+      "organization"
+    ],
+    "evidence_cites": true,
+    "local_onprem": false,
+    "edu_discount": true,
+    "free_tier": true,
+    "beta": false,
+    "slug": "paperguide",
+    "id": "paperguide",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://paperguide.ai"
+  },
+  {
+    "name": "Laser AI",
+    "tagline": "Systematic review assistant.",
+    "description": "Enterprise platform for systematic and living reviews with assisted screening, data extraction, and quality appraisal; requires structured workflows.",
+    "pricing": "paid",
+    "categories": [
+      "Discover & map literature"
+    ],
+    "tags": [
+      "systematic-review",
+      "screening"
+    ],
+    "evidence_cites": true,
+    "local_onprem": false,
+    "edu_discount": true,
+    "free_tier": false,
+    "beta": false,
+    "slug": "laser-ai",
+    "id": "laser-ai",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://laser.ai"
+  },
+  {
+    "name": "System Pro",
+    "tagline": "Knowledge graph search for research.",
+    "description": "Combines AI with a knowledge graph to surface concepts, context and related literature beyond simple keyword search; newer entrant, so check coverage.",
+    "pricing": "freemium",
+    "categories": [
+      "Discover & map literature"
+    ],
+    "tags": [
+      "knowledge-graph",
+      "search"
+    ],
+    "evidence_cites": true,
+    "local_onprem": false,
+    "edu_discount": true,
+    "free_tier": true,
+    "beta": false,
+    "slug": "system-pro",
+    "id": "system-pro",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://system.com"
+  },
+  {
+    "name": "STORM",
+    "tagline": "Research brief generation prototypes.",
+    "description": "Stanford prototypes (STORM/Co-STORM) build Wikipedia\u2011like topic briefs and enable collaborative question answering; experimental and open-source.",
+    "pricing": "free",
+    "categories": [
+      "Discover & map literature"
+    ],
+    "tags": [
+      "prototyping",
+      "qa",
+      "briefs"
+    ],
+    "evidence_cites": true,
+    "local_onprem": true,
+    "edu_discount": false,
+    "free_tier": true,
+    "beta": true,
+    "slug": "storm",
+    "id": "storm",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://storm.stanford.edu"
+  },
+  {
+    "name": "Mify",
+    "tagline": "AI mind\u2011mapping and concept maps.",
+    "description": "Turns prompts or documents into interactive mind maps, helping you structure themes for literature reviews; includes PDF-to-map and mobile apps.",
+    "pricing": "freemium",
+    "categories": [
+      "Discover & map literature"
+    ],
+    "tags": [
+      "mind-mapping",
+      "visualization"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": false,
+    "free_tier": true,
+    "beta": false,
+    "slug": "mify",
+    "id": "mify",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://mapify.ai"
+  },
+  {
+    "name": "arXiv Pulse",
+    "tagline": "Digest preprints by topic.",
+    "description": "Personalized digest summarizing new arXiv preprints in your chosen field; a great way to stay current without daily skimming; remember preprints aren\u2019t peer-reviewed.",
+    "pricing": "free",
+    "categories": [
+      "Discover & map literature"
+    ],
+    "tags": [
+      "preprints",
+      "summaries"
+    ],
+    "evidence_cites": true,
+    "local_onprem": false,
+    "edu_discount": false,
+    "free_tier": true,
+    "beta": false,
+    "slug": "arxiv-pulse",
+    "id": "arxiv-pulse",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://arxiv-pulse.com"
+  },
+  {
+    "name": "Connected Papers",
+    "tagline": "Visualize citation networks.",
+    "description": "Creates a graph of related papers based on co-citation and bibliographic coupling, helping you explore new directions and identify influential works.",
+    "pricing": "freemium",
+    "categories": [
+      "Discover & map literature"
+    ],
+    "tags": [
+      "citation-network",
+      "visualization"
+    ],
+    "evidence_cites": true,
+    "local_onprem": false,
+    "edu_discount": false,
+    "free_tier": true,
+    "beta": false,
+    "slug": "connected-papers",
+    "id": "connected-papers",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://www.connectedpapers.com"
+  },
+  {
+    "name": "ResearchRabbit",
+    "tagline": "Interactive literature maps.",
+    "description": "Recommends papers and authors using citation networks and displays them as interactive graphs; good for discovering connections and keeping up\u2011to\u2011date.",
+    "pricing": "freemium",
+    "categories": [
+      "Discover & map literature",
+      "Citation & reference management"
+    ],
+    "tags": [
+      "recommendation",
+      "network"
+    ],
+    "evidence_cites": true,
+    "local_onprem": false,
+    "edu_discount": false,
+    "free_tier": true,
+    "beta": false,
+    "slug": "researchrabbit",
+    "id": "researchrabbit",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://www.researchrabbit.ai"
+  },
+  {
+    "name": "Litmaps",
+    "tagline": "Interactive citation mapping.",
+    "description": "Generate visual maps of literature based on citations; explore topics and track new papers through alerts; sync with reference managers.",
+    "pricing": "freemium",
+    "categories": [
+      "Discover & map literature"
+    ],
+    "tags": [
+      "citation-map",
+      "alerts"
+    ],
+    "evidence_cites": true,
+    "local_onprem": false,
+    "edu_discount": false,
+    "free_tier": true,
+    "beta": false,
+    "slug": "litmaps",
+    "id": "litmaps",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://www.litmaps.com"
+  },
+  {
+    "name": "Inciteful",
+    "tagline": "Find relevant academic literature.",
+    "description": "Search engine and citation tool that uses citation networks to find overlooked but relevant papers; helps generate reading lists and recommendations.",
+    "pricing": "freemium",
+    "categories": [
+      "Discover & map literature"
+    ],
+    "tags": [
+      "search",
+      "recommendation"
+    ],
+    "evidence_cites": true,
+    "local_onprem": false,
+    "edu_discount": false,
+    "free_tier": true,
+    "beta": false,
+    "slug": "inciteful",
+    "id": "inciteful",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://inciteful.xyz"
+  },
+  {
+    "name": "Aether Brain",
+    "tagline": "Explains research methods.",
+    "description": "GPT\u2011powered assistant focused on explaining research papers, breaking down complex methods and figures into plain language.",
+    "pricing": "free",
+    "categories": [
+      "Read, summarize, & extract"
+    ],
+    "tags": [
+      "explanation",
+      "methods"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": false,
+    "free_tier": true,
+    "beta": false,
+    "slug": "aether-brain",
+    "id": "aether-brain",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://aether.ai"
+  },
+  {
+    "name": "Petal",
+    "tagline": "Fast summaries and Q&A.",
+    "description": "AI reader designed for rapid familiarization with long documents; chat with PDFs and ask questions to obtain key information quickly.",
+    "pricing": "freemium",
+    "categories": [
+      "Read, summarize, & extract"
+    ],
+    "tags": [
+      "summary",
+      "pdf",
+      "qa"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": false,
+    "free_tier": true,
+    "beta": true,
+    "slug": "petal",
+    "id": "petal",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://petal.dev"
+  },
+  {
+    "name": "Humata",
+    "tagline": "PDF question answering.",
+    "description": "Upload PDFs and ask questions; the tool provides snippet\u2011backed answers and summaries, supporting long documents and scientific papers.",
+    "pricing": "freemium",
+    "categories": [
+      "Read, summarize, & extract"
+    ],
+    "tags": [
+      "pdf",
+      "summaries",
+      "qa"
+    ],
+    "evidence_cites": true,
+    "local_onprem": false,
+    "edu_discount": false,
+    "free_tier": true,
+    "beta": false,
+    "slug": "humata",
+    "id": "humata",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://www.humata.ai"
+  },
+  {
+    "name": "Lateral AI",
+    "tagline": "Reading and organization workspace.",
+    "description": "An AI reading and organization workspace (sunset in 2025) formerly offering cross\u2011document search and notes; existing users can still access archives.",
+    "pricing": "free",
+    "categories": [
+      "Read, summarize, & extract"
+    ],
+    "tags": [
+      "workspace",
+      "search"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": false,
+    "free_tier": true,
+    "beta": false,
+    "slug": "lateral-ai",
+    "id": "lateral-ai",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://www.lateral.io"
+  },
+  {
+    "name": "Paper Brain",
+    "tagline": "Key points and definitions.",
+    "description": "Reader that extracts key points, definitions and questions from papers; great for a quick 'what\u2019s this about?' pass on new literature.",
+    "pricing": "free",
+    "categories": [
+      "Read, summarize, & extract"
+    ],
+    "tags": [
+      "extraction",
+      "definitions"
+    ],
+    "evidence_cites": true,
+    "local_onprem": false,
+    "edu_discount": false,
+    "free_tier": true,
+    "beta": false,
+    "slug": "paper-brain",
+    "id": "paper-brain",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://www.paperbrain.ai"
+  },
+  {
+    "name": "Unriddle",
+    "tagline": "Multi-format document assistant.",
+    "description": "Summarize and ask questions over PDFs, links and other documents; supports cross\u2011document themes and quick synthesis.",
+    "pricing": "freemium",
+    "categories": [
+      "Read, summarize, & extract"
+    ],
+    "tags": [
+      "summaries",
+      "multi-document"
+    ],
+    "evidence_cites": true,
+    "local_onprem": false,
+    "edu_discount": false,
+    "free_tier": true,
+    "beta": false,
+    "slug": "unriddle",
+    "id": "unriddle",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://www.unriddle.ai"
+  },
+  {
+    "name": "Sharly.ai",
+    "tagline": "Chat across documents with citations.",
+    "description": "Offers summaries, citations and cross\u2011document comparisons, making it easy to discuss and contrast findings across a corpus.",
+    "pricing": "freemium",
+    "categories": [
+      "Read, summarize, & extract"
+    ],
+    "tags": [
+      "chat",
+      "citations",
+      "comparison"
+    ],
+    "evidence_cites": true,
+    "local_onprem": false,
+    "edu_discount": false,
+    "free_tier": true,
+    "beta": false,
+    "slug": "sharly-ai",
+    "id": "sharly-ai",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://www.sharly.ai"
+  },
+  {
+    "name": "OpenRead",
+    "tagline": "Paper Q&A and explanations.",
+    "description": "Interactive paper reader with question answering and section\u2011wise explanations; good for learning core claims and methods quickly.",
+    "pricing": "free",
+    "categories": [
+      "Read, summarize, & extract"
+    ],
+    "tags": [
+      "questions",
+      "sections"
+    ],
+    "evidence_cites": true,
+    "local_onprem": false,
+    "edu_discount": false,
+    "free_tier": true,
+    "beta": false,
+    "slug": "openread",
+    "id": "openread",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://openread.ai"
+  },
+  {
+    "name": "DocAnalyzer AI",
+    "tagline": "Chat across many documents.",
+    "description": "Handles large collections of documents with shareable links and team workspaces; provides labeling and Q&A for corpora.",
+    "pricing": "freemium",
+    "categories": [
+      "Read, summarize, & extract"
+    ],
+    "tags": [
+      "multi-doc",
+      "workspace"
+    ],
+    "evidence_cites": true,
+    "local_onprem": false,
+    "edu_discount": false,
+    "free_tier": true,
+    "beta": false,
+    "slug": "docanalyzer-ai",
+    "id": "docanalyzer-ai",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://docanalyzer.ai"
+  },
+  {
+    "name": "Scholarcy",
+    "tagline": "Generate highlights and summaries.",
+    "description": "Automatically creates highlights, summaries and flashcards from academic papers; useful for quickly distilling key information.",
+    "pricing": "freemium",
+    "categories": [
+      "Read, summarize, & extract"
+    ],
+    "tags": [
+      "highlights",
+      "summaries"
+    ],
+    "evidence_cites": true,
+    "local_onprem": false,
+    "edu_discount": false,
+    "free_tier": true,
+    "beta": false,
+    "slug": "scholarcy",
+    "id": "scholarcy",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://scholarcy.example.com"
+  },
+  {
+    "name": "ExplainPaper",
+    "tagline": "Simplified explanations of passages.",
+    "description": "Provides plain\u2011English explanations of complex passages in scientific papers; great for clarifying dense paragraphs and equations.",
+    "pricing": "freemium",
+    "categories": [
+      "Read, summarize, & extract"
+    ],
+    "tags": [
+      "explanation",
+      "plain-language"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": false,
+    "free_tier": true,
+    "beta": false,
+    "slug": "explainpaper",
+    "id": "explainpaper",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://explainpaper.example.com"
+  },
+  {
+    "name": "OpenAlex",
+    "tagline": "Open scholarly catalog.",
+    "description": "Massive open database of scholarly works, authors, institutions and citations; can be used to explore citation networks and evaluate research impact.",
+    "pricing": "free",
+    "categories": [
+      "Evaluate claims & citations",
+      "Discover & map literature"
+    ],
+    "tags": [
+      "citations",
+      "metadata"
+    ],
+    "evidence_cites": true,
+    "local_onprem": true,
+    "edu_discount": false,
+    "free_tier": true,
+    "beta": false,
+    "slug": "openalex",
+    "id": "openalex",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://openalex.example.com"
+  },
+  {
+    "name": "Citation Gecko",
+    "tagline": "Find connected papers via citations.",
+    "description": "Browser-based tool that helps you discover relevant papers by exploring citation networks from a set of seed articles.",
+    "pricing": "free",
+    "categories": [
+      "Evaluate claims & citations",
+      "Discover & map literature"
+    ],
+    "tags": [
+      "citation-network",
+      "search"
+    ],
+    "evidence_cites": true,
+    "local_onprem": false,
+    "edu_discount": false,
+    "free_tier": true,
+    "beta": false,
+    "slug": "citation-gecko",
+    "id": "citation-gecko",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://citation-gecko.example.com"
+  },
+  {
+    "name": "Altmetric",
+    "tagline": "Measure research attention.",
+    "description": "Tracks and visualizes online attention (news, social media, policy documents) around academic outputs; complements citation counts.",
+    "pricing": "paid",
+    "categories": [
+      "Evaluate claims & citations"
+    ],
+    "tags": [
+      "metrics",
+      "altmetrics"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": true,
+    "free_tier": false,
+    "beta": false,
+    "slug": "altmetric",
+    "id": "altmetric",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://altmetric.example.com"
+  },
+  {
+    "name": "Dimensions.ai",
+    "tagline": "Research analytics platform.",
+    "description": "Provides bibliometrics, citations and grant data across millions of publications, helping evaluate influence and collaboration patterns.",
+    "pricing": "paid",
+    "categories": [
+      "Evaluate claims & citations"
+    ],
+    "tags": [
+      "analytics",
+      "metrics"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": true,
+    "free_tier": false,
+    "beta": false,
+    "slug": "dimensions-ai",
+    "id": "dimensions-ai",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://dimensions-ai.example.com"
+  },
+  {
+    "name": "Retraction Watch Database",
+    "tagline": "Database of retracted papers.",
+    "description": "Searchable catalog of retracted articles and notices, useful for checking the integrity of cited works.",
+    "pricing": "free",
+    "categories": [
+      "Evaluate claims & citations",
+      "Integrity & compliance"
+    ],
+    "tags": [
+      "retractions",
+      "integrity"
+    ],
+    "evidence_cites": true,
+    "local_onprem": false,
+    "edu_discount": false,
+    "free_tier": true,
+    "beta": false,
+    "slug": "retraction-watch-database",
+    "id": "retraction-watch-database",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://retraction-watch-database.example.com"
+  },
+  {
+    "name": "PubPeer",
+    "tagline": "Post-publication peer review.",
+    "description": "Platform where researchers discuss and critique published papers; helpful to see if findings have been challenged or corrected.",
+    "pricing": "free",
+    "categories": [
+      "Evaluate claims & citations"
+    ],
+    "tags": [
+      "peer-review",
+      "discussion"
+    ],
+    "evidence_cites": true,
+    "local_onprem": false,
+    "edu_discount": false,
+    "free_tier": true,
+    "beta": false,
+    "slug": "pubpeer",
+    "id": "pubpeer",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://pubpeer.example.com"
+  },
+  {
+    "name": "EvidenceHunt",
+    "tagline": "Evidence synthesis search.",
+    "description": "Tool designed to search for and synthesize evidence from clinical studies, capturing trial outcomes and confidence intervals; still evolving.",
+    "pricing": "freemium",
+    "categories": [
+      "Evaluate claims & citations"
+    ],
+    "tags": [
+      "clinical",
+      "evidence"
+    ],
+    "evidence_cites": true,
+    "local_onprem": false,
+    "edu_discount": false,
+    "free_tier": true,
+    "beta": true,
+    "slug": "evidencehunt",
+    "id": "evidencehunt",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://evidencehunt.example.com"
+  },
+  {
+    "name": "Journal Impact Explorer",
+    "tagline": "Explore journal metrics.",
+    "description": "Simple portal to view impact factors, Eigenfactor scores and citation distributions for journals; use as a rough indicator, not a definitive ranking.",
+    "pricing": "free",
+    "categories": [
+      "Evaluate claims & citations"
+    ],
+    "tags": [
+      "impact",
+      "metrics"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": false,
+    "free_tier": true,
+    "beta": false,
+    "slug": "journal-impact-explorer",
+    "id": "journal-impact-explorer",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://journal-impact-explorer.example.com"
+  },
+  {
+    "name": "Mendeley",
+    "tagline": "Reference manager and PDF organizer.",
+    "description": "Desktop and cloud tool to collect, organize and cite research papers; offers group libraries and literature recommendations.",
+    "pricing": "freemium",
+    "categories": [
+      "Citation & reference management"
+    ],
+    "tags": [
+      "reference-manager",
+      "pdf"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": true,
+    "free_tier": true,
+    "beta": false,
+    "slug": "mendeley",
+    "id": "mendeley",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://www.mendeley.com"
+  },
+  {
+    "name": "EndNote",
+    "tagline": "Comprehensive citation manager.",
+    "description": "Long-standing reference manager with powerful sorting, note-taking and citation insertion features; integrates with Word and popular databases.",
+    "pricing": "paid",
+    "categories": [
+      "Citation & reference management"
+    ],
+    "tags": [
+      "references",
+      "citations"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": true,
+    "free_tier": false,
+    "beta": false,
+    "slug": "endnote",
+    "id": "endnote",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://endnote.com"
+  },
+  {
+    "name": "SciWheel",
+    "tagline": "Reference manager & discovery.",
+    "description": "Formerly F1000Workspace, combines reference management with literature discovery and collaborative manuscript writing.",
+    "pricing": "paid",
+    "categories": [
+      "Citation & reference management"
+    ],
+    "tags": [
+      "references",
+      "discovery"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": true,
+    "free_tier": false,
+    "beta": false,
+    "slug": "sciwheel",
+    "id": "sciwheel",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://sciwheel.example.com"
+  },
+  {
+    "name": "JabRef",
+    "tagline": "Open-source BibTeX manager.",
+    "description": "Desktop application for managing bibliographies; integrates with LaTeX and supports linking PDFs and notes.",
+    "pricing": "free",
+    "categories": [
+      "Citation & reference management"
+    ],
+    "tags": [
+      "bibtex",
+      "latex"
+    ],
+    "evidence_cites": false,
+    "local_onprem": true,
+    "edu_discount": false,
+    "free_tier": true,
+    "beta": false,
+    "slug": "jabref",
+    "id": "jabref",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://jabref.example.com"
+  },
+  {
+    "name": "Citavi",
+    "tagline": "Knowledge organization & citing.",
+    "description": "Reference manager with task planning and knowledge organization features; supports Windows and cloud editions.",
+    "pricing": "paid",
+    "categories": [
+      "Citation & reference management"
+    ],
+    "tags": [
+      "knowledge-management",
+      "citations"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": true,
+    "free_tier": false,
+    "beta": false,
+    "slug": "citavi",
+    "id": "citavi",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://citavi.example.com"
+  },
+  {
+    "name": "RefWorks",
+    "tagline": "Web-based reference manager.",
+    "description": "Cloud citation management from ProQuest with collaboration features and direct import from databases; often licensed institutionally.",
+    "pricing": "paid",
+    "categories": [
+      "Citation & reference management"
+    ],
+    "tags": [
+      "references",
+      "cloud"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": true,
+    "free_tier": false,
+    "beta": false,
+    "slug": "refworks",
+    "id": "refworks",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://refworks.example.com"
+  },
+  {
+    "name": "BibGuru",
+    "tagline": "Automatic citation generator.",
+    "description": "Generate and manage citations quickly in multiple styles; ideal for students needing fast bibliography creation.",
+    "pricing": "freemium",
+    "categories": [
+      "Citation & reference management"
+    ],
+    "tags": [
+      "citation-generator",
+      "students"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": false,
+    "free_tier": true,
+    "beta": false,
+    "slug": "bibguru",
+    "id": "bibguru",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://bibguru.example.com"
+  },
+  {
+    "name": "Mendeley Cite",
+    "tagline": "Word add\u2011in for citations.",
+    "description": "Lightweight plug\u2011in that works with Mendeley libraries to insert and format citations inside Microsoft Word and Office 365.",
+    "pricing": "free",
+    "categories": [
+      "Citation & reference management"
+    ],
+    "tags": [
+      "word-addin",
+      "citations"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": false,
+    "free_tier": true,
+    "beta": false,
+    "slug": "mendeley-cite",
+    "id": "mendeley-cite",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://mendeley-cite.example.com"
+  },
+  {
+    "name": "Jenni AI",
+    "tagline": "AI co-writing with citations.",
+    "description": "Generates sentences and paragraphs for academic essays and can suggest real references from databases like OpenAlex; always verify citations.",
+    "pricing": "freemium",
+    "categories": [
+      "Writing & publishing"
+    ],
+    "tags": [
+      "co-writing",
+      "citations"
+    ],
+    "evidence_cites": true,
+    "local_onprem": false,
+    "edu_discount": false,
+    "free_tier": true,
+    "beta": true,
+    "slug": "jenni-ai",
+    "id": "jenni-ai",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://jenni.ai"
+  },
+  {
+    "name": "Yomu",
+    "tagline": "Real-time academic writing assistant.",
+    "description": "Helps draft and refine essays, papers and theses with discipline-aware feedback; integrates research and writing workflow.",
+    "pricing": "freemium",
+    "categories": [
+      "Writing & publishing"
+    ],
+    "tags": [
+      "writing",
+      "feedback"
+    ],
+    "evidence_cites": true,
+    "local_onprem": false,
+    "edu_discount": true,
+    "free_tier": true,
+    "beta": false,
+    "slug": "yomu",
+    "id": "yomu",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://www.yomu.ai"
+  },
+  {
+    "name": "Wisio",
+    "tagline": "Scientific writing copilot.",
+    "description": "Provides topic advice, drafting support, translation and citation lookup for scientific manuscripts; integrates with PubMed.",
+    "pricing": "paid",
+    "categories": [
+      "Writing & publishing"
+    ],
+    "tags": [
+      "manuscript",
+      "translation"
+    ],
+    "evidence_cites": true,
+    "local_onprem": false,
+    "edu_discount": true,
+    "free_tier": false,
+    "beta": false,
+    "slug": "wisio",
+    "id": "wisio",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://www.wisio.ai"
+  },
+  {
+    "name": "ThesisAI",
+    "tagline": "Automated literature review drafting.",
+    "description": "Ingests multiple papers to generate a structured literature review with inline citations; demands thorough fact-checking and rewriting for accuracy.",
+    "pricing": "freemium",
+    "categories": [
+      "Writing & publishing"
+    ],
+    "tags": [
+      "literature-review",
+      "drafting"
+    ],
+    "evidence_cites": true,
+    "local_onprem": false,
+    "edu_discount": false,
+    "free_tier": true,
+    "beta": true,
+    "slug": "thesisai",
+    "id": "thesisai",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://thesisai.com"
+  },
+  {
+    "name": "Paperpal",
+    "tagline": "Academic writing editor.",
+    "description": "AI copy editor that improves grammar, syntax and clarity in academic manuscripts; supports multiple subject areas.",
+    "pricing": "freemium",
+    "categories": [
+      "Writing & publishing"
+    ],
+    "tags": [
+      "editing",
+      "grammar"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": true,
+    "free_tier": true,
+    "beta": false,
+    "slug": "paperpal",
+    "id": "paperpal",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://paperpal.com"
+  },
+  {
+    "name": "Trinka",
+    "tagline": "Academic English grammar checker.",
+    "description": "Tailored grammar and language suggestions for technical and academic writing; includes subject-specific phrase recommendations.",
+    "pricing": "freemium",
+    "categories": [
+      "Writing & publishing"
+    ],
+    "tags": [
+      "grammar",
+      "academic"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": true,
+    "free_tier": true,
+    "beta": false,
+    "slug": "trinka",
+    "id": "trinka",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://www.trinka.ai"
+  },
+  {
+    "name": "DeepL Write",
+    "tagline": "High-quality paraphrasing tool.",
+    "description": "From the makers of DeepL Translator; rewrites sentences and paragraphs to improve style and fluency while preserving meaning; supports multiple languages.",
+    "pricing": "freemium",
+    "categories": [
+      "Writing & publishing"
+    ],
+    "tags": [
+      "paraphrasing",
+      "language"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": false,
+    "free_tier": true,
+    "beta": false,
+    "slug": "deepl-write",
+    "id": "deepl-write",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://www.deepl.com/write"
+  },
+  {
+    "name": "Wordtune",
+    "tagline": "Sentence-level rewriting assistant.",
+    "description": "Suggests rephrasings of sentences to improve clarity, tone and flow; includes formal and casual modes; not specific to academia but useful for polishing drafts.",
+    "pricing": "freemium",
+    "categories": [
+      "Writing & publishing"
+    ],
+    "tags": [
+      "rewriting",
+      "tone"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": false,
+    "free_tier": true,
+    "beta": false,
+    "slug": "wordtune",
+    "id": "wordtune",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://wordtune.example.com"
+  },
+  {
+    "name": "Codeium",
+    "tagline": "Free AI code completion.",
+    "description": "Offers AI-powered code completions across multiple IDEs; can be self-hosted for privacy; always review generated code for license and correctness.",
+    "pricing": "freemium",
+    "categories": [
+      "Coding, stats, & automation"
+    ],
+    "tags": [
+      "code-completion",
+      "IDE"
+    ],
+    "evidence_cites": false,
+    "local_onprem": true,
+    "edu_discount": false,
+    "free_tier": true,
+    "beta": false,
+    "slug": "codeium",
+    "id": "codeium",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://www.codeium.com"
+  },
+  {
+    "name": "Amazon CodeWhisperer",
+    "tagline": "AI coding companion from AWS.",
+    "description": "Generates code suggestions and full functions in real time, with support for AWS integrations; free for individual use.",
+    "pricing": "freemium",
+    "categories": [
+      "Coding, stats, & automation"
+    ],
+    "tags": [
+      "code-completion",
+      "aws"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": false,
+    "free_tier": true,
+    "beta": false,
+    "slug": "amazon-codewhisperer",
+    "id": "amazon-codewhisperer",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://amazon-codewhisperer.example.com"
+  },
+  {
+    "name": "Tabnine",
+    "tagline": "AI code suggestions for many languages.",
+    "description": "Predictive coding assistant that offers context-aware completions; available offline/on-prem for teams concerned about privacy.",
+    "pricing": "freemium",
+    "categories": [
+      "Coding, stats, & automation"
+    ],
+    "tags": [
+      "code-completion",
+      "privacy"
+    ],
+    "evidence_cites": false,
+    "local_onprem": true,
+    "edu_discount": false,
+    "free_tier": true,
+    "beta": false,
+    "slug": "tabnine",
+    "id": "tabnine",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://tabnine.example.com"
+  },
+  {
+    "name": "Replit Ghostwriter",
+    "tagline": "AI collaborator in the browser.",
+    "description": "Replit\u2019s built-in assistant helps you write and debug code directly in the browser-based IDE; free tier available.",
+    "pricing": "freemium",
+    "categories": [
+      "Coding, stats, & automation"
+    ],
+    "tags": [
+      "browser-ide",
+      "assistant"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": false,
+    "free_tier": true,
+    "beta": false,
+    "slug": "replit-ghostwriter",
+    "id": "replit-ghostwriter",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://replit-ghostwriter.example.com"
+  },
+  {
+    "name": "Jupyter AI",
+    "tagline": "Conversational coding in notebooks.",
+    "description": "Extension for JupyterLab that lets you chat with an LLM about your code and data; can generate code and explain outputs; requires internet connectivity.",
+    "pricing": "freemium",
+    "categories": [
+      "Coding, stats, & automation"
+    ],
+    "tags": [
+      "jupyter",
+      "assistant"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": false,
+    "free_tier": true,
+    "beta": true,
+    "slug": "jupyter-ai",
+    "id": "jupyter-ai",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://jupyter-ai.example.com"
+  },
+  {
+    "name": "Wolfram Alpha",
+    "tagline": "Computational knowledge engine.",
+    "description": "Provides answers to math, science and data queries using curated knowledge and symbolic computation; integrates with Mathematica and ChatGPT.",
+    "pricing": "freemium",
+    "categories": [
+      "Coding, stats, & automation"
+    ],
+    "tags": [
+      "computation",
+      "math"
+    ],
+    "evidence_cites": true,
+    "local_onprem": false,
+    "edu_discount": true,
+    "free_tier": true,
+    "beta": false,
+    "slug": "wolfram-alpha",
+    "id": "wolfram-alpha",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://www.wolframalpha.com"
+  },
+  {
+    "name": "RTutor.ai",
+    "tagline": "Natural-language data analyst for R.",
+    "description": "AI assistant that writes R code to analyze your data based on plain language questions; useful for quick EDA and charts; check code before running.",
+    "pricing": "freemium",
+    "categories": [
+      "Coding, stats, & automation"
+    ],
+    "tags": [
+      "R",
+      "analysis"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": false,
+    "free_tier": true,
+    "beta": true,
+    "slug": "rtutor-ai",
+    "id": "rtutor-ai",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://rtutor.ai"
+  },
+  {
+    "name": "Julius AI",
+    "tagline": "Chat to your spreadsheets and databases.",
+    "description": "Connect spreadsheets or databases and ask for charts, statistics or queries in plain language; supports notebooks and secure SOC 2/TX-RAMP compliance.",
+    "pricing": "freemium",
+    "categories": [
+      "Coding, stats, & automation",
+      "Data wrangling, analysis, & visualization"
+    ],
+    "tags": [
+      "data-analysis",
+      "charts"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": true,
+    "free_tier": true,
+    "beta": false,
+    "slug": "julius-ai",
+    "id": "julius-ai",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://www.julius.ai"
+  },
+  {
+    "name": "Excel Analyze Data",
+    "tagline": "Ask Excel about your data.",
+    "description": "Microsoft Excel\u2019s built-in AI feature (formerly Ideas) generates charts, pivot tables and answers to natural-language questions based on spreadsheet data.",
+    "pricing": "freemium",
+    "categories": [
+      "Data wrangling, analysis, & visualization"
+    ],
+    "tags": [
+      "excel",
+      "analysis"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": false,
+    "free_tier": true,
+    "beta": false,
+    "slug": "excel-analyze-data",
+    "id": "excel-analyze-data",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://www.microsoft.com/en-us/microsoft-365/excel"
+  },
+  {
+    "name": "Undetectable AI",
+    "tagline": "Detector and humanizer (not recommended).",
+    "description": "Aims to evade AI text detection; marketing tool not suited for scholarly writing; using such tools may violate academic integrity policies.",
+    "pricing": "freemium",
+    "categories": [
+      "Data wrangling, analysis, & visualization",
+      "Integrity & compliance"
+    ],
+    "tags": [
+      "humanizer",
+      "risk"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": false,
+    "free_tier": true,
+    "beta": true,
+    "slug": "undetectable-ai",
+    "id": "undetectable-ai",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://undetectable.ai"
+  },
+  {
+    "name": "Afforai (Logically.app)",
+    "tagline": "Workspace for references and summaries.",
+    "description": "Rebranded workspace combining reference management, literature review support, annotation and drafting; produces cite-grounded summaries and comparison pages.",
+    "pricing": "freemium",
+    "categories": [
+      "Data wrangling, analysis, & visualization",
+      "Citation & reference management"
+    ],
+    "tags": [
+      "workspace",
+      "summaries"
+    ],
+    "evidence_cites": true,
+    "local_onprem": false,
+    "edu_discount": true,
+    "free_tier": true,
+    "beta": false,
+    "slug": "afforai-logically-app",
+    "id": "afforai-logically-app",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://afforai-logically-app.example.com"
+  },
+  {
+    "name": "Granted AI",
+    "tagline": "Grant writing copilot.",
+    "description": "Trained on proposal patterns, this tool generates sections of grant applications and offers on-the-fly structuring; always attach real data and budgets.",
+    "pricing": "paid",
+    "categories": [
+      "Data wrangling, analysis, & visualization"
+    ],
+    "tags": [
+      "grants",
+      "writing"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": true,
+    "free_tier": false,
+    "beta": false,
+    "slug": "granted-ai",
+    "id": "granted-ai",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://granted.ai"
+  },
+  {
+    "name": "DataRobot",
+    "tagline": "Automated machine learning platform.",
+    "description": "AutoML system that builds and compares models automatically; good for predictive modeling but requires understanding of data and evaluation metrics.",
+    "pricing": "paid",
+    "categories": [
+      "Data wrangling, analysis, & visualization"
+    ],
+    "tags": [
+      "automl",
+      "modeling"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": true,
+    "free_tier": false,
+    "beta": false,
+    "slug": "datarobot",
+    "id": "datarobot",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://datarobot.example.com"
+  },
+  {
+    "name": "Tableau Ask Data",
+    "tagline": "Natural-language analytics in Tableau.",
+    "description": "Feature of Tableau that allows users to ask questions about their data and automatically create visualizations; works best with well-structured datasets.",
+    "pricing": "paid",
+    "categories": [
+      "Data wrangling, analysis, & visualization"
+    ],
+    "tags": [
+      "tableau",
+      "analytics"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": true,
+    "free_tier": false,
+    "beta": false,
+    "slug": "tableau-ask-data",
+    "id": "tableau-ask-data",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://tableau-ask-data.example.com"
+  },
+  {
+    "name": "IBM Watson Analytics",
+    "tagline": "Automated data discovery.",
+    "description": "Cloud-based analytics that applies AI to discover patterns and build predictive models with interactive dashboards; verify results carefully.",
+    "pricing": "paid",
+    "categories": [
+      "Data wrangling, analysis, & visualization"
+    ],
+    "tags": [
+      "analytics",
+      "dashboard"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": true,
+    "free_tier": false,
+    "beta": false,
+    "slug": "ibm-watson-analytics",
+    "id": "ibm-watson-analytics",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://ibm-watson-analytics.example.com"
+  },
+  {
+    "name": "Kaggle Notebooks AI",
+    "tagline": "AI-assisted Python notebook suggestions.",
+    "description": "On Kaggle\u2019s platform you can now get code suggestions and explanations for analyses directly in notebooks; great for data competitions and exploration.",
+    "pricing": "free",
+    "categories": [
+      "Data wrangling, analysis, & visualization",
+      "Coding, stats, & automation"
+    ],
+    "tags": [
+      "notebooks",
+      "data"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": false,
+    "free_tier": true,
+    "beta": true,
+    "slug": "kaggle-notebooks-ai",
+    "id": "kaggle-notebooks-ai",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://kaggle-notebooks-ai.example.com"
+  },
+  {
+    "name": "MAXQDA",
+    "tagline": "Comprehensive QDA software.",
+    "description": "Industry-standard qualitative data analysis package with AI-assisted coding, sentiment analysis and visualization; cross-platform.",
+    "pricing": "paid",
+    "categories": [
+      "Qualitative analysis"
+    ],
+    "tags": [
+      "coding",
+      "sentiment"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": true,
+    "free_tier": false,
+    "beta": false,
+    "slug": "maxqda",
+    "id": "maxqda",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://www.maxqda.com"
+  },
+  {
+    "name": "Dedoose",
+    "tagline": "Web-based mixed-methods analysis.",
+    "description": "Browser-based platform for qualitative and mixed-methods research; supports coding, memos and collaborative teamwork.",
+    "pricing": "paid",
+    "categories": [
+      "Qualitative analysis"
+    ],
+    "tags": [
+      "mixed-methods",
+      "collaboration"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": true,
+    "free_tier": false,
+    "beta": false,
+    "slug": "dedoose",
+    "id": "dedoose",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://dedoose.example.com"
+  },
+  {
+    "name": "Taguette",
+    "tagline": "Open-source text annotation.",
+    "description": "Free and open-source tool for qualitative coding; runs locally or on a server; great for teaching and small projects.",
+    "pricing": "free",
+    "categories": [
+      "Qualitative analysis"
+    ],
+    "tags": [
+      "open-source",
+      "coding"
+    ],
+    "evidence_cites": false,
+    "local_onprem": true,
+    "edu_discount": false,
+    "free_tier": true,
+    "beta": false,
+    "slug": "taguette",
+    "id": "taguette",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://taguette.example.com"
+  },
+  {
+    "name": "Quirkos",
+    "tagline": "Visual QDA software.",
+    "description": "User-friendly qualitative analysis with bubble-based visualization of codes; helpful for small to medium projects.",
+    "pricing": "paid",
+    "categories": [
+      "Qualitative analysis"
+    ],
+    "tags": [
+      "visualization",
+      "coding"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": true,
+    "free_tier": false,
+    "beta": false,
+    "slug": "quirkos",
+    "id": "quirkos",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://quirkos.example.com"
+  },
+  {
+    "name": "WebQDA",
+    "tagline": "Online qualitative analysis platform.",
+    "description": "Portuguese-developed web platform for qualitative data analysis and collaboration; supports coding and memoing.",
+    "pricing": "paid",
+    "categories": [
+      "Qualitative analysis"
+    ],
+    "tags": [
+      "web",
+      "collaboration"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": true,
+    "free_tier": false,
+    "beta": false,
+    "slug": "webqda",
+    "id": "webqda",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://webqda.example.com"
+  },
+  {
+    "name": "QDA Miner",
+    "tagline": "Provalis\u2019 text analytics package.",
+    "description": "Combines qualitative coding with quantitative content analysis and text mining; integrates with WordStat for advanced analytics.",
+    "pricing": "paid",
+    "categories": [
+      "Qualitative analysis"
+    ],
+    "tags": [
+      "text-mining",
+      "analysis"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": true,
+    "free_tier": false,
+    "beta": false,
+    "slug": "qda-miner",
+    "id": "qda-miner",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://qda-miner.example.com"
+  },
+  {
+    "name": "QCAmap",
+    "tagline": "Qualitative content analysis web app.",
+    "description": "Web-based tool to assist with qualitative content analysis following Mayring\u2019s methodology; supports coding and category development.",
+    "pricing": "free",
+    "categories": [
+      "Qualitative analysis"
+    ],
+    "tags": [
+      "content-analysis",
+      "mayring"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": false,
+    "free_tier": true,
+    "beta": false,
+    "slug": "qcamap",
+    "id": "qcamap",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://qcamap.example.com"
+  },
+  {
+    "name": "QDAcity",
+    "tagline": "Collaborative qualitative data analysis.",
+    "description": "Team-based QDA platform that supports annotation, memoing and project management; offers AI-assisted coding suggestions.",
+    "pricing": "freemium",
+    "categories": [
+      "Qualitative analysis"
+    ],
+    "tags": [
+      "team",
+      "annotation"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": true,
+    "free_tier": true,
+    "beta": true,
+    "slug": "qdacity",
+    "id": "qdacity",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://qdacity.example.com"
+  },
+  {
+    "name": "Descript",
+    "tagline": "Edit audio by editing text.",
+    "description": "Transcription and audio/video editing platform where edits to the text automatically reflect in the media; includes AI voice cloning (with consent).",
+    "pricing": "freemium",
+    "categories": [
+      "Transcription & meeting notes"
+    ],
+    "tags": [
+      "transcription",
+      "editing"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": false,
+    "free_tier": true,
+    "beta": false,
+    "slug": "descript",
+    "id": "descript",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://www.descript.com"
+  },
+  {
+    "name": "Fireflies.ai",
+    "tagline": "AI meeting assistant with notes.",
+    "description": "Records meetings, provides searchable transcripts, identifies action items and integrates with calendar and collaboration tools.",
+    "pricing": "freemium",
+    "categories": [
+      "Transcription & meeting notes",
+      "Collaboration & knowledge management"
+    ],
+    "tags": [
+      "meetings",
+      "notes"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": false,
+    "free_tier": true,
+    "beta": false,
+    "slug": "fireflies-ai",
+    "id": "fireflies-ai",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://fireflies.ai"
+  },
+  {
+    "name": "Zoom AI Companion",
+    "tagline": "Smart summaries for Zoom meetings.",
+    "description": "Zoom\u2019s AI Companion generates meeting summaries, chapters and next-step suggestions; quality can vary, so review before sharing.",
+    "pricing": "freemium",
+    "categories": [
+      "Transcription & meeting notes"
+    ],
+    "tags": [
+      "meetings",
+      "summaries"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": true,
+    "free_tier": true,
+    "beta": true,
+    "slug": "zoom-ai-companion",
+    "id": "zoom-ai-companion",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://explore.zoom.us/en/ai-companion/"
+  },
+  {
+    "name": "Trint",
+    "tagline": "Automated transcription & editing.",
+    "description": "Provides fast, automated transcription with an editor to refine text; supports multiple languages and exports.",
+    "pricing": "paid",
+    "categories": [
+      "Transcription & meeting notes"
+    ],
+    "tags": [
+      "transcription",
+      "editing"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": true,
+    "free_tier": false,
+    "beta": false,
+    "slug": "trint",
+    "id": "trint",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://trint.example.com"
+  },
+  {
+    "name": "HappyScribe",
+    "tagline": "Audio transcription in many languages.",
+    "description": "Web-based transcription and subtitles generation tool; offers team collaboration and human-corrected transcripts as an option.",
+    "pricing": "paid",
+    "categories": [
+      "Transcription & meeting notes"
+    ],
+    "tags": [
+      "subtitles",
+      "languages"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": true,
+    "free_tier": false,
+    "beta": false,
+    "slug": "happyscribe",
+    "id": "happyscribe",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://happyscribe.example.com"
+  },
+  {
+    "name": "Rev.ai",
+    "tagline": "Speech-to-text API and service.",
+    "description": "Automatic and human transcription services via API or web interface; widely used for research and media.",
+    "pricing": "paid",
+    "categories": [
+      "Transcription & meeting notes"
+    ],
+    "tags": [
+      "api",
+      "speech"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": true,
+    "free_tier": false,
+    "beta": false,
+    "slug": "rev-ai",
+    "id": "rev-ai",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://rev-ai.example.com"
+  },
+  {
+    "name": "Sonix.ai",
+    "tagline": "Fast transcription & translation.",
+    "description": "AI transcription and translation platform with collaborative editing and search across files; supports many languages.",
+    "pricing": "paid",
+    "categories": [
+      "Transcription & meeting notes"
+    ],
+    "tags": [
+      "transcription",
+      "translation"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": false,
+    "free_tier": true,
+    "beta": false,
+    "slug": "sonix-ai",
+    "id": "sonix-ai",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://sonix-ai.example.com"
+  },
+  {
+    "name": "Loom",
+    "tagline": "Async video messaging with transcripts.",
+    "description": "Record short video messages that automatically include transcripts and captions; useful for sharing quick updates or tutorials.",
+    "pricing": "freemium",
+    "categories": [
+      "Transcription & meeting notes",
+      "Collaboration & knowledge management"
+    ],
+    "tags": [
+      "video",
+      "asynchronous"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": true,
+    "free_tier": true,
+    "beta": false,
+    "slug": "loom",
+    "id": "loom",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://loom.example.com"
+  },
+  {
+    "name": "Thematic",
+    "tagline": "AI-powered feedback analysis.",
+    "description": "Analyzes qualitative survey responses and uncovers themes using AI and NLP; suited for large datasets; always review the results manually.",
+    "pricing": "paid",
+    "categories": [
+      "Surveys & text analytics"
+    ],
+    "tags": [
+      "text-analytics",
+      "themes"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": false,
+    "free_tier": false,
+    "beta": false,
+    "slug": "thematic",
+    "id": "thematic",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://getthematic.com"
+  },
+  {
+    "name": "Typeform",
+    "tagline": "Conversational surveys with analytics.",
+    "description": "Create engaging, conversational surveys; includes a feature for AI-generated questions and summary insights; test for bias before deployment.",
+    "pricing": "freemium",
+    "categories": [
+      "Surveys & text analytics"
+    ],
+    "tags": [
+      "surveys",
+      "forms"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": false,
+    "free_tier": true,
+    "beta": false,
+    "slug": "typeform",
+    "id": "typeform",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://typeform.example.com"
+  },
+  {
+    "name": "Alchemer",
+    "tagline": "Enterprise survey platform.",
+    "description": "Formerly SurveyGizmo; offers advanced survey design, logic and AI insights; widely used in research and customer feedback.",
+    "pricing": "paid",
+    "categories": [
+      "Surveys & text analytics"
+    ],
+    "tags": [
+      "survey",
+      "enterprise"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": true,
+    "free_tier": false,
+    "beta": false,
+    "slug": "alchemer",
+    "id": "alchemer",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://alchemer.example.com"
+  },
+  {
+    "name": "Dovetail",
+    "tagline": "Research repository with analysis.",
+    "description": "Customer and user research platform that organizes notes, transcripts and surveys, with automated tagging and sentiment analysis.",
+    "pricing": "paid",
+    "categories": [
+      "Surveys & text analytics",
+      "Collaboration & knowledge management"
+    ],
+    "tags": [
+      "repository",
+      "sentiment"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": true,
+    "free_tier": false,
+    "beta": false,
+    "slug": "dovetail",
+    "id": "dovetail",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://dovetail.example.com"
+  },
+  {
+    "name": "Clarabridge",
+    "tagline": "Text analytics and CX insights.",
+    "description": "Enterprise text analytics platform that extracts sentiment and intent from open feedback across channels; heavy-duty solution.",
+    "pricing": "paid",
+    "categories": [
+      "Surveys & text analytics"
+    ],
+    "tags": [
+      "sentiment",
+      "enterprise"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": false,
+    "free_tier": false,
+    "beta": false,
+    "slug": "clarabridge",
+    "id": "clarabridge",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://clarabridge.example.com"
+  },
+  {
+    "name": "SurveySparrow",
+    "tagline": "Engaging surveys with automation.",
+    "description": "Survey platform with chat\u2011like surveys, NPS and 360 reviews; includes conversational analytics and integrations.",
+    "pricing": "freemium",
+    "categories": [
+      "Surveys & text analytics"
+    ],
+    "tags": [
+      "surveys",
+      "nps"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": false,
+    "free_tier": true,
+    "beta": false,
+    "slug": "surveysparrow",
+    "id": "surveysparrow",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://surveysparrow.example.com"
+  },
+  {
+    "name": "Qualaroo",
+    "tagline": "On-site surveys with AI analytics.",
+    "description": "Collects contextual feedback via website pop-ups and analyzes responses using sentiment and theme detection.",
+    "pricing": "paid",
+    "categories": [
+      "Surveys & text analytics"
+    ],
+    "tags": [
+      "website",
+      "feedback"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": false,
+    "free_tier": false,
+    "beta": false,
+    "slug": "qualaroo",
+    "id": "qualaroo",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://qualaroo.example.com"
+  },
+  {
+    "name": "MonkeyLearn",
+    "tagline": "No-code text analysis.",
+    "description": "Provides pre-built and custom machine learning models to analyze sentiment, intent, topics and keywords in survey responses and other text data.",
+    "pricing": "freemium",
+    "categories": [
+      "Surveys & text analytics"
+    ],
+    "tags": [
+      "nlp",
+      "no-code"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": false,
+    "free_tier": true,
+    "beta": false,
+    "slug": "monkeylearn",
+    "id": "monkeylearn",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://monkeylearn.example.com"
+  },
+  {
+    "name": "Eraser AI",
+    "tagline": "Generate flowcharts from text.",
+    "description": "Transforms plain-English descriptions into flowcharts automatically; good for quickly sketching algorithms or workflows, but complex flows may need refinement.",
+    "pricing": "freemium",
+    "categories": [
+      "Figures, images & visualizations"
+    ],
+    "tags": [
+      "flowcharts",
+      "diagrams"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": false,
+    "free_tier": true,
+    "beta": true,
+    "slug": "eraser-ai",
+    "id": "eraser-ai",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://eraser-ai.example.com"
+  },
+  {
+    "name": "Midjourney",
+    "tagline": "Creative text-to-image generator.",
+    "description": "Generates high-quality artistic images from textual prompts via Discord; not suitable for scientific diagrams; credit required when using images.",
+    "pricing": "paid",
+    "categories": [
+      "Figures, images & visualizations"
+    ],
+    "tags": [
+      "art",
+      "image-generation"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": false,
+    "free_tier": false,
+    "beta": true,
+    "slug": "midjourney",
+    "id": "midjourney",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://www.midjourney.com"
+  },
+  {
+    "name": "Stable Diffusion",
+    "tagline": "Open-source image generation model.",
+    "description": "Generative model that can be locally run to produce images from text prompts; can be fine\u2011tuned; ensure transparency when using generated images in research.",
+    "pricing": "free",
+    "categories": [
+      "Figures, images & visualizations"
+    ],
+    "tags": [
+      "image-generation",
+      "open-source"
+    ],
+    "evidence_cites": false,
+    "local_onprem": true,
+    "edu_discount": false,
+    "free_tier": true,
+    "beta": true,
+    "slug": "stable-diffusion",
+    "id": "stable-diffusion",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://stability.ai"
+  },
+  {
+    "name": "Microsoft Designer",
+    "tagline": "AI-powered graphic design.",
+    "description": "Part of Microsoft 365; helps generate professional-looking designs, social media posts and graphics quickly using AI suggestions.",
+    "pricing": "freemium",
+    "categories": [
+      "Figures, images & visualizations"
+    ],
+    "tags": [
+      "design",
+      "templates"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": true,
+    "free_tier": true,
+    "beta": false,
+    "slug": "microsoft-designer",
+    "id": "microsoft-designer",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://designer.microsoft.com"
+  },
+  {
+    "name": "Canva Magic Design",
+    "tagline": "AI to spark creative designs.",
+    "description": "Canva\u2019s AI system generates design drafts based on your content and preferences; useful for slides and posters but check for scientific accuracy.",
+    "pricing": "freemium",
+    "categories": [
+      "Figures, images & visualizations"
+    ],
+    "tags": [
+      "design",
+      "slides"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": true,
+    "free_tier": true,
+    "beta": false,
+    "slug": "canva-magic-design",
+    "id": "canva-magic-design",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://canva-magic-design.example.com"
+  },
+  {
+    "name": "ChartGPT",
+    "tagline": "Charts from natural language.",
+    "description": "Converts natural language descriptions into charts and plots automatically; helps illustrate data quickly; verify chart choices and scales.",
+    "pricing": "freemium",
+    "categories": [
+      "Figures, images & visualizations",
+      "Data wrangling, analysis, & visualization"
+    ],
+    "tags": [
+      "charts",
+      "visualization"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": false,
+    "free_tier": true,
+    "beta": true,
+    "slug": "chartgpt",
+    "id": "chartgpt",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://chartgpt.example.com"
+  },
+  {
+    "name": "Genially",
+    "tagline": "Interactive visuals and infographics.",
+    "description": "Tool for creating interactive presentations, infographics and storytelling visuals; includes AI suggestions; good for teaching and outreach.",
+    "pricing": "freemium",
+    "categories": [
+      "Figures, images & visualizations",
+      "Teaching & assessment"
+    ],
+    "tags": [
+      "interactive",
+      "infographics"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": true,
+    "free_tier": true,
+    "beta": false,
+    "slug": "genially",
+    "id": "genially",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://genially.example.com"
+  },
+  {
+    "name": "ChartAI",
+    "tagline": "Automated chart generation.",
+    "description": "Generates a variety of charts and dashboards from datasets using AI; tailor the charts to your audience and verify accuracy.",
+    "pricing": "freemium",
+    "categories": [
+      "Figures, images & visualizations"
+    ],
+    "tags": [
+      "charts",
+      "dashboards"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": false,
+    "free_tier": true,
+    "beta": true,
+    "slug": "chartai",
+    "id": "chartai",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://chartai.example.com"
+  },
+  {
+    "name": "Khanmigo",
+    "tagline": "GPT-4-powered tutor on Khan Academy.",
+    "description": "Experimental tutor that guides students through problems step-by-step rather than giving answers; helps teachers draft lesson plans and quizzes.",
+    "pricing": "freemium",
+    "categories": [
+      "Teaching & assessment"
+    ],
+    "tags": [
+      "tutor",
+      "education"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": true,
+    "free_tier": true,
+    "beta": true,
+    "slug": "khanmigo",
+    "id": "khanmigo",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://www.khanacademy.org/khan-labs"
+  },
+  {
+    "name": "Canvas Engage (GPT-4)",
+    "tagline": "AI assistant in Canvas LMS.",
+    "description": "Instructure\u2019s integration of GPT-4 into Canvas offers question generation, forum summaries and instructor support; quality of outputs requires oversight.",
+    "pricing": "freemium",
+    "categories": [
+      "Teaching & assessment"
+    ],
+    "tags": [
+      "LMS",
+      "assistant"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": true,
+    "free_tier": true,
+    "beta": true,
+    "slug": "canvas-engage-gpt-4",
+    "id": "canvas-engage-gpt-4",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://canvas-engage-gpt-4.example.com"
+  },
+  {
+    "name": "Quizlet Q-Chat",
+    "tagline": "Conversational flashcard practice.",
+    "description": "GPT-powered chat mode that helps students learn with flashcards by asking and answering questions; best used alongside human-checked materials.",
+    "pricing": "freemium",
+    "categories": [
+      "Teaching & assessment"
+    ],
+    "tags": [
+      "flashcards",
+      "chat"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": false,
+    "free_tier": true,
+    "beta": true,
+    "slug": "quizlet-q-chat",
+    "id": "quizlet-q-chat",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://quizlet.com/features/q-chat"
+  },
+  {
+    "name": "Quillionz",
+    "tagline": "Question generator for educators.",
+    "description": "Generates quizzes and question sets from source material; good starting point for assessments but requires review to ensure accuracy and fairness.",
+    "pricing": "freemium",
+    "categories": [
+      "Teaching & assessment"
+    ],
+    "tags": [
+      "question-generation",
+      "assessment"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": false,
+    "free_tier": true,
+    "beta": true,
+    "slug": "quillionz",
+    "id": "quillionz",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://quillionz.example.com"
+  },
+  {
+    "name": "Cognii",
+    "tagline": "AI tutor with adaptive feedback.",
+    "description": "Provides open-response tutoring and assessment using natural-language understanding; offers adaptive feedback to learners; used in K-12 and higher education.",
+    "pricing": "paid",
+    "categories": [
+      "Teaching & assessment"
+    ],
+    "tags": [
+      "tutor",
+      "adaptive"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": false,
+    "free_tier": false,
+    "beta": false,
+    "slug": "cognii",
+    "id": "cognii",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://cognii.example.com"
+  },
+  {
+    "name": "Squirrel AI",
+    "tagline": "Personalized learning system.",
+    "description": "Chinese adaptive learning platform that creates individualized study plans and provides AI-driven instruction across subjects.",
+    "pricing": "paid",
+    "categories": [
+      "Teaching & assessment"
+    ],
+    "tags": [
+      "adaptive-learning",
+      "personalized"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": false,
+    "free_tier": false,
+    "beta": false,
+    "slug": "squirrel-ai",
+    "id": "squirrel-ai",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://squirrel-ai.example.com"
+  },
+  {
+    "name": "Century Tech",
+    "tagline": "AI-powered teaching and assessment.",
+    "description": "Platform that uses AI to tailor learning paths for students, monitor progress and provide analytics to teachers; emphasises mastery-based learning.",
+    "pricing": "paid",
+    "categories": [
+      "Teaching & assessment"
+    ],
+    "tags": [
+      "analytics",
+      "learning-path"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": true,
+    "free_tier": false,
+    "beta": false,
+    "slug": "century-tech",
+    "id": "century-tech",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://century-tech.example.com"
+  },
+  {
+    "name": "Gradescope",
+    "tagline": "Assistive grading for problem sets.",
+    "description": "Groups similar answers to speed grading of written assignments and coding problems; instructors must verify groups for fairness.",
+    "pricing": "paid",
+    "categories": [
+      "Teaching & assessment"
+    ],
+    "tags": [
+      "grading",
+      "education"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": true,
+    "free_tier": false,
+    "beta": false,
+    "slug": "gradescope-2",
+    "id": "gradescope-2",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://gradescope-2.example.com"
+  },
+  {
+    "name": "GPTZero",
+    "tagline": "Detect AI-generated text.",
+    "description": "One of the early free web tools to estimate whether text is AI-written using perplexity and burstiness; prone to false positives/negatives\u2014use with caution.",
+    "pricing": "freemium",
+    "categories": [
+      "Integrity & compliance"
+    ],
+    "tags": [
+      "ai-detection",
+      "plagiarism"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": false,
+    "free_tier": true,
+    "beta": true,
+    "slug": "gptzero",
+    "id": "gptzero",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://gptzero.me"
+  },
+  {
+    "name": "Ouriginal (Urkund)",
+    "tagline": "European plagiarism detection.",
+    "description": "Well-established plagiarism detection system, now part of Turnitin, focusing on similarity checking; does not specifically detect AI writing.",
+    "pricing": "paid",
+    "categories": [
+      "Integrity & compliance"
+    ],
+    "tags": [
+      "similarity-check",
+      "plagiarism"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": true,
+    "free_tier": false,
+    "beta": false,
+    "slug": "ouriginal-urkund",
+    "id": "ouriginal-urkund",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://ouriginal-urkund.example.com"
+  },
+  {
+    "name": "CopyLeaks AI Detector",
+    "tagline": "AI content and plagiarism checker.",
+    "description": "Detects plagiarized and AI-generated content with a machine-learning model; useful to supplement human judgment.",
+    "pricing": "freemium",
+    "categories": [
+      "Integrity & compliance"
+    ],
+    "tags": [
+      "ai-detection",
+      "plagiarism"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": false,
+    "free_tier": true,
+    "beta": true,
+    "slug": "copyleaks-ai-detector",
+    "id": "copyleaks-ai-detector",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://copyleaks-ai-detector.example.com"
+  },
+  {
+    "name": "ZeroGPT",
+    "tagline": "AI text detection tool.",
+    "description": "Analyzes text to predict the likelihood it was generated by AI; accuracy varies; treat results as preliminary.",
+    "pricing": "freemium",
+    "categories": [
+      "Integrity & compliance"
+    ],
+    "tags": [
+      "ai-detection",
+      "text-analysis"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": false,
+    "free_tier": true,
+    "beta": true,
+    "slug": "zerogpt",
+    "id": "zerogpt",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://zerogpt.example.com"
+  },
+  {
+    "name": "Originality.ai",
+    "tagline": "AI and plagiarism scanning for professionals.",
+    "description": "Subscription service that scans content for plagiarism and AI generation; often used by publishers and agencies.",
+    "pricing": "paid",
+    "categories": [
+      "Integrity & compliance"
+    ],
+    "tags": [
+      "ai-detection",
+      "plagiarism"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": false,
+    "free_tier": false,
+    "beta": false,
+    "slug": "originality-ai",
+    "id": "originality-ai",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://originality-ai.example.com"
+  },
+  {
+    "name": "Plagscan",
+    "tagline": "Academic plagiarism detection.",
+    "description": "Traditional similarity checking tool used by universities; compares documents against a large database; doesn\u2019t detect AI text.",
+    "pricing": "paid",
+    "categories": [
+      "Integrity & compliance"
+    ],
+    "tags": [
+      "plagiarism",
+      "academic"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": true,
+    "free_tier": false,
+    "beta": false,
+    "slug": "plagscan",
+    "id": "plagscan",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://plagscan.example.com"
+  },
+  {
+    "name": "iThenticate",
+    "tagline": "Professional plagiarism checker.",
+    "description": "Used by journals and publishers to scan manuscripts for overlap with published literature; part of Turnitin; does not detect AI writing.",
+    "pricing": "paid",
+    "categories": [
+      "Integrity & compliance"
+    ],
+    "tags": [
+      "plagiarism",
+      "manuscripts"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": true,
+    "free_tier": false,
+    "beta": false,
+    "slug": "ithenticate",
+    "id": "ithenticate",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://ithenticate.example.com"
+  },
+  {
+    "name": "PaperRater",
+    "tagline": "Grammar and plagiarism checker.",
+    "description": "Free online tool that evaluates grammar, spelling and originality; suitable for students seeking feedback on drafts; accuracy varies.",
+    "pricing": "freemium",
+    "categories": [
+      "Integrity & compliance"
+    ],
+    "tags": [
+      "grammar-check",
+      "plagiarism"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": false,
+    "free_tier": true,
+    "beta": false,
+    "slug": "paperrater",
+    "id": "paperrater",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://paperrater.example.com"
+  },
+  {
+    "name": "Colabra",
+    "tagline": "Intelligent lab notebook.",
+    "description": "AI-enhanced electronic lab notebook for research teams, offering experiment tracking, protocol templates and insights across projects.",
+    "pricing": "paid",
+    "categories": [
+      "Project & experiment tracking"
+    ],
+    "tags": [
+      "eln",
+      "team"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": true,
+    "free_tier": false,
+    "beta": true,
+    "slug": "colabra",
+    "id": "colabra",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://colabra.app"
+  },
+  {
+    "name": "LabArchives",
+    "tagline": "Electronic lab notebook with compliance.",
+    "description": "Widely used ELN that helps labs store, organize and share experimental records; offers compliance with regulatory standards.",
+    "pricing": "paid",
+    "categories": [
+      "Project & experiment tracking"
+    ],
+    "tags": [
+      "eln",
+      "compliance"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": true,
+    "free_tier": false,
+    "beta": false,
+    "slug": "labarchives",
+    "id": "labarchives",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://labarchives.example.com"
+  },
+  {
+    "name": "Labguru",
+    "tagline": "Integrated lab management platform.",
+    "description": "Combines lab notebook, inventory, and project management; includes protocol management and scheduling tools.",
+    "pricing": "paid",
+    "categories": [
+      "Project & experiment tracking"
+    ],
+    "tags": [
+      "eln",
+      "inventory"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": true,
+    "free_tier": false,
+    "beta": false,
+    "slug": "labguru",
+    "id": "labguru",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://www.labguru.com"
+  },
+  {
+    "name": "eLabFTW",
+    "tagline": "Open-source ELN and database.",
+    "description": "Self-hosted electronic lab notebook with inventory management and scheduling; free and open-source, with strong security features.",
+    "pricing": "free",
+    "categories": [
+      "Project & experiment tracking"
+    ],
+    "tags": [
+      "eln",
+      "open-source"
+    ],
+    "evidence_cites": false,
+    "local_onprem": true,
+    "edu_discount": false,
+    "free_tier": true,
+    "beta": false,
+    "slug": "elabftw",
+    "id": "elabftw",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://www.elabftw.net"
+  },
+  {
+    "name": "SciNote",
+    "tagline": "Research data management and ELN.",
+    "description": "Electronic lab notebook combined with project and data management; includes AI suggestions for experiment planning.",
+    "pricing": "paid",
+    "categories": [
+      "Project & experiment tracking"
+    ],
+    "tags": [
+      "eln",
+      "data-management"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": true,
+    "free_tier": false,
+    "beta": true,
+    "slug": "scinote",
+    "id": "scinote",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://www.scinote.net"
+  },
+  {
+    "name": "RSpace",
+    "tagline": "Collaborative ELN platform.",
+    "description": "Electronic lab notebook designed for research teams; integrates with institutional repositories and storage; cloud and on-prem options.",
+    "pricing": "paid",
+    "categories": [
+      "Project & experiment tracking"
+    ],
+    "tags": [
+      "eln",
+      "collaboration"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": true,
+    "free_tier": false,
+    "beta": false,
+    "slug": "rspace",
+    "id": "rspace",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://www.rspace.com"
+  },
+  {
+    "name": "LabTwin",
+    "tagline": "Voice-activated digital lab assistant.",
+    "description": "Digital assistant for lab work that captures notes via voice commands, logs data and assists with protocol steps; hands-free operation.",
+    "pricing": "paid",
+    "categories": [
+      "Project & experiment tracking"
+    ],
+    "tags": [
+      "voice",
+      "assistant"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": false,
+    "free_tier": false,
+    "beta": true,
+    "slug": "labtwin",
+    "id": "labtwin",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://www.labtwin.com"
+  },
+  {
+    "name": "Benchling",
+    "tagline": "Modern ELN for life sciences.",
+    "description": "Collaborative lab notebook with AI helpers and inventory; institutional tool.",
+    "pricing": "paid",
+    "categories": [
+      "Project & experiment tracking"
+    ],
+    "tags": [
+      "eln",
+      "lab"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": true,
+    "free_tier": false,
+    "beta": false,
+    "slug": "benchling-2",
+    "id": "benchling-2",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://www.benchling.com"
+  },
+  {
+    "name": "DMPTool",
+    "tagline": "Data management plan builder.",
+    "description": "Guides researchers through creating funder-compliant Data Management Plans with templates and example language; helps ensure data sharing requirements are met.",
+    "pricing": "free",
+    "categories": [
+      "Policy & ethics support"
+    ],
+    "tags": [
+      "data-management",
+      "templates"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": true,
+    "free_tier": true,
+    "beta": false,
+    "slug": "dmptool",
+    "id": "dmptool",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://dmptool.org/"
+  },
+  {
+    "name": "DMPonline",
+    "tagline": "Online DMP creation tool.",
+    "description": "UK-based platform similar to DMPTool for drafting Data Management Plans tailored to funder and institutional requirements.",
+    "pricing": "free",
+    "categories": [
+      "Policy & ethics support"
+    ],
+    "tags": [
+      "data-management",
+      "plans"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": true,
+    "free_tier": true,
+    "beta": false,
+    "slug": "dmponline",
+    "id": "dmponline",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://dmponline.dcc.ac.uk"
+  },
+  {
+    "name": "IRB Advisor",
+    "tagline": "Guidance for ethical research protocols.",
+    "description": "Provides information and advice on preparing Institutional Review Board applications and maintaining compliance with human-subject research regulations.",
+    "pricing": "paid",
+    "categories": [
+      "Policy & ethics support"
+    ],
+    "tags": [
+      "irb",
+      "guidance"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": true,
+    "free_tier": false,
+    "beta": false,
+    "slug": "irb-advisor",
+    "id": "irb-advisor",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://irbadvisor.com"
+  },
+  {
+    "name": "ConsentBuilder",
+    "tagline": "Templates for informed consent.",
+    "description": "Offers templates and AI-assisted text suggestions to draft readable informed consent documents; still requires customization and review.",
+    "pricing": "freemium",
+    "categories": [
+      "Policy & ethics support"
+    ],
+    "tags": [
+      "consent",
+      "templates"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": false,
+    "free_tier": true,
+    "beta": true,
+    "slug": "consentbuilder",
+    "id": "consentbuilder",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://consentbuilder.com"
+  },
+  {
+    "name": "DataSeer",
+    "tagline": "Check data sharing compliance.",
+    "description": "Analyzes manuscripts to see if data sharing requirements are met and suggests actions; helps ensure compliance with funders and journals.",
+    "pricing": "paid",
+    "categories": [
+      "Policy & ethics support"
+    ],
+    "tags": [
+      "compliance",
+      "data-sharing"
+    ],
+    "evidence_cites": true,
+    "local_onprem": false,
+    "edu_discount": true,
+    "free_tier": false,
+    "beta": false,
+    "slug": "dataseer",
+    "id": "dataseer",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://dataseer.ai"
+  },
+  {
+    "name": "Ethics & Compliance Chatbot",
+    "tagline": "Ask about research ethics guidelines.",
+    "description": "Conversational assistant trained on research ethics, legal frameworks and policy guidelines to answer questions; cross-check with official sources.",
+    "pricing": "freemium",
+    "categories": [
+      "Policy & ethics support"
+    ],
+    "tags": [
+      "chatbot",
+      "ethics"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": false,
+    "free_tier": true,
+    "beta": true,
+    "slug": "ethics-compliance-chatbot",
+    "id": "ethics-compliance-chatbot",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://ethicsbot.ai"
+  },
+  {
+    "name": "AI Fairness 360",
+    "tagline": "Toolkit for detecting bias in AI.",
+    "description": "Open-source library from IBM to evaluate and mitigate algorithmic bias; supports multiple bias metrics and mitigation strategies.",
+    "pricing": "free",
+    "categories": [
+      "Policy & ethics support",
+      "Coding, stats, & automation"
+    ],
+    "tags": [
+      "bias",
+      "fairness"
+    ],
+    "evidence_cites": false,
+    "local_onprem": true,
+    "edu_discount": false,
+    "free_tier": true,
+    "beta": false,
+    "slug": "ai-fairness-360",
+    "id": "ai-fairness-360",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://aif360.mybluemix.net"
+  },
+  {
+    "name": "Research Integrity Bot",
+    "tagline": "Assistant for research integrity policies.",
+    "description": "Tool that helps researchers navigate institutional integrity policies, authorship guidelines, and conflict of interest disclosures.",
+    "pricing": "freemium",
+    "categories": [
+      "Policy & ethics support"
+    ],
+    "tags": [
+      "integrity",
+      "policies"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": false,
+    "free_tier": true,
+    "beta": true,
+    "slug": "research-integrity-bot",
+    "id": "research-integrity-bot",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://researchintegritybot.example.com"
+  },
+  {
+    "name": "Glean",
+    "tagline": "Enterprise knowledge search.",
+    "description": "AI-powered search that indexes your organization\u2019s documents, wikis and emails to help you find information quickly across platforms; requires institutional deployment.",
+    "pricing": "paid",
+    "categories": [
+      "Collaboration & knowledge management"
+    ],
+    "tags": [
+      "search",
+      "enterprise"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": true,
+    "free_tier": false,
+    "beta": false,
+    "slug": "glean",
+    "id": "glean",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://glean.example.com"
+  },
+  {
+    "name": "PrivateGPT",
+    "tagline": "Local LLM for your documents.",
+    "description": "Open-source solution allowing you to query your PDFs and text files via a local large language model to preserve privacy; requires technical setup.",
+    "pricing": "free",
+    "categories": [
+      "Collaboration & knowledge management"
+    ],
+    "tags": [
+      "local",
+      "LLM"
+    ],
+    "evidence_cites": false,
+    "local_onprem": true,
+    "edu_discount": false,
+    "free_tier": true,
+    "beta": true,
+    "slug": "privategpt",
+    "id": "privategpt",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://privategpt.example.com"
+  },
+  {
+    "name": "Guru",
+    "tagline": "Team knowledge base with AI suggestions.",
+    "description": "Centralized knowledge repository that surfaces answers and recommendations in Slack and other tools; ensures information stays up-to-date.",
+    "pricing": "freemium",
+    "categories": [
+      "Collaboration & knowledge management"
+    ],
+    "tags": [
+      "knowledge-base",
+      "recommendations"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": false,
+    "free_tier": true,
+    "beta": false,
+    "slug": "guru",
+    "id": "guru",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://guru.example.com"
+  },
+  {
+    "name": "Lark AI",
+    "tagline": "Docs and communication in one platform.",
+    "description": "Suite of collaboration tools including docs, chat, calendars and AI features like summarization and translation; strong in mobile and Asia-Pacific markets.",
+    "pricing": "freemium",
+    "categories": [
+      "Collaboration & knowledge management"
+    ],
+    "tags": [
+      "docs",
+      "chat"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": false,
+    "free_tier": true,
+    "beta": false,
+    "slug": "lark-ai",
+    "id": "lark-ai",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://lark-ai.example.com"
+  },
+  {
+    "name": "Slite AI",
+    "tagline": "AI-powered wiki and notes.",
+    "description": "Knowledge-sharing platform with AI that answers questions about your team\u2019s docs and helps draft meeting notes and summaries.",
+    "pricing": "freemium",
+    "categories": [
+      "Collaboration & knowledge management"
+    ],
+    "tags": [
+      "wiki",
+      "notes"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": false,
+    "free_tier": true,
+    "beta": true,
+    "slug": "slite-ai",
+    "id": "slite-ai",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://slite-ai.example.com"
+  },
+  {
+    "name": "Coda AI",
+    "tagline": "AI features in Coda docs.",
+    "description": "All-in-one doc platform with AI that can summarize pages, extract action items and generate content; great for meeting notes and project planning.",
+    "pricing": "freemium",
+    "categories": [
+      "Collaboration & knowledge management"
+    ],
+    "tags": [
+      "docs",
+      "summaries"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": false,
+    "free_tier": true,
+    "beta": true,
+    "slug": "coda-ai",
+    "id": "coda-ai",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://coda-ai.example.com"
+  },
+  {
+    "name": "Quip AI",
+    "tagline": "AI-powered documents and spreadsheets.",
+    "description": "Salesforce\u2019s collaboration platform with AI-driven content and summaries, integrated chat and spreadsheets; targeted at enterprise teams.",
+    "pricing": "paid",
+    "categories": [
+      "Collaboration & knowledge management"
+    ],
+    "tags": [
+      "docs",
+      "spreadsheets"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": true,
+    "free_tier": false,
+    "beta": true,
+    "slug": "quip-ai",
+    "id": "quip-ai",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://quip-ai.example.com"
+  },
+  {
+    "name": "Microsoft Copilot for 365",
+    "tagline": "AI across Microsoft Office.",
+    "description": "Generative AI baked into Word, Excel, PowerPoint and Outlook to draft, summarize and analyze content; enterprise preview rollout; verify outputs.",
+    "pricing": "paid",
+    "categories": [
+      "Collaboration & knowledge management",
+      "Writing & publishing"
+    ],
+    "tags": [
+      "office",
+      "assistant"
+    ],
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": true,
+    "free_tier": false,
+    "beta": true,
+    "slug": "microsoft-copilot-for-365",
+    "id": "microsoft-copilot-for-365",
+    "logo": "assets/logos/generic.png",
+    "created_at": "2025-08-29",
+    "url": "https://microsoft-copilot-for-365.example.com"
+  },
+  {
+    "id": "labcollector",
+    "slug": "labcollector",
+    "name": "LabCollector",
+    "url": "https://www.labcollector.com/",
+    "tagline": "Inventory management and ELN for labs.",
+    "description": "LabCollector is a modular laboratory management solution with inventory tracking, electronic notebooks, and project management features for research teams.",
+    "pricing": "paid",
+    "categories": [
+      "Project & experiment tracking"
+    ],
+    "tags": [
+      "inventory",
+      "eln",
+      "lab management"
+    ],
+    "logo": "assets/logos/generic.png",
+    "evidence_cites": false,
+    "local_onprem": true,
+    "edu_discount": false,
+    "free_tier": false,
+    "beta": false,
+    "created_at": "2025-08-29"
+  },
+  {
+    "id": "research-ethics-assistant",
+    "slug": "research-ethics-assistant",
+    "name": "Research Ethics Assistant",
+    "url": "https://www.researchethicsassistant.example.com/",
+    "tagline": "AI-powered support for research ethics and compliance.",
+    "description": "Research Ethics Assistant is an AI-driven platform that guides researchers through ethical considerations, consent forms, and regulatory compliance for studies involving human participants.",
+    "pricing": "freemium",
+    "categories": [
+      "Policy & ethics support"
+    ],
+    "tags": [
+      "ethics",
+      "compliance",
+      "human subjects"
+    ],
+    "logo": "assets/logos/generic.png",
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": true,
+    "free_tier": true,
+    "beta": true,
+    "created_at": "2025-08-29"
+  }
+]

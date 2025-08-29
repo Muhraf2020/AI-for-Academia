@@ -1,0 +1,4 @@
+# FILE: robots.txt
+User-agent: *
+Allow: /
+Sitemap: https://yourname.github.io/ai-tools-directory/sitemap.xml

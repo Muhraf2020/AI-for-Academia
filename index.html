@@ -1,0 +1,83 @@
+<!-- FILE: index.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>AI Tools Directory</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="A static, fast directory of AI tools for the academic research lifecycle — search, filter, and explore." />
+  <meta property="og:title" content="AI Tools Directory" />
+  <meta property="og:description" content="Search and explore AI tools by category, pricing, and tags." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="" id="og-url" />
+  <meta property="og:image" content="" />
+  <link rel="icon" href="favicon.ico" />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <h1>AI Tools Directory</h1>
+      <p class="lead">Search and filter AI tools across the academic research lifecycle. 100% static — easy to host on GitHub Pages.</p>
+
+      <div class="toolbar">
+        <div class="bar" role="search">
+          <label for="search" class="visually-hidden" aria-hidden="true">Search tools</label>
+          <input id="search" type="search" placeholder="Search tools by name, purpose, or tag…" aria-label="Search tools" />
+          <select id="pricing" aria-label="Pricing filter">
+            <option value="all">All pricing</option>
+            <option value="free">Free</option>
+            <option value="freemium">Freemium</option>
+            <option value="paid">Paid</option>
+          </select>
+          <a id="suggest-link" class="link-btn" target="_blank" rel="noopener">Suggest a tool</a>
+        </div>
+        <div class="meta">
+          <span id="page-info" aria-live="polite"></span>
+        </div>
+      </div>
+
+      <div id="chips" class="chips" aria-label="Filter by category"></div>
+      <div id="count" class="count" aria-live="polite"></div>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+      <section id="results" class="grid" aria-live="polite"></section>
+      <nav id="pagination" class="pagination" aria-label="Pagination" hidden>
+        <button id="prev">◀ Prev</button>
+        <span id="page" aria-live="polite"></span>
+        <button id="next">Next ▶</button>
+      </nav>
+
+      <details class="checklist">
+        <summary><strong>60-Second Tool Selection Checklist</strong></summary>
+        <ul>
+          <li><strong>Data Sensitivity:</strong> Prefer 🔒 local/on-prem for sensitive data.</li>
+          <li><strong>Evidence & Transparency:</strong> Favor tools that provide citations (✅).</li>
+          <li><strong>Academic Integration:</strong> Exports and compatibility (RIS/BibTeX/CSV/PDF; Zotero/Overleaf/LMS).</li>
+          <li><strong>Cost & Access:</strong> Look for 🔁 free tiers or 🏫 EDU plans.</li>
+          <li><strong>Maturity & Support:</strong> Stable projects vs 🧪 betas.</li>
+          <li><strong>Ethics & Compliance:</strong> Verify outputs; disclose AI assistance.</li>
+        </ul>
+      </details>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <small class="disclaimer">
+        <strong>Tools & Links Disclaimer.</strong> The tools and external links referenced are provided solely for informational purposes. Inclusion does not constitute endorsement or preference; no affiliate relationships. Features, pricing, availability, and policies may change; verify current details and comply with your institution’s policies on AI use, research integrity, data privacy, and security. External websites are not under our control; links may change. All trademarks belong to their owners. No warranty is expressed or implied.
+      </small>
+    </div>
+  </footer>
+
+  <!-- Fuse.js (only external script allowed) -->
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script src="assets/app.js"></script>
+  <script id="jsonld-list" type="application/ld+json"></script>
+
+  <noscript>Your browser needs JavaScript enabled to use search and filters.</noscript>
+</body>
+</html>
