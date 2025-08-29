@@ -272,6 +272,42 @@
       setQueryParam('page', currentPage);
       render();
     });
+        // Clear filters button (auto-create if missing)
+    let elClear = document.getElementById('clear-filters');
+    if (!elClear) {
+      elClear = document.createElement('button');
+      elClear.id = 'clear-filters';
+      elClear.type = 'button';
+      elClear.className = 'chip';
+      elClear.title = 'Reset search, pricing, and categories';
+      elClear.textContent = 'Clear filters';
+      // place right after the chips row
+      if (elChips && elChips.parentNode) {
+        elChips.parentNode.insertBefore(elClear, elChips.nextSibling);
+      } else {
+        // fallback: append somewhere visible
+        document.body.appendChild(elClear);
+      }
+    }
+    elClear.addEventListener('click', () => {
+      // reset state
+      selectedCategories.clear();
+      currentPricing = 'all';
+      currentQuery = '';
+      currentPage = 1;
+
+      // reset UI controls
+      elSearch.value = '';
+      elPricing.value = 'all';
+      setQueryParam('category', null);
+      setQueryParam('pricing', null);
+      setQueryParam('q', null);
+      setQueryParam('page', 1);
+
+      updateChipsActive();
+      applyFilters();
+    });
+
 
     applyFilters(true);
   }
@@ -385,13 +421,4 @@
 
   // ---------- START ----------
   window.addEventListener("DOMContentLoaded", init);
-
-  // In init(), after wiring other listeners:
-const elClear = document.getElementById('clear-filters');
-if (elClear) elClear.addEventListener('click', () => {
-  selectedCategories.clear(); currentPricing='all'; currentQuery=''; currentPage=1;
-  elSearch.value=''; elPricing.value='all';
-  setQueryParam('category', null); setQueryParam('pricing', null); setQueryParam('q', null); setQueryParam('page', 1);
-  updateChipsActive(); applyFilters();
-
 })();
