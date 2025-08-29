@@ -30,26 +30,26 @@
   const CATEGORY_SLUG_SET = new Set(CATEGORIES.map(c => c.slug));
 
   // ---------- STATE ----------
-  let tools = [];           // full list
-  let visible = [];         // filtered list
-  let fuse = null;          // Fuse index
-  let selectedCategories = new Set(); // multi-select chips
+  let tools = [];                 // full list
+  let visible = [];               // filtered list
+  let fuse = null;                // Fuse index
+  let selectedCategories = new Set(); // multi-select chips (by slug)
   let currentPricing = "all";
   let currentQuery = "";
   let currentPage = 1;
 
   // ---------- ELEMENTS ----------
-  const elSearch = document.getElementById("search");
-  const elChips = document.getElementById("chips");
-  const elPricing = document.getElementById("pricing");
-  const elSuggest = document.getElementById("suggest-link");
-  const elCount = document.getElementById("count");
-  const elGrid = document.getElementById("results");
+  const elSearch     = document.getElementById("search");
+  const elChips      = document.getElementById("chips");
+  const elPricing    = document.getElementById("pricing");
+  const elSuggest    = document.getElementById("suggest-link");
+  const elCount      = document.getElementById("count");
+  const elGrid       = document.getElementById("results");
   const elPagination = document.getElementById("pagination");
-  const elPrev = document.getElementById("prev");
-  const elNext = document.getElementById("next");
-  const elPage = document.getElementById("page");
-  const elPageInfo = document.getElementById("page-info");
+  const elPrev       = document.getElementById("prev");
+  const elNext       = document.getElementById("next");
+  const elPage       = document.getElementById("page");
+  const elPageInfo   = document.getElementById("page-info");
 
   // ---------- UTIL ----------
   const qs = new URLSearchParams(location.search);
@@ -88,53 +88,69 @@
     if (t.beta)          arr.push("🧪");
     return arr.length? `<span class="icons" title="✅ cites • 🔒 local/on-prem • 🏫 EDU • 🔁 free tier • 🧪 beta">${arr.join(" ")}</span>` : "";
   }
+  function slugify(s) { return String(s||"").toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/(^-|-$)/g,""); }
 
-  // ---------- RENDER CHIPS ----------
+  // ---------- CHIPS ----------
   function renderChips() {
     elChips.innerHTML = CATEGORIES.map(cat => {
       const pressed = selectedCategories.has(cat.slug);
       return `<button class="chip" type="button" data-slug="${esc(cat.slug)}" aria-pressed="${pressed}">${esc(cat.name)}</button>`;
     }).join("");
-    // event delegation
-    elChips.addEventListener("click", (e)=>{
-      const btn = e.target.closest(".chip");
-      if (!btn) return;
+    updateChipsActive();
+  }
+
+  function updateChipsActive() {
+    elChips.querySelectorAll(".chip").forEach(btn => {
       const slug = btn.getAttribute("data-slug");
-      if (selectedCategories.has(slug)) selectedCategories.delete(slug);
-      else selectedCategories.add(slug);
-      btn.setAttribute("aria-pressed", selectedCategories.has(slug));
-      currentPage = 1;
-      setQueryParam("category", Array.from(selectedCategories));
-      applyFilters();
-    }, { once: true });
+      const on   = selectedCategories.has(slug);
+      btn.classList.toggle("active", on);
+      btn.setAttribute("aria-pressed", on ? "true" : "false");
+    });
   }
 
   // ---------- FETCH & INIT ----------
   async function init() {
+    // Suggest form
     elSuggest.href = CONFIG.GOOGLE_FORM_URL || "#";
 
-    // Build chips once
+    // Preselect chips from URL
     const startSelected = getArrayParam("category").filter(slug=>CATEGORY_SLUG_SET.has(slug));
     startSelected.forEach(s=>selectedCategories.add(s));
     renderChips();
-    for (const btn of elChips.querySelectorAll(".chip")) {
-      const slug = btn.getAttribute("data-slug");
-      btn.setAttribute("aria-pressed", selectedCategories.has(slug));
-    }
 
+    // Single delegated listener for all chips (works across re-renders)
+    elChips.addEventListener("click", (e) => {
+      const btn = e.target.closest(".chip");
+      if (!btn || !elChips.contains(btn)) return;
+      const slug = btn.getAttribute("data-slug");
+      if (!CATEGORY_SLUG_SET.has(slug)) return;
+
+      if (selectedCategories.has(slug)) selectedCategories.delete(slug);
+      else selectedCategories.add(slug);
+
+      currentPage = 1;
+      setQueryParam("category", Array.from(selectedCategories));
+      updateChipsActive();
+      applyFilters();
+    });
+
+    // Pricing from URL
     const p = qs.get("pricing");
     if (p && ["free","freemium","paid"].includes(p)) {
       currentPricing = p;
       elPricing.value = p;
     }
 
+    // Search from URL
     const q = qs.get("q") || "";
     currentQuery = q;
     elSearch.value = q;
 
+    // Page from URL
     const pageParam = parseInt(qs.get("page") || "1", 10);
     currentPage = Number.isFinite(pageParam) && pageParam>0 ? pageParam : 1;
 
+    // Load tools
     let data = [];
     try {
       const res = await fetch("data/tools.json", { cache: "no-store" });
@@ -143,9 +159,9 @@
       if (!Array.isArray(data)) throw new Error("tools.json must be an array");
     } catch (err) {
       console.warn(err);
-      document.getElementById("results").innerHTML = `<div class="empty">Could not load <code>data/tools.json</code>. Create the file with your tools to see results here.<br/>Schema example is documented in <code>assets/app.js</code>.</div>`;
-      document.getElementById("count").textContent = "";
-      document.getElementById("pagination").hidden = true;
+      elGrid.innerHTML = `<div class="empty">Could not load <code>data/tools.json</code>. Create the file with your tools to see results here.<br/>Schema example is documented in <code>assets/app.js</code>.</div>`;
+      elCount.textContent = "";
+      elPagination.hidden = true;
       return;
     }
 
@@ -191,10 +207,10 @@
       applyFilters();
     });
 
-    document.getElementById("prev").addEventListener("click", ()=>{
+    elPrev.addEventListener("click", ()=>{
       if (currentPage>1){ currentPage--; setQueryParam("page", currentPage); render(); }
     });
-    document.getElementById("next").addEventListener("click", ()=>{
+    elNext.addEventListener("click", ()=>{
       const totalPages = Math.max(1, Math.ceil(visible.length / CONFIG.ITEMS_PER_PAGE));
       if (currentPage<totalPages){ currentPage++; setQueryParam("page", currentPage); render(); }
     });
@@ -208,7 +224,9 @@
     let arr = tools.slice();
 
     if (catFilter.length>0) {
-      arr = arr.filter(t => t.categories.some(c => catFilter.includes(slugify(c)) || catFilter.includes(c)));
+      arr = arr.filter(t =>
+        t.categories.some(c => catFilter.includes(slugify(c)) || catFilter.includes(c))
+      );
     }
 
     if (currentPricing !== "all") {
@@ -225,25 +243,23 @@
     render();
   }
 
-  function slugify(s) { return String(s||"").toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/(^-|-$)/g,""); }
-
   // ---------- RENDER ----------
   function render() {
     const total = visible.length;
-    document.getElementById("count").textContent = total ? `${total} tool${total===1?"":"s"} found` : "No matching tools found.";
-    document.getElementById("page-info").textContent = `Showing ${Math.min(total, ((currentPage-1)*CONFIG.ITEMS_PER_PAGE)+1)}–${Math.min(total, currentPage*CONFIG.ITEMS_PER_PAGE)} of ${total}`;
+    elCount.textContent = total ? `${total} tool${total===1?"":"s"} found` : "No matching tools found.";
+    elPageInfo.textContent = `Showing ${Math.min(total, ((currentPage-1)*CONFIG.ITEMS_PER_PAGE)+1)}–${Math.min(total, currentPage*CONFIG.ITEMS_PER_PAGE)} of ${total}`;
 
     const totalPages = Math.max(1, Math.ceil(total / CONFIG.ITEMS_PER_PAGE));
     currentPage = Math.min(currentPage, totalPages);
-    document.getElementById("prev").disabled = currentPage<=1;
-    document.getElementById("next").disabled = currentPage>=totalPages;
-    document.getElementById("page").textContent = `Page ${currentPage} of ${totalPages}`;
-    document.getElementById("pagination").hidden = total<=CONFIG.ITEMS_PER_PAGE;
+    elPrev.disabled = currentPage<=1;
+    elNext.disabled = currentPage>=totalPages;
+    elPage.textContent = `Page ${currentPage} of ${totalPages}`;
+    elPagination.hidden = total<=CONFIG.ITEMS_PER_PAGE;
 
     const start = (currentPage-1) * CONFIG.ITEMS_PER_PAGE;
     const pageItems = visible.slice(start, start + CONFIG.ITEMS_PER_PAGE);
 
-    document.getElementById("results").innerHTML = pageItems.map(cardHTML).join("");
+    elGrid.innerHTML = pageItems.map(cardHTML).join("");
 
     const og = document.getElementById("og-url");
     if (og) og.setAttribute("content", CONFIG.SITE_URL);
@@ -252,17 +268,17 @@
   }
 
   function cardHTML(t) {
-    const logo = t.logo ? `<img class="logo" src="${esc(t.logo)}" alt="${esc(t.name)} logo" loading="lazy" />`
-                        : `<div class="logo" aria-hidden="true">${esc(initials(t.name)||"AI")}</div>`;
+    const logo = t.logo
+      ? `<img class="logo" src="${esc(t.logo)}" alt="${esc(t.name)} logo" loading="lazy" />`
+      : `<div class="logo" aria-hidden="true">${esc(initials(t.name)||"AI")}</div>`;
+
     const cats = t.categories.slice(0,2).map(c=>`<span class="badge">${esc(c)}</span>`).join(" ");
     const tagChips = t.tags.slice(0,5).map(c=>`<span class="tag">${esc(c)}</span>`).join(" ");
     const icons = iconRow(t);
-    // When rendering a card, the primary call‑to‑action should open the tool’s official
-    // website in a new tab.  If the tool entry defines a `url` property, use that;
-    // otherwise fall back to the internal detail page.  We escape the URL to avoid
-    // injecting arbitrary HTML.  The button is labeled “Visit” with a northeast arrow
-    // to indicate an external link.
+
+    // Primary CTA opens official site in a new tab
     const link = t.url ? esc(t.url) : `tool.html?slug=${encodeURIComponent(t.slug)}`;
+
     return `
       <article class="card">
         ${logo}
