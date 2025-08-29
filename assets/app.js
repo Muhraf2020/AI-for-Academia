@@ -385,13 +385,13 @@
 
   // ---------- START ----------
   window.addEventListener("DOMContentLoaded", init);
-})();
 
-// In init(), after wiring other listeners:
+  // In init(), after wiring other listeners:
 const elClear = document.getElementById('clear-filters');
 if (elClear) elClear.addEventListener('click', () => {
   selectedCategories.clear(); currentPricing='all'; currentQuery=''; currentPage=1;
   elSearch.value=''; elPricing.value='all';
   setQueryParam('category', null); setQueryParam('pricing', null); setQueryParam('q', null); setQueryParam('page', 1);
   updateChipsActive(); applyFilters();
-});
+
+})();
