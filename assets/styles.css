@@ -99,3 +99,81 @@ hr.sep { border:0; border-top:1px solid var(--border); margin:14px 0; }
   background: #111;       /* match active chip’s dark background */
   color: #fff;            /* white text for contrast */
 }
+
+/* -------------------------------------------
+   Subscribe box styles (newsletter signup)
+   - Lightweight, accessible layout that works on mobile
+   - Matches your existing visual tone
+   ------------------------------------------- */
+.subscribe {
+  margin: 24px 0;
+  padding: 16px;
+  background: #f8f9fb;
+  border: 1px solid #e6e8eb;
+  border-radius: 12px;
+}
+.subscribe h2 {
+  margin: 0 0 8px;
+  font-size: 1.12rem;
+}
+.subscribe .small {
+  font-size: .9rem;
+  color: #666;
+  margin: 0 0 8px;
+}
+.subscribe form {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;              /* stack on small screens */
+  align-items: center;
+  margin: 6px 0;
+}
+.subscribe input[type="email"] {
+  flex: 1;                      /* take remaining width */
+  min-width: 220px;             /* don't collapse too small */
+  padding: 10px 12px;
+  border: 1px solid #d0d5dd;
+  border-radius: 10px;
+}
+.subscribe .consent {
+  font-size: .9rem;
+  color: #444;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.subscribe button {
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid #0b5fff;
+  background: #0b5fff;
+  color: #fff;
+  cursor: pointer;
+}
+.subscribe button:hover {
+  background: #0a52e3;
+  border-color: #0a52e3;
+}
+
+/* Screen-reader-only utility (already used elsewhere) */
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+}
+
+/* -------------------------------------------
+   Category chip counts (little number badges)
+   - Shows a small rounded badge with the count
+   - Turns inverted when the chip is active
+   ------------------------------------------- */
+.chip .chip-count {
+  margin-left: .4rem;     /* space between label and badge */
+  background: #eee;       /* light gray badge background */
+  border-radius: 10px;    /* pill shape */
+  padding: 0 .45rem;      /* horizontal padding for legibility */
+  font-size: .85em;       /* slightly smaller than chip text */
+}
+.chip.active .chip-count {
+  background: #111;       /* match active chip’s dark background */
+  color: #fff;            /* white text for contrast */
+}
