@@ -425,7 +425,7 @@
           <div class="badges">${cats}</div>
           <div class="tags">${tagChips}</div>
         </div>
-        <div class="cta"><a href="${link}" aria-label="Visit website ${esc(t.name)} website" target="_blank" rel="noopener">Visit website ↗</a></div>
+        <div class="cta"><a href="${link}" aria-label="Visit ${esc(t.name)} website" target="_blank" rel="noopener">Visit website ↗</a></div>
       </article>
     `;
   }
