@@ -805,7 +805,7 @@
     "beta": true,
     "slug": "research-buddy",
     "id": "research-buddy",
-    "logo": "assets/logos/generic.png",
+    "logo": "assets/logos/research-buddy.png",
     "created_at": "2025-08-29",
     "url": "https://www.researchbuddyai.com"
   },
@@ -1340,7 +1340,7 @@
     "beta": false,
     "slug": "scholarcy",
     "id": "scholarcy",
-    "logo": "assets/logos/generic.png",
+    "logo": "assets/logos/scholarcy.png",
     "created_at": "2025-08-29",
     "url": "https://www.scholarcy.com/"
   },
@@ -1363,7 +1363,7 @@
     "beta": false,
     "slug": "explainpaper",
     "id": "explainpaper",
-    "logo": "assets/logos/generic.png",
+    "logo": "assets/logos/explainpaper.png",
     "created_at": "2025-08-29",
     "url": "https://www.explainpaper.com/"
   },
@@ -1387,7 +1387,7 @@
     "beta": false,
     "slug": "openalex",
     "id": "openalex",
-    "logo": "assets/logos/generic.png",
+    "logo": "assets/logos/openalex.png",
     "created_at": "2025-08-29",
     "url": "https://openalex.org/"
   },
@@ -1411,7 +1411,7 @@
     "beta": false,
     "slug": "citation-gecko",
     "id": "citation-gecko",
-    "logo": "assets/logos/generic.png",
+    "logo": "assets/logos/citation-gecko.png",
     "created_at": "2025-08-29",
     "url": "https://citationgecko.azurewebsites.net/"
   },
@@ -1434,7 +1434,7 @@
     "beta": false,
     "slug": "altmetric",
     "id": "altmetric",
-    "logo": "assets/logos/generic.png",
+    "logo": "assets/logos/altmetric.png",
     "created_at": "2025-08-29",
     "url": "https://www.altmetric.com/"
   },
@@ -1504,7 +1504,7 @@
     "beta": false,
     "slug": "pubpeer",
     "id": "pubpeer",
-    "logo": "assets/logos/generic.png",
+    "logo": "assets/logos/pubpeer.png",
     "created_at": "2025-08-29",
     "url": "https://pubpeer.com/"
   },
@@ -1619,7 +1619,7 @@
     "beta": false,
     "slug": "sciwheel",
     "id": "sciwheel",
-    "logo": "assets/logos/generic.png",
+    "logo": "assets/logos/sciwheel.png",
     "created_at": "2025-08-29",
     "url": "https://sciwheel.com/"
   },
@@ -1642,7 +1642,7 @@
     "beta": false,
     "slug": "jabref",
     "id": "jabref",
-    "logo": "assets/logos/generic.png",
+    "logo": "assets/logos/jabref.png",
     "created_at": "2025-08-29",
     "url": "https://www.jabref.org/"
   },
@@ -1688,7 +1688,7 @@
     "beta": false,
     "slug": "refworks",
     "id": "refworks",
-    "logo": "assets/logos/generic.png",
+    "logo": "assets/logos/refworks.png",
     "created_at": "2025-08-29",
     "url": "https://refworks.proquest.com/"
   },
@@ -1711,7 +1711,7 @@
     "beta": false,
     "slug": "bibguru",
     "id": "bibguru",
-    "logo": "assets/logos/generic.png",
+    "logo": "assets/logos/bibguru.png",
     "created_at": "2025-08-29",
     "url": "https://www.bibguru.com/"
   },
@@ -1918,7 +1918,7 @@
     "beta": false,
     "slug": "wordtune",
     "id": "wordtune",
-    "logo": "assets/logos/generic.png",
+    "logo": "assets/logos/wordtune.png",
     "created_at": "2025-08-29",
     "url": "https://www.wordtune.com/"
   },
@@ -1964,7 +1964,7 @@
     "beta": false,
     "slug": "amazon-codewhisperer",
     "id": "amazon-codewhisperer",
-    "logo": "assets/logos/generic.png",
+    "logo": "assets/logos/amazon-codewhisperer.png",
     "created_at": "2025-08-29",
     "url": "https://docs.aws.amazon.com/codewhisperer/"
   },
@@ -1987,7 +1987,7 @@
     "beta": false,
     "slug": "tabnine",
     "id": "tabnine",
-    "logo": "assets/logos/generic.png",
+    "logo": "assets/logos/tabnine.png",
     "created_at": "2025-08-29",
     "url": "https://www.tabnine.com/"
   },
@@ -2010,7 +2010,7 @@
     "beta": false,
     "slug": "replit-ghostwriter",
     "id": "replit-ghostwriter",
-    "logo": "assets/logos/generic.png",
+    "logo": "assets/logos/replit-ghostwriter.png",
     "created_at": "2025-08-29",
     "url": "https://replit.com/ai"
   },
@@ -2033,7 +2033,7 @@
     "beta": true,
     "slug": "jupyter-ai",
     "id": "jupyter-ai",
-    "logo": "assets/logos/generic.png",
+    "logo": "assets/logos/jupyter-ai.png",
     "created_at": "2025-08-29",
     "url": "https://github.com/jupyterlab/jupyter-ai"
   },
@@ -3652,7 +3652,7 @@
     "beta": false,
     "slug": "irb-advisor",
     "id": "irb-advisor",
-    "logo": "assets/logos/generic.png",
+    "logo": "assets/logos/irb-advisor.png",
     "created_at": "2025-08-29",
     "url": "https://irbadvisor.com"
   },
