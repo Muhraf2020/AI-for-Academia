@@ -1,232 +1,206 @@
-#!/usr/bin/env python3
+# FILE: scripts/fetch_logos.py
 """
-Fetch per-tool logos and update data/tools.json to point at local files.
+Fetch per-tool logos and update data/tools.json with local logo paths.
 
-- Reads:  data/tools.json   (array of tool dicts)
-- Optional: data/logo_overrides.json  (slug -> explicit logo URL)
-- Writes images into: assets/logos/<slug>.(png|svg)
-- Updates each tool["logo"] to the local path (faster/more reliable on GitHub Pages)
+Strategy per tool (when logo is missing or "generic.png"):
+1) Try Clearbit logo:   https://logo.clearbit.com/<domain>?size=256&format=png
+2) Try Google favicon:  https://www.google.com/s2/favicons?domain=<domain>&sz=128
+3) Parse the homepage HTML for:
+   - <link rel="icon" ...> / apple-touch-icon / mask-icon
+   - <meta property="og:image" ...> / <meta name="twitter:image" ...>
+The first image we can successfully fetch becomes the logo.
 
-Run locally:
-  python scripts/fetch_logos.py
-  python scripts/fetch_logos.py --force
-  python scripts/fetch_logos.py --only perplexity,notebooklm
-  python scripts/fetch_logos.py --dry-run
-
-Used by CI in .github/workflows/fetch-logos.yml
+We save logos to assets/logos/<slug>.png and write that path back into tools.json.
 """
-from __future__ import annotations
-import argparse
+
 import json
 import os
-from pathlib import Path
+import re
+import sys
+import time
 from io import BytesIO
-from urllib.parse import urlparse, urlunparse
+from urllib.parse import urlparse, urljoin
 
 import requests
+from bs4 import BeautifulSoup
 from PIL import Image
 
-ROOT = Path(__file__).resolve().parents[1]
-TOOLS_JSON = ROOT / "data" / "tools.json"
-OVERRIDES_JSON = ROOT / "data" / "logo_overrides.json"
-LOGO_DIR = ROOT / "assets" / "logos"
-REPORT_JSON = ROOT / "data" / "logo_report.json"
+ROOT = os.path.dirname(os.path.dirname(__file__))  # repo root from scripts/
+DATA_JSON = os.path.join(ROOT, "data", "tools.json")
+LOGO_DIR = os.path.join(ROOT, "assets", "logos")
 
-UA = "Mozilla/5.0 (compatible; AI-Tools-LogoFetcher/1.0; +https://github.com/yourrepo)"
-TIMEOUT = 12
+HEADERS = {
+    "User-Agent": "Mozilla/5.0 (compatible; LogoFetcher/1.0; +https://github.com/)"
+}
+TIMEOUT = 15
 
-def load_json(p: Path, default):
-    try:
-        with p.open("r", encoding="utf-8") as f:
-            return json.load(f)
-    except FileNotFoundError:
-        return default
-
-def save_json(p: Path, data):
-    p.parent.mkdir(parents=True, exist_ok=True)
-    with p.open("w", encoding="utf-8") as f:
-        json.dump(data, f, ensure_ascii=False, indent=2)
 
 def slugify(s: str) -> str:
-    import re
-    return re.sub(r"(^-|-$)", "", re.sub(r"[^a-z0-9]+", "-", (s or "").lower())).strip()[:128]
+    return re.sub(r"(^-|-$)", "", re.sub(r"[^a-z0-9]+", "-", s.lower()))[:128]
 
-def origin_of(url: str) -> tuple[str, str] | tuple[None, None]:
+
+def ensure_dirs():
+    os.makedirs(LOGO_DIR, exist_ok=True)
+
+
+def is_image_response(resp: requests.Response) -> bool:
+    ct = resp.headers.get("Content-Type", "").lower()
+    return resp.status_code == 200 and ("image/" in ct or resp.content[:4] in [b"\x89PNG", b"\xff\xd8\xff\xe0", b"\xff\xd8\xff\xe1"])
+
+
+def download_image(url: str) -> Image.Image | None:
     try:
-        u = urlparse(url)
-        if not u.scheme or not u.netloc:
-            return None, None
-        origin = urlunparse((u.scheme, u.netloc, "", "", "", ""))
-        domain = u.netloc.split("@")[-1]
-        return origin, domain
+        r = requests.get(url, headers=HEADERS, timeout=TIMEOUT, allow_redirects=True)
+        if not is_image_response(r):
+            return None
+        im = Image.open(BytesIO(r.content))
+        # Convert to RGBA to preserve transparency, then later save as PNG
+        return im.convert("RGBA")
     except Exception:
-        return None, None
+        return None
 
-def candidate_urls(tool: dict, overrides: dict) -> list[str]:
-    # 1) explicit override wins
-    if overrides and tool.get("slug") in overrides:
-        return [overrides[tool["slug"]]]
 
-    # 2) derive from official URL
-    origin, domain = origin_of(tool.get("url", ""))
-    urls = []
-    if origin and domain:
-        urls += [
-            f"{origin}/apple-touch-icon.png",
-            f"{origin}/apple-touch-icon-precomposed.png",
-            f"{origin}/favicon.png",
-            f"{origin}/favicon.ico",
-        ]
-        # 3) last-resort: Google s2 favicon (usually PNG)
-        urls.append(f"https://www.google.com/s2/favicons?domain={domain}&sz=128")
-    return urls
+def save_png(im: Image.Image, path: str):
+    # If very small (e.g., 16px favicon), upscale a bit for nicer display
+    w, h = im.size
+    if max(w, h) < 64:
+        scale = 128 // max(1, max(w, h))
+        if scale > 1:
+            im = im.resize((max(64, w * scale), max(64, h * scale)), Image.LANCZOS)
+    im.save(path, format="PNG", optimize=True)
 
-def fetch_bytes(url: str) -> tuple[bytes | None, str | None]:
+
+def domain_from_url(url: str) -> str:
     try:
-        r = requests.get(url, headers={"User-Agent": UA}, timeout=TIMEOUT, allow_redirects=True)
-        if r.status_code == 200 and r.content:
-            ctype = r.headers.get("Content-Type", "").split(";")[0].strip().lower()
-            return r.content, ctype
-    except requests.RequestException:
-        pass
-    return None, None
-
-def ext_from_ctype(ctype: str | None, fallback: str = ".png") -> str:
-    if not ctype:
-        return fallback
-    if "svg" in ctype:
-        return ".svg"
-    if "jpeg" in ctype or "jpg" in ctype:
-        return ".jpg"
-    if "png" in ctype:
-        return ".png"
-    if "webp" in ctype:
-        return ".webp"
-    if "x-icon" in ctype or "vnd.microsoft.icon" in ctype or "ico" in ctype:
-        return ".ico"
-    return fallback
-
-def normalize_to_png(raw: bytes, ctype: str, out_path_png: Path) -> bool:
-    """
-    Convert any raster (ico, jpg, png, webp) to PNG using Pillow.
-    Returns True on success.
-    """
-    try:
-        img = Image.open(BytesIO(raw))
-        # pick the largest ICO frame if needed
-        if getattr(img, "is_animated", False) and hasattr(img, "n_frames"):
-            # Not usual for favicons, but just in case
-            best = 0
-            best_area = 0
-            for i in range(img.n_frames):
-                img.seek(i)
-                w, h = img.size
-                if w * h > best_area:
-                    best_area = w * h
-                    best = i
-            img.seek(best)
-        img = img.convert("RGBA")
-        out_path_png.parent.mkdir(parents=True, exist_ok=True)
-        img.save(out_path_png, format="PNG")
-        return True
+        netloc = urlparse(url).netloc
+        return netloc.split("@")[-1]
     except Exception:
-        return False
+        return ""
 
-def save_svg(raw: bytes, out_path_svg: Path) -> bool:
+
+def homepage_icons(home_url: str) -> list[str]:
+    """Scrape a homepage for candidate icon/image URLs (absolute)."""
     try:
-        out_path_svg.parent.mkdir(parents=True, exist_ok=True)
-        out_path_svg.write_bytes(raw)
-        return True
+        r = requests.get(home_url, headers=HEADERS, timeout=TIMEOUT)
+        r.raise_for_status()
     except Exception:
-        return False
+        return []
 
-def handle_one(tool: dict, overrides: dict, force: bool) -> dict:
-    slug = tool.get("slug") or slugify(tool.get("name") or "")
-    tool["slug"] = slug or tool.get("id") or slugify(tool.get("name") or "tool")
-    dest_png = LOGO_DIR / f"{tool['slug']}.png"
-    dest_svg = LOGO_DIR / f"{tool['slug']}.svg"
+    soup = BeautifulSoup(r.text, "lxml")
 
-    # Skip if we already have a local file and not forcing
-    if not force:
-        existing = tool.get("logo", "")
-        if existing and existing.startswith("assets/logos/"):
-            if (ROOT / existing).exists():
-                return {"slug": slug, "status": "skip-existing", "path": existing}
+    candidates = []
 
-        if dest_png.exists() or dest_svg.exists():
-            # Make sure JSON points to it
-            tool["logo"] = f"assets/logos/{dest_svg.name if dest_svg.exists() else dest_png.name}"
-            return {"slug": slug, "status": "skip-existing-file", "path": tool["logo"]}
+    # <link rel="icon">, <link rel="shortcut icon">, apple-touch-icon, mask-icon, etc.
+    for link in soup.find_all("link"):
+        rel = (link.get("rel") or [])
+        rel = [x.lower() for x in rel]
+        if any(x in rel for x in ["icon", "shortcut icon", "apple-touch-icon", "apple-touch-icon-precomposed", "mask-icon"]):
+            href = link.get("href")
+            if href:
+                candidates.append(urljoin(home_url, href))
 
-    # Try candidates
-    for url in candidate_urls(tool, overrides):
-        raw, ctype = fetch_bytes(url)
-        if not raw:
-            continue
+    # Open Graph / Twitter
+    for meta_name in [
+        ("property", "og:image"),
+        ("name", "og:image"),
+        ("name", "twitter:image"),
+        ("property", "twitter:image"),
+    ]:
+        meta = soup.find("meta", attrs={meta_name[0]: meta_name[1]})
+        if meta and meta.get("content"):
+            candidates.append(urljoin(home_url, meta["content"]))
 
-        ext = ext_from_ctype(ctype)
-        if ext == ".svg":
-            ok = save_svg(raw, dest_svg)
-            if ok:
-                tool["logo"] = f"assets/logos/{dest_svg.name}"
-                return {"slug": slug, "status": "ok-svg", "source": url, "path": tool["logo"]}
-        else:
-            # Convert anything else to PNG for consistency
-            ok = normalize_to_png(raw, ctype or "", dest_png)
-            if ok:
-                tool["logo"] = f"assets/logos/{dest_png.name}"
-                return {"slug": slug, "status": "ok-png", "source": url, "path": tool["logo"]}
+    # De-dupe, preserve order
+    seen = set()
+    out = []
+    for u in candidates:
+        if u not in seen:
+            seen.add(u)
+            out.append(u)
+    return out
 
-    return {"slug": slug, "status": "failed", "reason": "no-usable-logo", "url": tool.get("url")}
+
+def best_logo_for(url: str) -> Image.Image | None:
+    dom = domain_from_url(url)
+    if not dom:
+        return None
+
+    # 1) Clearbit
+    clearbit = f"https://logo.clearbit.com/{dom}?size=256&format=png"
+    im = download_image(clearbit)
+    if im:
+        return im
+
+    # 2) Google favicon (png)
+    google_fav = f"https://www.google.com/s2/favicons?domain={dom}&sz=128"
+    im = download_image(google_fav)
+    if im:
+        return im
+
+    # 3) Parse homepage for icons / OG images
+    # Normalize homepage to scheme+domain only, but if path present, use as is.
+    parsed = urlparse(url)
+    home = f"{parsed.scheme}://{parsed.netloc}/"
+    for candidate in homepage_icons(home):
+        im = download_image(candidate)
+        if im:
+            return im
+
+    return None
+
 
 def main():
-    ap = argparse.ArgumentParser(description="Fetch per-tool logos and update tools.json")
-    ap.add_argument("--force", action="store_true", help="refetch/overwrite even if a local logo exists")
-    ap.add_argument("--only", type=str, help="comma-separated list of slugs to process")
-    ap.add_argument("--dry-run", action="store_true", help="do not write files or modify JSON")
-    args = ap.parse_args()
+    ensure_dirs()
 
-    tools = load_json(TOOLS_JSON, default=[])
-    if not isinstance(tools, list) or not tools:
-        print("No tools found in data/tools.json")
-        return 1
+    with open(DATA_JSON, "r", encoding="utf-8") as f:
+        tools = json.load(f)
+        if not isinstance(tools, list):
+            print("ERROR: data/tools.json must be an array of tools.")
+            sys.exit(1)
 
-    overrides = load_json(OVERRIDES_JSON, default={})
-    LOGO_DIR.mkdir(parents=True, exist_ok=True)
+    updated = 0
+    skipped = 0
 
-    only_set = None
-    if args.only:
-        only_set = {s.strip().lower() for s in args.only.split(",") if s.strip()}
+    for t in tools:
+        name = t.get("name") or t.get("id") or "tool"
+        slug = (t.get("slug") or slugify(name))
+        url = t.get("url") or ""
+        logo = t.get("logo") or ""
 
-    report = []
-    changed = False
+        # Only fetch when (a) we have a URL and (b) logo is missing or generic
+        needs_logo = (not logo) or logo.endswith("/generic.png") or logo.endswith("generic.png")
 
-    for tool in tools:
-        slug = (tool.get("slug") or slugify(tool.get("name") or "")).lower()
-        if only_set and slug not in only_set:
+        if not url or not needs_logo:
+            skipped += 1
             continue
 
-        res = handle_one(tool, overrides, force=args.force)
-        report.append(res)
-        if res.get("status", "").startswith("ok") or res.get("status", "").startswith("skip-existing-file"):
-            changed = True
+        print(f"[logo] Fetching for: {name}  ({url})")
+        im = best_logo_for(url)
+        if not im:
+            print("  - No logo found. Leaving as is.")
+            continue
 
-    if args.dry_run:
-        print(json.dumps(report, indent=2))
-        return 0
+        out_rel = f"assets/logos/{slug}.png"
+        out_abs = os.path.join(ROOT, out_rel)
+        save_png(im, out_abs)
 
-    # Save updated JSON and a small report
-    if changed:
-        save_json(TOOLS_JSON, tools)
-    save_json(REPORT_JSON, report)
+        t["logo"] = out_rel
+        updated += 1
 
-    print("Done. Summary:")
-    counts = {}
-    for r in report:
-        counts[r["status"]] = counts.get(r["status"], 0) + 1
-    for k, v in sorted(counts.items()):
-        print(f"  {k:>20}: {v}")
-    return 0
+        # Be nice to endpoints
+        time.sleep(0.3)
+
+    if updated:
+        # Write back pretty but compact
+        with open(DATA_JSON, "w", encoding="utf-8") as f:
+            json.dump(tools, f, ensure_ascii=False, indent=2)
+            f.write("\n")
+        print(f"Updated {updated} logo(s).")
+    else:
+        print("No logos updated (either all set or no matches).")
+
+    print(f"Skipped: {skipped}")
+
 
 if __name__ == "__main__":
-    raise SystemExit(main())
+    main()
