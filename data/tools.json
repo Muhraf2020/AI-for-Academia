@@ -3842,5 +3842,29 @@
     "beta": false,
     "created_at": "2025-08-29"
     url": "https://www.labcollector.com/"
+  },
+  {
+    "id": "research-ethics-assistant",
+    "slug": "research-ethics-assistant",
+    "name": "Research Ethics Assistant",
+    "url": "https://www.researchethicsassistant.example.com/",
+    "tagline": "AI-powered support for research ethics and compliance.",
+    "description": "Research Ethics Assistant is an AI-driven platform that guides researchers through ethical considerations, consent forms, and regulatory compliance for studies involving human participants.",
+    "pricing": "freemium",
+    "categories": [
+      "Policy & ethics support"
+    ],
+    "tags": [
+      "ethics",
+      "compliance",
+      "human subjects"
+    ],
+    "logo": "assets/logos/generic.png",
+    "evidence_cites": false,
+    "local_onprem": false,
+    "edu_discount": true,
+    "free_tier": true,
+    "beta": true,
+    "created_at": "2025-08-29"
   }
 ]
