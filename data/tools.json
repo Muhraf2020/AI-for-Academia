@@ -828,7 +828,7 @@
     "beta": true,
     "slug": "mirrorthink",
     "id": "mirrorthink",
-    "logo": "assets/logos/generic.png",
+    "logo": "assets/logos/mirrorthink.png",
     "created_at": "2025-08-29",
     "url": "https://mirrorthink.ai"
   },
@@ -1014,7 +1014,7 @@
     "beta": false,
     "slug": "arxiv-pulse",
     "id": "arxiv-pulse",
-    "logo": "assets/logos/generic.png",
+    "logo": "assets/logos/arxiv-pulse.png",
     "created_at": "2025-08-29",
     "url": "https://www.arxivpulse.com"
   },
@@ -1154,7 +1154,7 @@
     "beta": true,
     "slug": "petal",
     "id": "petal",
-    "logo": "assets/logos/generic.png",
+    "logo": "assets/logos/petal.png",
     "created_at": "2025-08-29",
     "url": "https://www.petal.org"
   },
@@ -1294,7 +1294,7 @@
     "beta": false,
     "slug": "openread",
     "id": "openread",
-    "logo": "assets/logos/generic.png",
+    "logo": "assets/logos/openread.png",
     "created_at": "2025-08-29",
     "url": "https://www.openread.academy"
   },
@@ -1457,7 +1457,7 @@
     "beta": false,
     "slug": "dimensions-ai",
     "id": "dimensions-ai",
-    "logo": "assets/logos/generic.png",
+    "logo": "assets/logos/dimensions-ai.png",
     "created_at": "2025-08-29",
     "url": "https://www.dimensions.ai"
   },
@@ -1527,7 +1527,7 @@
     "beta": true,
     "slug": "evidencehunt",
     "id": "evidencehunt",
-    "logo": "assets/logos/generic.png",
+    "logo": "assets/logos/evidencehunt.png",
     "created_at": "2025-08-29",
     "url": "https://evidencehunt.com"
   },
@@ -1550,7 +1550,7 @@
     "beta": false,
     "slug": "scimago-journal-&-country-rank",
     "id": "scimago-journal-&-country-rank",
-    "logo": "assets/logos/generic.png",
+    "logo": "assets/logos/scimago-journal-&-country-rank.png",
     "created_at": "2025-08-29",
     "url": "https://www.scimagojr.com/"
   },
@@ -1665,7 +1665,7 @@
     "beta": false,
     "slug": "citavi",
     "id": "citavi",
-    "logo": "assets/logos/generic.png",
+    "logo": "assets/logos/citavi.png",
     "created_at": "2025-08-29",
     "url": "https://lumivero.com/products/citavi"
   },
@@ -1734,7 +1734,7 @@
     "beta": false,
     "slug": "mendeley-cite",
     "id": "mendeley-cite",
-    "logo": "assets/logos/generic.png",
+    "logo": "assets/logos/mendeley-cite.png",
     "created_at": "2025-08-29",
     "url": "https://appsource.microsoft.com/en-us/product/office/wa104382081?tab=overview"
   },
@@ -1803,7 +1803,7 @@
     "beta": false,
     "slug": "wisio",
     "id": "wisio",
-    "logo": "assets/logos/generic.png",
+    "logo": "assets/logos/wisio.png",
     "created_at": "2025-08-29",
     "url": "https://wisio.app"
   },
@@ -1826,7 +1826,7 @@
     "beta": true,
     "slug": "thesisai",
     "id": "thesisai",
-    "logo": "assets/logos/generic.png",
+    "logo": "assets/logos/thesisai.png",
     "created_at": "2025-08-29",
     "url": "https://www.thesisai.io"
   },
@@ -2197,7 +2197,7 @@
     "beta": false,
     "slug": "granted-ai",
     "id": "granted-ai",
-    "logo": "assets/logos/generic.png",
+    "logo": "assets/logos/granted-ai.png",
     "created_at": "2025-08-29",
     "url": "https://grantedai.com/"
   },
@@ -2220,7 +2220,7 @@
     "beta": false,
     "slug": "datarobot",
     "id": "datarobot",
-    "logo": "assets/logos/generic.png",
+    "logo": "assets/logos/datarobot.png",
     "created_at": "2025-08-29",
     "url": "https://www.datarobot.com/"
   },
@@ -2243,7 +2243,7 @@
     "beta": false,
     "slug": "tableau-ask-data",
     "id": "tableau-ask-data",
-    "logo": "assets/logos/generic.png",
+    "logo": "assets/logos/tableau-ask-data.png",
     "created_at": "2025-08-29",
     "url": "https://www.tableau.com/learn/tutorials/on-demand/ask-data"
   },
@@ -2266,7 +2266,7 @@
     "beta": false,
     "slug": "ibm-watson-analytics",
     "id": "ibm-watson-analytics",
-    "logo": "assets/logos/generic.png",
+    "logo": "assets/logos/ibm-watson-analytics.png",
     "created_at": "2025-08-29",
     "url": "https://www.ibm.com/solutions/analytics"
   },
@@ -2290,7 +2290,7 @@
     "beta": true,
     "slug": "kaggle-notebooks-ai",
     "id": "kaggle-notebooks-ai",
-    "logo": "assets/logos/generic.png",
+    "logo": "assets/logos/kaggle-notebooks-ai.png",
     "created_at": "2025-08-29",
     "url": "https://www.kaggle.com/code"
   },
@@ -2336,7 +2336,7 @@
     "beta": false,
     "slug": "dedoose",
     "id": "dedoose",
-    "logo": "assets/logos/generic.png",
+    "logo": "assets/logos/dedoose.png",
     "created_at": "2025-08-29",
     "url": "https://www.dedoose.com"
   },
@@ -2359,7 +2359,7 @@
     "beta": false,
     "slug": "taguette",
     "id": "taguette",
-    "logo": "assets/logos/generic.png",
+    "logo": "assets/logos/taguette.png",
     "created_at": "2025-08-29",
     "url": "https://www.taguette.org/"
   },
@@ -2382,7 +2382,7 @@
     "beta": false,
     "slug": "quirkos",
     "id": "quirkos",
-    "logo": "assets/logos/generic.png",
+    "logo": "assets/logos/quirkos.png",
     "created_at": "2025-08-29",
     "url": "https://www.quirkos.com"
   },
@@ -2405,7 +2405,7 @@
     "beta": false,
     "slug": "webqda",
     "id": "webqda",
-    "logo": "assets/logos/generic.png",
+    "logo": "assets/logos/webqda.png",
     "created_at": "2025-08-29",
     "url": "https://www.webqda.net"
   },
@@ -2428,7 +2428,7 @@
     "beta": false,
     "slug": "qda-miner",
     "id": "qda-miner",
-    "logo": "assets/logos/generic.png",
+    "logo": "assets/logos/qda-miner.png",
     "created_at": "2025-08-29",
     "url": "https://provalisresearch.com/"
   },
@@ -2451,7 +2451,7 @@
     "beta": false,
     "slug": "qcamap",
     "id": "qcamap",
-    "logo": "assets/logos/generic.png",
+    "logo": "assets/logos/qcamap.png",
     "created_at": "2025-08-29",
     "url": "https://www.qcamap.org/"
   },
@@ -2474,7 +2474,7 @@
     "beta": true,
     "slug": "qdacity",
     "id": "qdacity",
-    "logo": "assets/logos/generic.png",
+    "logo": "assets/logos/qdacity.png",
     "created_at": "2025-08-29",
     "url": "https://qdacity.com/"
   },
@@ -2567,7 +2567,7 @@
     "beta": false,
     "slug": "trint",
     "id": "trint",
-    "logo": "assets/logos/generic.png",
+    "logo": "assets/logos/trint.png",
     "created_at": "2025-08-29",
     "url": "https://trint.com/"
   },
@@ -2590,7 +2590,7 @@
     "beta": false,
     "slug": "happyscribe",
     "id": "happyscribe",
-    "logo": "assets/logos/generic.png",
+    "logo": "assets/logos/happyscribe.png",
     "created_at": "2025-08-29",
     "url": "https://www.happyscribe.com/"
   },
@@ -2613,7 +2613,7 @@
     "beta": false,
     "slug": "rev-ai",
     "id": "rev-ai",
-    "logo": "assets/logos/generic.png",
+    "logo": "assets/logos/rev-ai.png",
     "created_at": "2025-08-29",
     "url": "https://www.rev.ai/"
   },
@@ -2636,7 +2636,7 @@
     "beta": false,
     "slug": "sonix-ai",
     "id": "sonix-ai",
-    "logo": "assets/logos/generic.png",
+    "logo": "assets/logos/sonix-ai.png",
     "created_at": "2025-08-29",
     "url": "https://sonix.ai/"
   },
@@ -2660,7 +2660,7 @@
     "beta": false,
     "slug": "loom",
     "id": "loom",
-    "logo": "assets/logos/generic.png",
+    "logo": "assets/logos/loom.png",
     "created_at": "2025-08-29",
     "url": "https://www.loom.com/ai"
   },
@@ -2706,7 +2706,7 @@
     "beta": false,
     "slug": "typeform",
     "id": "typeform",
-    "logo": "assets/logos/generic.png",
+    "logo": "assets/logos/typeform.png",
     "created_at": "2025-08-29",
     "url": "https://www.typeform.com/"
   },
@@ -2729,7 +2729,7 @@
     "beta": false,
     "slug": "alchemer",
     "id": "alchemer",
-    "logo": "assets/logos/generic.png",
+    "logo": "assets/logos/alchemer.png",
     "created_at": "2025-08-29",
     "url": "https://www.alchemer.com/"
   },
@@ -2753,7 +2753,7 @@
     "beta": false,
     "slug": "dovetail",
     "id": "dovetail",
-    "logo": "assets/logos/generic.png",
+    "logo": "assets/logos/dovetail.png",
     "created_at": "2025-08-29",
     "url": "https://dovetail.com/"
   },
@@ -2776,7 +2776,7 @@
     "beta": false,
     "slug": "clarabridge",
     "id": "clarabridge",
-    "logo": "assets/logos/generic.png",
+    "logo": "assets/logos/clarabridge.png",
     "created_at": "2025-08-29",
     "url": "https://www.qualtrics.com/clarabridge/"
   },
@@ -2799,7 +2799,7 @@
     "beta": false,
     "slug": "surveysparrow",
     "id": "surveysparrow",
-    "logo": "assets/logos/generic.png",
+    "logo": "assets/logos/surveysparrow.png",
     "created_at": "2025-08-29",
     "url": "https://surveysparrow.com/"
   },
@@ -2822,7 +2822,7 @@
     "beta": false,
     "slug": "qualaroo",
     "id": "qualaroo",
-    "logo": "assets/logos/generic.png",
+    "logo": "assets/logos/qualaroo.png",
     "created_at": "2025-08-29",
     "url": "https://qualaroo.com/"
   },
@@ -2845,7 +2845,7 @@
     "beta": false,
     "slug": "medallia",
     "id": "medallia",
-    "logo": "assets/logos/generic.png",
+    "logo": "assets/logos/medallia.png",
     "created_at": "2025-08-29",
     "url": "https://www.medallia.com/"
   },
@@ -2868,7 +2868,7 @@
     "beta": true,
     "slug": "eraser-ai",
     "id": "eraser-ai",
-    "logo": "assets/logos/generic.png",
+    "logo": "assets/logos/eraser-ai.png",
     "created_at": "2025-08-29",
     "url": "https://www.eraser.io/"
   },
@@ -2960,7 +2960,7 @@
     "beta": false,
     "slug": "canva-magic-design",
     "id": "canva-magic-design",
-    "logo": "assets/logos/generic.png",
+    "logo": "assets/logos/canva-magic-design.png",
     "created_at": "2025-08-29",
     "url": "https://www.canva.com/magic-design/"
   },
@@ -2984,7 +2984,7 @@
     "beta": false,
     "slug": "genially",
     "id": "genially",
-    "logo": "assets/logos/generic.png",
+    "logo": "assets/logos/genially.png",
     "created_at": "2025-08-29",
     "url": "https://genially.com/"
   },
@@ -3007,7 +3007,7 @@
     "beta": true,
     "slug": "venngage",
     "id": "venngage",
-    "logo": "assets/logos/generic.png",
+    "logo": "assets/logos/venngage.png",
     "created_at": "2025-08-29",
     "url": "https://venngage.com/ai-tools/chart"
   },
@@ -3076,7 +3076,7 @@
     "beta": true,
     "slug": "quillionz",
     "id": "quillionz",
-    "logo": "assets/logos/generic.png",
+    "logo": "assets/logos/quillionz.png",
     "created_at": "2025-08-29",
     "url": "https://www.quillionz.com/"
   },
@@ -3099,7 +3099,7 @@
     "beta": false,
     "slug": "squirrel-ai",
     "id": "squirrel-ai",
-    "logo": "assets/logos/generic.png",
+    "logo": "assets/logos/squirrel-ai.png",
     "created_at": "2025-08-29",
     "url": "https://squirrelai.com/"
   },
@@ -3122,7 +3122,7 @@
     "beta": false,
     "slug": "century-tech",
     "id": "century-tech",
-    "logo": "assets/logos/generic.png",
+    "logo": "assets/logos/century-tech.png",
     "created_at": "2025-08-29",
     "url": "https://www.century.tech/"
   },
@@ -3145,7 +3145,7 @@
     "beta": false,
     "slug": "gradescope-2",
     "id": "gradescope-2",
-    "logo": "assets/logos/generic.png",
+    "logo": "assets/logos/gradescope-2.png",
     "created_at": "2025-08-29",
     "url": "https://www.gradescope.com/"
   },
@@ -3191,7 +3191,7 @@
     "beta": false,
     "slug": "ouriginal-urkund",
     "id": "ouriginal-urkund",
-    "logo": "assets/logos/generic.png",
+    "logo": "assets/logos/ouriginal-urkund.png",
     "created_at": "2025-08-29",
     "url": "https://ouriginal.com/"
   },
@@ -3214,7 +3214,7 @@
     "beta": true,
     "slug": "copyleaks-ai-detector",
     "id": "copyleaks-ai-detector",
-    "logo": "assets/logos/generic.png",
+    "logo": "assets/logos/copyleaks-ai-detector.png",
     "created_at": "2025-08-29",
     "url": "https://copyleaks.com/"
   },
@@ -3237,7 +3237,7 @@
     "beta": true,
     "slug": "zerogpt",
     "id": "zerogpt",
-    "logo": "assets/logos/generic.png",
+    "logo": "assets/logos/zerogpt.png",
     "created_at": "2025-08-29",
     "url": "https://www.zerogpt.com/"
   },
@@ -3260,7 +3260,7 @@
     "beta": false,
     "slug": "originality-ai",
     "id": "originality-ai",
-    "logo": "assets/logos/generic.png",
+    "logo": "assets/logos/originality-ai.png",
     "created_at": "2025-08-29",
     "url": "https://originality.ai/"
   },
@@ -3283,7 +3283,7 @@
     "beta": false,
     "slug": "plagscan",
     "id": "plagscan",
-    "logo": "assets/logos/generic.png",
+    "logo": "assets/logos/plagscan.png",
     "created_at": "2025-08-29",
     "url": "https://www.plagscan.com/en/"
   },
@@ -3306,7 +3306,7 @@
     "beta": false,
     "slug": "ithenticate",
     "id": "ithenticate",
-    "logo": "assets/logos/generic.png",
+    "logo": "assets/logos/ithenticate.png",
     "created_at": "2025-08-29",
     "url": "https://www.ithenticate.com/"
   },
@@ -3329,7 +3329,7 @@
     "beta": false,
     "slug": "paperrater",
     "id": "paperrater",
-    "logo": "assets/logos/generic.png",
+    "logo": "assets/logos/paperrater.png",
     "created_at": "2025-08-29",
     "url": "https://www.paperrater.com/"
   },
@@ -3375,7 +3375,7 @@
     "beta": false,
     "slug": "labarchives",
     "id": "labarchives",
-    "logo": "assets/logos/generic.png",
+    "logo": "assets/logos/labarchives.png",
     "created_at": "2025-08-29",
     "url": "https://www.labarchives.com/"
   },
@@ -3467,7 +3467,7 @@
     "beta": false,
     "slug": "rspace",
     "id": "rspace",
-    "logo": "assets/logos/generic.png",
+    "logo": "assets/logos/rspace.png",
     "created_at": "2025-08-29",
     "url": "https://www.researchspace.com/"
   },
@@ -3582,7 +3582,7 @@
     "beta": true,
     "slug": "consentbuilder",
     "id": "consentbuilder",
-    "logo": "assets/logos/generic.png",
+    "logo": "assets/logos/consentbuilder.png",
     "created_at": "2025-08-29",
     "url": "https://informedconsentbuilder.com/"
   },
@@ -3652,7 +3652,7 @@
     "beta": false,
     "slug": "glean",
     "id": "glean",
-    "logo": "assets/logos/generic.png",
+    "logo": "assets/logos/glean.png",
     "created_at": "2025-08-29",
     "url": "https://www.glean.com/"
   },
@@ -3675,7 +3675,7 @@
     "beta": true,
     "slug": "privategpt",
     "id": "privategpt",
-    "logo": "assets/logos/generic.png",
+    "logo": "assets/logos/privategpt.png",
     "created_at": "2025-08-29",
     "url": "https://chat.private-ai.com/"
   },
@@ -3698,7 +3698,7 @@
     "beta": false,
     "slug": "guru",
     "id": "guru",
-    "logo": "assets/logos/generic.png",
+    "logo": "assets/logos/guru.png",
     "created_at": "2025-08-29",
     "url": "https://www.getguru.com/"
   },
@@ -3721,7 +3721,7 @@
     "beta": false,
     "slug": "lark-ai",
     "id": "lark-ai",
-    "logo": "assets/logos/generic.png",
+    "logo": "assets/logos/lark-ai.png",
     "created_at": "2025-08-29",
     "url": "https://www.larksuite.com/en_sg/"
   },
@@ -3744,7 +3744,7 @@
     "beta": true,
     "slug": "slite-ai",
     "id": "slite-ai",
-    "logo": "assets/logos/generic.png",
+    "logo": "assets/logos/slite-ai.png",
     "created_at": "2025-08-29",
     "url": "https://slite.com/"
   },
@@ -3767,7 +3767,7 @@
     "beta": true,
     "slug": "coda-ai",
     "id": "coda-ai",
-    "logo": "assets/logos/generic.png",
+    "logo": "assets/logos/coda-ai.png",
     "created_at": "2025-08-29",
     "url": "https://coda.io/"
   },
@@ -3790,7 +3790,7 @@
     "beta": true,
     "slug": "quip-ai",
     "id": "quip-ai",
-    "logo": "assets/logos/generic.png",
+    "logo": "assets/logos/quip-ai.png",
     "created_at": "2025-08-29",
     "url": "https://quip.com/"
   },
@@ -3814,7 +3814,7 @@
     "beta": true,
     "slug": "microsoft-copilot-for-365",
     "id": "microsoft-copilot-for-365",
-    "logo": "assets/logos/generic.png",
+    "logo": "assets/logos/microsoft-copilot-for-365.png",
     "created_at": "2025-08-29",
     "url": "https://www.microsoft.com/en-us/microsoft-365-copilot"
   },
@@ -3840,7 +3840,6 @@
     "edu_discount": false,
     "free_tier": false,
     "beta": false,
-    "created_at": "2025-08-29",
-    "url": "https://www.labcollector.com/"
+    "created_at": "2025-08-29"
   }
 ]
