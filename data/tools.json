@@ -2361,7 +2361,7 @@
     "id": "taguette",
     "logo": "assets/logos/generic.png",
     "created_at": "2025-08-29",
-    "url": "https://taguette.example.com"
+    "url": "https://www.taguette.org/"
   },
   {
     "name": "Quirkos",
@@ -2384,7 +2384,7 @@
     "id": "quirkos",
     "logo": "assets/logos/generic.png",
     "created_at": "2025-08-29",
-    "url": "https://quirkos.example.com"
+    "url": "https://www.quirkos.com"
   },
   {
     "name": "WebQDA",
@@ -2407,7 +2407,7 @@
     "id": "webqda",
     "logo": "assets/logos/generic.png",
     "created_at": "2025-08-29",
-    "url": "https://webqda.example.com"
+    "url": "https://www.webqda.net"
   },
   {
     "name": "QDA Miner",
@@ -2430,7 +2430,7 @@
     "id": "qda-miner",
     "logo": "assets/logos/generic.png",
     "created_at": "2025-08-29",
-    "url": "https://qda-miner.example.com"
+    "url": "https://provalisresearch.com/"
   },
   {
     "name": "QCAmap",
@@ -2453,7 +2453,7 @@
     "id": "qcamap",
     "logo": "assets/logos/generic.png",
     "created_at": "2025-08-29",
-    "url": "https://qcamap.example.com"
+    "url": "https://www.qcamap.org/"
   },
   {
     "name": "QDAcity",
@@ -2476,7 +2476,7 @@
     "id": "qdacity",
     "logo": "assets/logos/generic.png",
     "created_at": "2025-08-29",
-    "url": "https://qdacity.example.com"
+    "url": "https://qdacity.com/"
   },
   {
     "name": "Descript",
@@ -2499,7 +2499,7 @@
     "id": "descript",
     "logo": "assets/logos/descript.png",
     "created_at": "2025-08-29",
-    "url": "https://www.descript.com"
+    "url": "https://www.descript.com/"
   },
   {
     "name": "Fireflies.ai",
@@ -2546,7 +2546,7 @@
     "id": "zoom-ai-companion",
     "logo": "assets/logos/zoom-ai-companion.png",
     "created_at": "2025-08-29",
-    "url": "https://explore.zoom.us/en/ai-companion/"
+    "url": "https://www.zoom.com/en/products/ai-assistant/"
   },
   {
     "name": "Trint",
@@ -2569,7 +2569,7 @@
     "id": "trint",
     "logo": "assets/logos/generic.png",
     "created_at": "2025-08-29",
-    "url": "https://trint.example.com"
+    "url": "https://trint.com/"
   },
   {
     "name": "HappyScribe",
@@ -2592,7 +2592,7 @@
     "id": "happyscribe",
     "logo": "assets/logos/generic.png",
     "created_at": "2025-08-29",
-    "url": "https://happyscribe.example.com"
+    "url": "https://www.happyscribe.com/"
   },
   {
     "name": "Rev.ai",
@@ -2615,7 +2615,7 @@
     "id": "rev-ai",
     "logo": "assets/logos/generic.png",
     "created_at": "2025-08-29",
-    "url": "https://rev-ai.example.com"
+    "url": "https://www.rev.ai/"
   },
   {
     "name": "Sonix.ai",
@@ -2638,7 +2638,7 @@
     "id": "sonix-ai",
     "logo": "assets/logos/generic.png",
     "created_at": "2025-08-29",
-    "url": "https://sonix-ai.example.com"
+    "url": "https://sonix.ai/"
   },
   {
     "name": "Loom",
@@ -2662,7 +2662,7 @@
     "id": "loom",
     "logo": "assets/logos/generic.png",
     "created_at": "2025-08-29",
-    "url": "https://loom.example.com"
+    "url": "https://www.loom.com/ai"
   },
   {
     "name": "Thematic",
