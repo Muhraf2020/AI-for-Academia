@@ -179,3 +179,5 @@ hr.sep { border:0; border-top:1px solid var(--border); margin:14px 0; }
   background: #111;       /* match active chip’s dark background */
   color: #fff;            /* white text for contrast */
 }
+/* Card vertical centering (optional) */
+.card { align-items: center; }
