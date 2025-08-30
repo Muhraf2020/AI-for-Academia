@@ -1296,7 +1296,7 @@
     "id": "openread",
     "logo": "assets/logos/generic.png",
     "created_at": "2025-08-29",
-    "url": "https://openread.ai"
+    "url": "https://www.openread.academy"
   },
   {
     "name": "DocAnalyzer AI",
@@ -1459,7 +1459,7 @@
     "id": "dimensions-ai",
     "logo": "assets/logos/generic.png",
     "created_at": "2025-08-29",
-    "url": "https://dimensions-ai.example.com"
+    "url": "https://www.dimensions.ai"
   },
   {
     "name": "Retraction Watch Database",
@@ -1529,7 +1529,7 @@
     "id": "evidencehunt",
     "logo": "assets/logos/generic.png",
     "created_at": "2025-08-29",
-    "url": "https://evidencehunt.example.com"
+    "url": "https://evidencehunt.com"
   },
   {
     "name": "Journal Impact Explorer",
