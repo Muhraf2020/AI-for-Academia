@@ -1532,7 +1532,7 @@
     "url": "https://evidencehunt.com"
   },
   {
-    "name": "Journal Impact Explorer",
+    "name": "Scimago Journal & Country Rank",
     "tagline": "Explore journal metrics.",
     "description": "Simple portal to view impact factors, Eigenfactor scores and citation distributions for journals; use as a rough indicator, not a definitive ranking.",
     "pricing": "free",
@@ -1548,11 +1548,11 @@
     "edu_discount": false,
     "free_tier": true,
     "beta": false,
-    "slug": "journal-impact-explorer",
-    "id": "journal-impact-explorer",
+    "slug": "scimago-journal-&-country-rank",
+    "id": "scimago-journal-&-country-rank",
     "logo": "assets/logos/generic.png",
     "created_at": "2025-08-29",
-    "url": "https://journal-impact-explorer.example.com"
+    "url": "https://www.scimagojr.com/"
   },
   {
     "name": "Mendeley",
