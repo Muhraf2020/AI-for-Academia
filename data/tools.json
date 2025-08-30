@@ -2986,10 +2986,10 @@
     "id": "genially",
     "logo": "assets/logos/generic.png",
     "created_at": "2025-08-29",
-    "url": "https://genially.example.com"
+    "url": "https://genially.com/"
   },
   {
-    "name": "ChartAI",
+    "name": "Venngage",
     "tagline": "Automated chart generation.",
     "description": "Generates a variety of charts and dashboards from datasets using AI; tailor the charts to your audience and verify accuracy.",
     "pricing": "freemium",
@@ -3005,11 +3005,11 @@
     "edu_discount": false,
     "free_tier": true,
     "beta": true,
-    "slug": "chartai",
-    "id": "chartai",
+    "slug": "venngage",
+    "id": "venngage",
     "logo": "assets/logos/generic.png",
     "created_at": "2025-08-29",
-    "url": "https://chartai.example.com"
+    "url": "https://venngage.com/ai-tools/chart"
   },
   {
     "name": "Khanmigo",
@@ -3033,29 +3033,6 @@
     "logo": "assets/logos/khanmigo.png",
     "created_at": "2025-08-29",
     "url": "https://www.khanacademy.org/khan-labs"
-  },
-  {
-    "name": "Canvas Engage (GPT-4)",
-    "tagline": "AI assistant in Canvas LMS.",
-    "description": "Instructure’s integration of GPT-4 into Canvas offers question generation, forum summaries and instructor support; quality of outputs requires oversight.",
-    "pricing": "freemium",
-    "categories": [
-      "Teaching & assessment"
-    ],
-    "tags": [
-      "LMS",
-      "assistant"
-    ],
-    "evidence_cites": false,
-    "local_onprem": false,
-    "edu_discount": true,
-    "free_tier": true,
-    "beta": true,
-    "slug": "canvas-engage-gpt-4",
-    "id": "canvas-engage-gpt-4",
-    "logo": "assets/logos/generic.png",
-    "created_at": "2025-08-29",
-    "url": "https://canvas-engage-gpt-4.example.com"
   },
   {
     "name": "Quizlet Q-Chat",
