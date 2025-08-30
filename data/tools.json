@@ -3078,30 +3078,7 @@
     "id": "quillionz",
     "logo": "assets/logos/generic.png",
     "created_at": "2025-08-29",
-    "url": "https://quillionz.example.com"
-  },
-  {
-    "name": "Cognii",
-    "tagline": "AI tutor with adaptive feedback.",
-    "description": "Provides open-response tutoring and assessment using natural-language understanding; offers adaptive feedback to learners; used in K-12 and higher education.",
-    "pricing": "paid",
-    "categories": [
-      "Teaching & assessment"
-    ],
-    "tags": [
-      "tutor",
-      "adaptive"
-    ],
-    "evidence_cites": false,
-    "local_onprem": false,
-    "edu_discount": false,
-    "free_tier": false,
-    "beta": false,
-    "slug": "cognii",
-    "id": "cognii",
-    "logo": "assets/logos/generic.png",
-    "created_at": "2025-08-29",
-    "url": "https://cognii.example.com"
+    "url": "https://www.quillionz.com/"
   },
   {
     "name": "Squirrel AI",
@@ -3124,7 +3101,7 @@
     "id": "squirrel-ai",
     "logo": "assets/logos/generic.png",
     "created_at": "2025-08-29",
-    "url": "https://squirrel-ai.example.com"
+    "url": "https://squirrelai.com/"
   },
   {
     "name": "Century Tech",
@@ -3147,7 +3124,7 @@
     "id": "century-tech",
     "logo": "assets/logos/generic.png",
     "created_at": "2025-08-29",
-    "url": "https://century-tech.example.com"
+    "url": "https://www.century.tech/"
   },
   {
     "name": "Gradescope",
@@ -3170,7 +3147,7 @@
     "id": "gradescope-2",
     "logo": "assets/logos/generic.png",
     "created_at": "2025-08-29",
-    "url": "https://gradescope-2.example.com"
+    "url": "https://www.gradescope.com/"
   },
   {
     "name": "GPTZero",
@@ -3216,7 +3193,7 @@
     "id": "ouriginal-urkund",
     "logo": "assets/logos/generic.png",
     "created_at": "2025-08-29",
-    "url": "https://ouriginal-urkund.example.com"
+    "url": "https://ouriginal.com/"
   },
   {
     "name": "CopyLeaks AI Detector",
@@ -3239,7 +3216,7 @@
     "id": "copyleaks-ai-detector",
     "logo": "assets/logos/generic.png",
     "created_at": "2025-08-29",
-    "url": "https://copyleaks-ai-detector.example.com"
+    "url": "https://copyleaks.com/"
   },
   {
     "name": "ZeroGPT",
@@ -3262,7 +3239,7 @@
     "id": "zerogpt",
     "logo": "assets/logos/generic.png",
     "created_at": "2025-08-29",
-    "url": "https://zerogpt.example.com"
+    "url": "https://www.zerogpt.com/"
   },
   {
     "name": "Originality.ai",
@@ -3285,7 +3262,7 @@
     "id": "originality-ai",
     "logo": "assets/logos/generic.png",
     "created_at": "2025-08-29",
-    "url": "https://originality-ai.example.com"
+    "url": "https://originality.ai/"
   },
   {
     "name": "Plagscan",
@@ -3308,7 +3285,7 @@
     "id": "plagscan",
     "logo": "assets/logos/generic.png",
     "created_at": "2025-08-29",
-    "url": "https://plagscan.example.com"
+    "url": "https://www.plagscan.com/en/"
   },
   {
     "name": "iThenticate",
@@ -3331,7 +3308,7 @@
     "id": "ithenticate",
     "logo": "assets/logos/generic.png",
     "created_at": "2025-08-29",
-    "url": "https://ithenticate.example.com"
+    "url": "https://www.ithenticate.com/"
   },
   {
     "name": "PaperRater",
@@ -3354,7 +3331,7 @@
     "id": "paperrater",
     "logo": "assets/logos/generic.png",
     "created_at": "2025-08-29",
-    "url": "https://paperrater.example.com"
+    "url": "https://www.paperrater.com/"
   },
   {
     "name": "Colabra",
@@ -3377,7 +3354,7 @@
     "id": "colabra",
     "logo": "assets/logos/colabra.png",
     "created_at": "2025-08-29",
-    "url": "https://colabra.app"
+    "url": "https://www.colabra.ai/electronic-lab-notebook"
   },
   {
     "name": "LabArchives",
@@ -3400,7 +3377,7 @@
     "id": "labarchives",
     "logo": "assets/logos/generic.png",
     "created_at": "2025-08-29",
-    "url": "https://labarchives.example.com"
+    "url": "https://www.labarchives.com/"
   },
   {
     "name": "Labguru",
@@ -3492,7 +3469,7 @@
     "id": "rspace",
     "logo": "assets/logos/generic.png",
     "created_at": "2025-08-29",
-    "url": "https://www.rspace.com"
+    "url": "https://www.researchspace.com/"
   },
   {
     "name": "LabTwin",
@@ -3587,29 +3564,6 @@
     "url": "https://dmponline.dcc.ac.uk"
   },
   {
-    "name": "IRB Advisor",
-    "tagline": "Guidance for ethical research protocols.",
-    "description": "Provides information and advice on preparing Institutional Review Board applications and maintaining compliance with human-subject research regulations.",
-    "pricing": "paid",
-    "categories": [
-      "Policy & ethics support"
-    ],
-    "tags": [
-      "irb",
-      "guidance"
-    ],
-    "evidence_cites": false,
-    "local_onprem": false,
-    "edu_discount": true,
-    "free_tier": false,
-    "beta": false,
-    "slug": "irb-advisor",
-    "id": "irb-advisor",
-    "logo": "assets/logos/irb-advisor.png",
-    "created_at": "2025-08-29",
-    "url": "https://irbadvisor.com"
-  },
-  {
     "name": "ConsentBuilder",
     "tagline": "Templates for informed consent.",
     "description": "Offers templates and AI-assisted text suggestions to draft readable informed consent documents; still requires customization and review.",
@@ -3630,7 +3584,7 @@
     "id": "consentbuilder",
     "logo": "assets/logos/generic.png",
     "created_at": "2025-08-29",
-    "url": "https://consentbuilder.com"
+    "url": "https://informedconsentbuilder.com/"
   },
   {
     "name": "DataSeer",
@@ -3656,29 +3610,6 @@
     "url": "https://dataseer.ai"
   },
   {
-    "name": "Ethics & Compliance Chatbot",
-    "tagline": "Ask about research ethics guidelines.",
-    "description": "Conversational assistant trained on research ethics, legal frameworks and policy guidelines to answer questions; cross-check with official sources.",
-    "pricing": "freemium",
-    "categories": [
-      "Policy & ethics support"
-    ],
-    "tags": [
-      "chatbot",
-      "ethics"
-    ],
-    "evidence_cites": false,
-    "local_onprem": false,
-    "edu_discount": false,
-    "free_tier": true,
-    "beta": true,
-    "slug": "ethics-compliance-chatbot",
-    "id": "ethics-compliance-chatbot",
-    "logo": "assets/logos/generic.png",
-    "created_at": "2025-08-29",
-    "url": "https://ethicsbot.ai"
-  },
-  {
     "name": "AI Fairness 360",
     "tagline": "Toolkit for detecting bias in AI.",
     "description": "Open-source library from IBM to evaluate and mitigate algorithmic bias; supports multiple bias metrics and mitigation strategies.",
@@ -3700,30 +3631,7 @@
     "id": "ai-fairness-360",
     "logo": "assets/logos/ai-fairness-360.png",
     "created_at": "2025-08-29",
-    "url": "https://aif360.mybluemix.net"
-  },
-  {
-    "name": "Research Integrity Bot",
-    "tagline": "Assistant for research integrity policies.",
-    "description": "Tool that helps researchers navigate institutional integrity policies, authorship guidelines, and conflict of interest disclosures.",
-    "pricing": "freemium",
-    "categories": [
-      "Policy & ethics support"
-    ],
-    "tags": [
-      "integrity",
-      "policies"
-    ],
-    "evidence_cites": false,
-    "local_onprem": false,
-    "edu_discount": false,
-    "free_tier": true,
-    "beta": true,
-    "slug": "research-integrity-bot",
-    "id": "research-integrity-bot",
-    "logo": "assets/logos/generic.png",
-    "created_at": "2025-08-29",
-    "url": "https://researchintegritybot.example.com"
+    "url": "https://ai-fairness-360.org/"
   },
   {
     "name": "Glean",
@@ -3746,7 +3654,7 @@
     "id": "glean",
     "logo": "assets/logos/generic.png",
     "created_at": "2025-08-29",
-    "url": "https://glean.example.com"
+    "url": "https://www.glean.com/"
   },
   {
     "name": "PrivateGPT",
@@ -3769,7 +3677,7 @@
     "id": "privategpt",
     "logo": "assets/logos/generic.png",
     "created_at": "2025-08-29",
-    "url": "https://privategpt.example.com"
+    "url": "https://chat.private-ai.com/"
   },
   {
     "name": "Guru",
@@ -3792,7 +3700,7 @@
     "id": "guru",
     "logo": "assets/logos/generic.png",
     "created_at": "2025-08-29",
-    "url": "https://guru.example.com"
+    "url": "https://www.getguru.com/"
   },
   {
     "name": "Lark AI",
@@ -3815,7 +3723,7 @@
     "id": "lark-ai",
     "logo": "assets/logos/generic.png",
     "created_at": "2025-08-29",
-    "url": "https://lark-ai.example.com"
+    "url": "https://www.larksuite.com/en_sg/"
   },
   {
     "name": "Slite AI",
@@ -3838,7 +3746,7 @@
     "id": "slite-ai",
     "logo": "assets/logos/generic.png",
     "created_at": "2025-08-29",
-    "url": "https://slite-ai.example.com"
+    "url": "https://slite.com/"
   },
   {
     "name": "Coda AI",
@@ -3861,7 +3769,7 @@
     "id": "coda-ai",
     "logo": "assets/logos/generic.png",
     "created_at": "2025-08-29",
-    "url": "https://coda-ai.example.com"
+    "url": "https://coda.io/"
   },
   {
     "name": "Quip AI",
@@ -3884,7 +3792,7 @@
     "id": "quip-ai",
     "logo": "assets/logos/generic.png",
     "created_at": "2025-08-29",
-    "url": "https://quip-ai.example.com"
+    "url": "https://quip.com/"
   },
   {
     "name": "Microsoft Copilot for 365",
@@ -3908,7 +3816,7 @@
     "id": "microsoft-copilot-for-365",
     "logo": "assets/logos/generic.png",
     "created_at": "2025-08-29",
-    "url": "https://microsoft-copilot-for-365.example.com"
+    "url": "https://www.microsoft.com/en-us/microsoft-365-copilot"
   },
   {
     "id": "labcollector",
@@ -3933,29 +3841,6 @@
     "free_tier": false,
     "beta": false,
     "created_at": "2025-08-29"
-  },
-  {
-    "id": "research-ethics-assistant",
-    "slug": "research-ethics-assistant",
-    "name": "Research Ethics Assistant",
-    "url": "https://www.researchethicsassistant.example.com/",
-    "tagline": "AI-powered support for research ethics and compliance.",
-    "description": "Research Ethics Assistant is an AI-driven platform that guides researchers through ethical considerations, consent forms, and regulatory compliance for studies involving human participants.",
-    "pricing": "freemium",
-    "categories": [
-      "Policy & ethics support"
-    ],
-    "tags": [
-      "ethics",
-      "compliance",
-      "human subjects"
-    ],
-    "logo": "assets/logos/generic.png",
-    "evidence_cites": false,
-    "local_onprem": false,
-    "edu_discount": true,
-    "free_tier": true,
-    "beta": true,
-    "created_at": "2025-08-29"
+    url": "https://www.labcollector.com/"
   }
 ]
