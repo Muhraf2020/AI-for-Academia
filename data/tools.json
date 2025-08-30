@@ -98,7 +98,7 @@
     "id": "scispace",
     "slug": "scispace-copilot",
     "name": "SciSpace Copilot",
-    "url": "https://typeset.io/",
+    "url": "https://scispace.com/",
     "tagline": "Explain papers as you read.",
     "description": "Ask questions alongside PDFs; get simpler explanations of math, tables, and graphs.",
     "pricing": "freemium",
@@ -946,7 +946,7 @@
     "id": "system-pro",
     "logo": "assets/logos/system-pro.png",
     "created_at": "2025-08-29",
-    "url": "https://system.com"
+    "url": "https://www.system.com/product/system-pro"
   },
   {
     "name": "STORM",
@@ -993,7 +993,7 @@
     "id": "mify",
     "logo": "assets/logos/mify.png",
     "created_at": "2025-08-29",
-    "url": "https://mapify.ai"
+    "url": "https://mapify.so/"
   },
   {
     "name": "arXiv Pulse",
@@ -1342,7 +1342,7 @@
     "id": "scholarcy",
     "logo": "assets/logos/generic.png",
     "created_at": "2025-08-29",
-    "url": "https://scholarcy.example.com"
+    "url": "https://www.scholarcy.com/"
   },
   {
     "name": "ExplainPaper",
@@ -1365,7 +1365,7 @@
     "id": "explainpaper",
     "logo": "assets/logos/generic.png",
     "created_at": "2025-08-29",
-    "url": "https://explainpaper.example.com"
+    "url": "https://www.explainpaper.com/"
   },
   {
     "name": "OpenAlex",
@@ -1389,7 +1389,7 @@
     "id": "openalex",
     "logo": "assets/logos/generic.png",
     "created_at": "2025-08-29",
-    "url": "https://openalex.example.com"
+    "url": "https://openalex.org/"
   },
   {
     "name": "Citation Gecko",
@@ -1413,7 +1413,7 @@
     "id": "citation-gecko",
     "logo": "assets/logos/generic.png",
     "created_at": "2025-08-29",
-    "url": "https://citation-gecko.example.com"
+    "url": "https://citationgecko.azurewebsites.net/"
   },
   {
     "name": "Altmetric",
@@ -1436,7 +1436,7 @@
     "id": "altmetric",
     "logo": "assets/logos/generic.png",
     "created_at": "2025-08-29",
-    "url": "https://altmetric.example.com"
+    "url": "https://www.altmetric.com/"
   },
   {
     "name": "Dimensions.ai",
@@ -1483,7 +1483,7 @@
     "id": "retraction-watch-database",
     "logo": "assets/logos/generic.png",
     "created_at": "2025-08-29",
-    "url": "https://retraction-watch-database.example.com"
+    "url": "https://retractiondatabase.org/"
   },
   {
     "name": "PubPeer",
@@ -1506,7 +1506,7 @@
     "id": "pubpeer",
     "logo": "assets/logos/generic.png",
     "created_at": "2025-08-29",
-    "url": "https://pubpeer.example.com"
+    "url": "https://pubpeer.com/"
   },
   {
     "name": "EvidenceHunt",
@@ -1621,7 +1621,7 @@
     "id": "sciwheel",
     "logo": "assets/logos/generic.png",
     "created_at": "2025-08-29",
-    "url": "https://sciwheel.example.com"
+    "url": "https://sciwheel.com/"
   },
   {
     "name": "JabRef",
@@ -1644,7 +1644,7 @@
     "id": "jabref",
     "logo": "assets/logos/generic.png",
     "created_at": "2025-08-29",
-    "url": "https://jabref.example.com"
+    "url": "https://www.jabref.org/"
   },
   {
     "name": "Citavi",
@@ -1690,7 +1690,7 @@
     "id": "refworks",
     "logo": "assets/logos/generic.png",
     "created_at": "2025-08-29",
-    "url": "https://refworks.example.com"
+    "url": "https://refworks.proquest.com/"
   },
   {
     "name": "BibGuru",
@@ -1713,7 +1713,7 @@
     "id": "bibguru",
     "logo": "assets/logos/generic.png",
     "created_at": "2025-08-29",
-    "url": "https://bibguru.example.com"
+    "url": "https://www.bibguru.com/"
   },
   {
     "name": "Mendeley Cite",
@@ -1920,7 +1920,7 @@
     "id": "wordtune",
     "logo": "assets/logos/generic.png",
     "created_at": "2025-08-29",
-    "url": "https://wordtune.example.com"
+    "url": "https://www.wordtune.com/"
   },
   {
     "name": "Codeium",
@@ -1966,7 +1966,7 @@
     "id": "amazon-codewhisperer",
     "logo": "assets/logos/generic.png",
     "created_at": "2025-08-29",
-    "url": "https://amazon-codewhisperer.example.com"
+    "url": "https://docs.aws.amazon.com/codewhisperer/"
   },
   {
     "name": "Tabnine",
@@ -1989,7 +1989,7 @@
     "id": "tabnine",
     "logo": "assets/logos/generic.png",
     "created_at": "2025-08-29",
-    "url": "https://tabnine.example.com"
+    "url": "https://www.tabnine.com/"
   },
   {
     "name": "Replit Ghostwriter",
@@ -2012,7 +2012,7 @@
     "id": "replit-ghostwriter",
     "logo": "assets/logos/generic.png",
     "created_at": "2025-08-29",
-    "url": "https://replit-ghostwriter.example.com"
+    "url": "https://replit.com/ai"
   },
   {
     "name": "Jupyter AI",
@@ -2035,7 +2035,7 @@
     "id": "jupyter-ai",
     "logo": "assets/logos/generic.png",
     "created_at": "2025-08-29",
-    "url": "https://jupyter-ai.example.com"
+    "url": "https://github.com/jupyterlab/jupyter-ai"
   },
   {
     "name": "Wolfram Alpha",
