@@ -2,7 +2,7 @@
 (function () {
   // ---------- CONFIG ----------
   const CONFIG = {
-    GOOGLE_FORM_URL: "https://forms.gle/q9VymiqhY6mT5MYV8", // <-- replace
+    GOOGLE_FORM_URL: "https://docs.google.com/forms/d/e/1FAIpQLScUEGeF_jxL3oNwCTrBh1OX-WRlsauQksUJjV_Z3uiY9k9pYA/viewform?usp=header", // <-- replace
     ITEMS_PER_PAGE: 12,
     SITE_URL: "https://yourname.github.io/ai-tools-directory/" // <-- replace when you publish
   };
