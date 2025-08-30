@@ -2268,7 +2268,7 @@
     "id": "ibm-watson-analytics",
     "logo": "assets/logos/generic.png",
     "created_at": "2025-08-29",
-    "url": "https://ibm-watson-analytics.example.com"
+    "url": "https://www.ibm.com/solutions/analytics"
   },
   {
     "name": "Kaggle Notebooks AI",
@@ -2292,7 +2292,7 @@
     "id": "kaggle-notebooks-ai",
     "logo": "assets/logos/generic.png",
     "created_at": "2025-08-29",
-    "url": "https://kaggle-notebooks-ai.example.com"
+    "url": "https://www.kaggle.com/code"
   },
   {
     "name": "MAXQDA",
@@ -2338,7 +2338,7 @@
     "id": "dedoose",
     "logo": "assets/logos/generic.png",
     "created_at": "2025-08-29",
-    "url": "https://dedoose.example.com"
+    "url": "https://www.dedoose.com"
   },
   {
     "name": "Taguette",
