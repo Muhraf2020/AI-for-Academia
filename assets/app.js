@@ -91,6 +91,60 @@
   }
   function slugify(s) { return String(s||"").toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/(^-|-$)/g,""); }
 
+  /* =======================
+   LOGO FALLBACK HELPERS
+   ======================= */
+
+// Extracts the hostname from a URL (used to fetch a site icon if the main logo fails)
+function hostnameFromUrl(u) {
+  try { return new URL(u).hostname; } catch { return ""; }
+}
+
+// Installs a robust error handler on each logo <img> to:
+// 1) try icon.horse, 2) try Google s2 favicons, 3) fall back to initials
+function installLogoErrorFallback() {
+  document.querySelectorAll('img.logo[data-domain]').forEach(img => {
+    if (img.dataset._wired) return; // avoid double-binding after re-renders
+    img.dataset._wired = "1";
+
+    img.addEventListener('error', () => {
+      const domain = img.dataset.domain;
+      // No domain? swap to initials block and exit
+      if (!domain) {
+        const name = img.getAttribute('alt')?.replace(/ logo$/i, '') || 'AI';
+        const div = document.createElement('div');
+        div.className = 'logo';
+        div.setAttribute('aria-hidden', 'true');
+        div.textContent = (name.split(/\s+/).slice(0,2).map(s=>s[0]?.toUpperCase()||'').join('')) || 'AI';
+        img.replaceWith(div);
+        return;
+      }
+
+      // 1st fallback: icon.horse
+      if (!img.dataset.triedHorse) {
+        img.dataset.triedHorse = "1";
+        img.src = `https://icon.horse/icon/${encodeURIComponent(domain)}`;
+        return;
+      }
+
+      // 2nd fallback: Google s2 favicons
+      if (!img.dataset.triedS2) {
+        img.dataset.triedS2 = "1";
+        img.src = `https://www.google.com/s2/favicons?domain=${encodeURIComponent(domain)}&sz=64`;
+        return;
+      }
+
+      // Final fallback: initials
+      const name = img.getAttribute('alt')?.replace(/ logo$/i, '') || 'AI';
+      const div = document.createElement('div');
+      div.className = 'logo';
+      div.setAttribute('aria-hidden', 'true');
+      div.textContent = (name.split(/\s+/).slice(0,2).map(s=>s[0]?.toUpperCase()||'').join('')) || 'AI';
+      img.replaceWith(div);
+    }, { once: false });
+  });
+}
+
   // ----- PAGINATION HELPERS -----
   function getPageWindow(curr, total, width = 5) {
     const half = Math.floor(width / 2);
