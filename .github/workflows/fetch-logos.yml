@@ -1,0 +1,45 @@
+name: Fetch tool logos
+on:
+  workflow_dispatch: {}   # run manually from the Actions tab
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install deps
+        run: |
+          python -m pip install --upgrade pip
+          pip install pillow requests
+
+      - name: Ensure logos dir exists
+        run: mkdir -p assets/logos
+
+      - name: Run logo fetcher
+        run: python scripts/fetch_logos.py --force
+
+      - name: Create PR with changes
+        uses: peter-evans/create-pull_request@v6
+        with:
+          commit-message: "chore: fetch per-tool logos and update tools.json"
+          title: "Fetch per-tool logos"
+          body: |
+            Automated logo fetch run.
+            - Converts favicons to PNG where possible
+            - Saves to assets/logos/<slug>.png (or .svg)
+            - Updates data/tools.json "logo" to local path
+          branch: chore/fetch-logos
+          labels: automated
