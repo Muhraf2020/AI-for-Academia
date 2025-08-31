@@ -300,16 +300,29 @@ async function init() {
 
       setOG("og:title", document.title);
       setOG("og:description", tool.short_description || `Learn about ${tool.name}.`);
-      setMeta("twitter:title", document.title);
-      setMeta("twitter:description", tool.short_description || `Learn about ${tool.name}.`);
-
       setOG("og:url", toolUrl);
 
+      setMeta("twitter:title", document.title);
+      setMeta("twitter:description", tool.short_description || `Learn about ${tool.name}.`);
       // Optional: per-tool social image
       if (tool.image && /^https?:/i.test(tool.image)) {
         setOG("og:image", tool.image);
         setMeta("twitter:image", tool.image);
       }
+      /* === ADD THESE LINES HERE (force-update placeholders in <head>) === */
+      document.querySelector('meta[name="twitter:title"]')
+      ?.setAttribute('content', document.title);
+
+      document.querySelector('meta[name="twitter:description"]')
+      ?.setAttribute('content', tool.short_description || `Learn about ${tool.name}.`);
+
+      document.querySelector('meta[name="twitter:image"]')
+      ?.setAttribute('content',
+      (tool.image && /^https?:/i.test(tool.image))
+      ? tool.image
+      : 'https://academiawithai.com/assets/og-default.jpg'
+  );
+      /* === END ADD === */
 
       // JSON-LD: SoftwareApplication
       addJSONLD({
