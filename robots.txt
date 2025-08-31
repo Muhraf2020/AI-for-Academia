@@ -1,4 +1,4 @@
-# FILE: robots.txt
 User-agent: *
 Allow: /
+
 Sitemap: https://academiawithai.com/sitemap.xml
