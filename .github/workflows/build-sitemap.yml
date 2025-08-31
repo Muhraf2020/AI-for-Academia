@@ -1,0 +1,38 @@
+name: Build sitemap & robots
+
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch: {}
+
+permissions:
+  contents: write  # required to commit sitemap/robots back to the repo
+
+jobs:
+  build-sitemap:
+    runs-on: ubuntu-latest
+    env:
+      BASE_URL: https://academiawithai.com/
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Build sitemap & robots
+        run: node scripts/build-sitemap.mjs
+
+      - name: Commit changes (if any)
+        run: |
+          if [[ -n "$(git status --porcelain)" ]]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add sitemap.xml robots.txt
+            git commit -m "ci: rebuild sitemap & robots [skip ci]"
+            git push
+          else
+            echo "No changes to commit."
+          fi
