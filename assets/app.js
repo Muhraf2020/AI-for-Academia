@@ -300,6 +300,9 @@ async function init() {
 
       setOG("og:title", document.title);
       setOG("og:description", tool.short_description || `Learn about ${tool.name}.`);
+      setMeta("twitter:title", document.title);
+      setMeta("twitter:description", tool.short_description || `Learn about ${tool.name}.`);
+
       setOG("og:url", toolUrl);
 
       // Optional: per-tool social image
