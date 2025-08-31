@@ -591,39 +591,63 @@ async function init() {
   }
 
   function cardHTML(t) {
+  const detailsHref = `tool.html?slug=${encodeURIComponent(t.slug)}`;
   const domain = t.url ? hostnameFromUrl(t.url) : "";
 
-  const logo = t.logo
+  // Logo: linked to details, proper alt, lazy, async decode
+  const logoHTML = t.logo
     ? (() => {
-        // add ?v= to bust caches when you update logos
         const withV = `${t.logo}${t.logo.includes('?') ? '&' : '?'}v=${CONFIG.ASSET_VERSION}`;
-        return `<img class="logo" src="${esc(withV)}" alt="${esc(t.name)} logo" loading="lazy" referrerpolicy="no-referrer" data-domain="${esc(domain)}" />`;
+        return `
+          <a href="${detailsHref}" class="logo-link" aria-label="${esc(t.name)} details">
+            <img class="logo"
+                 src="${esc(withV)}"
+                 alt="${esc(t.name)} logo"
+                 loading="lazy"
+                 decoding="async"
+                 referrerpolicy="no-referrer"
+                 data-domain="${esc(domain)}" />
+          </a>`;
       })()
-    : `<div class="logo" aria-hidden="true">${esc(initials(t.name)||"AI")}</div>`;
+    : `
+      <a href="${detailsHref}" class="logo-link" aria-label="${esc(t.name)} details">
+        <div class="logo" role="img" aria-label="${esc(t.name)} logo">
+          ${esc(initials(t.name) || "AI")}
+        </div>
+      </a>`;
 
   const cats = t.categories.slice(0,2).map(c=>`<span class="badge">${esc(c)}</span>`).join(" ");
   const tagChips = t.tags.slice(0,5).map(c=>`<span class="tag">${esc(c)}</span>`).join(" ");
   const icons = iconRow(t);
 
-  const link = t.url ? esc(t.url) : `tool.html?slug=${encodeURIComponent(t.slug)}`;
+  // External CTA falls back to details if url missing
+  const extHref = t.url || detailsHref;
 
   return `
     <article class="card">
-      ${logo}
+      ${logoHTML}
       <div style="flex:1">
         <div class="title">
-          <h2 style="font-size:1.05rem; margin:0">${esc(t.name)}</h2>
+          <h2 style="font-size:1.05rem; margin:0">
+            <a href="${detailsHref}" title="${esc(t.name)} details">${esc(t.name)}</a>
+          </h2>
           ${icons}
           <span class="right">${pricingBadge(t.pricing)}</span>
         </div>
-        <p style="margin:6px 0 8px; color:#333">${esc(t.tagline || t.description.slice(0,120))}</p>
+        <p style="margin:6px 0 8px; color:#333">
+          ${esc(t.tagline || t.description.slice(0,120))}
+        </p>
         <div class="badges">${cats}</div>
         <div class="tags">${tagChips}</div>
       </div>
-      <div class="cta"><a href="${link}" aria-label="Visit ${esc(t.name)} website" target="_blank" rel="noopener">Website ↗</a></div>
+      <div class="cta">
+        <a href="${detailsHref}" class="details-link" title="View ${esc(t.name)} details">Details →</a>
+        <a href="${extHref}" aria-label="Visit ${esc(t.name)} website" target="_blank" rel="noopener">Website ↗</a>
+      </div>
     </article>
   `;
 }
+
 
 
   // ---------- JSON-LD ----------
