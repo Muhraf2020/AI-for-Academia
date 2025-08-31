@@ -249,7 +249,96 @@ function installLogoErrorFallback() {
 
 
   // ---------- FETCH & INIT ----------
-  async function init() {
+async function init() {
+
+  // === Router: handle tool.html separately and exit early ===
+  if (/tool\.html$/i.test(location.pathname)) {
+    try {
+      // 1) read slug from URL
+      const slug = (new URLSearchParams(location.search)).get("slug") || "";
+
+      // 2) load tools.json
+      const res = await fetch("data/tools.json", { cache: "no-store" });
+      if (!res.ok) throw new Error("tools.json not found");
+      const data = await res.json();
+      if (!Array.isArray(data)) throw new Error("tools.json must be an array");
+
+      // 3) normalize tools (consistent with index mapping)
+      const normalized = data.map(t => ({
+        id: t.id || t.slug || Math.random().toString(36).slice(2),
+        slug: (t.slug || (t.name||"").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g,"")).slice(0,128),
+        name: t.name || "Untitled",
+        url: t.url || "#",
+        tagline: t.tagline || "",
+        description: t.description || "",
+        pricing: ["free","freemium","paid"].includes(t.pricing) ? t.pricing : "freemium",
+        categories: Array.isArray(t.categories) ? t.categories.filter(Boolean) : [],
+        tags: Array.isArray(t.tags) ? t.tags.filter(Boolean) : [],
+        logo: t.logo || "",
+        image: t.image || "",                 // optional hero image per tool
+        short_description: t.short_description || t.tagline || "",
+        price: t.price || t.pricing || ""
+      }));
+
+      // 4) find the tool by slug
+      const tool = normalized.find(t => t.slug === slug);
+      if (!tool) {
+        document.title = "Tool not found — Academia with AI";
+        setMeta("description", "This tool could not be found.");
+        setCanonical(`${CONFIG.SITE_URL}tool.html`);
+        return;
+      }
+
+      // 5) === Per-tool SEO ===
+      const siteUrl = (CONFIG.SITE_URL || (location.origin + "/")).replace(/\/$/, "/");
+      const toolUrl = `${siteUrl}tool.html?slug=${encodeURIComponent(tool.slug)}`;
+      const categoryName = (tool.categories && tool.categories[0]) || "Tools";
+
+      document.title = `${tool.name} — ${categoryName} | Academia with AI`;
+      setMeta("description", tool.short_description || `Learn about ${tool.name} for academic workflows.`);
+      setCanonical(toolUrl);
+
+      setOG("og:title", document.title);
+      setOG("og:description", tool.short_description || `Learn about ${tool.name}.`);
+      setOG("og:url", toolUrl);
+
+      // Optional: per-tool social image
+      if (tool.image && /^https?:/i.test(tool.image)) {
+        setOG("og:image", tool.image);
+        setMeta("twitter:image", tool.image);
+      }
+
+      // JSON-LD: SoftwareApplication
+      addJSONLD({
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": tool.name,
+        "url": toolUrl,
+        "operatingSystem": "Any",
+        "applicationCategory": "EducationalApplication",
+        "description": tool.short_description || undefined,
+        "offers": (tool.price && String(tool.price).toLowerCase().includes("free"))
+          ? { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+          : undefined
+      });
+
+      // JSON-LD: Breadcrumbs
+      const catSlug = slugify(categoryName);
+      addJSONLD({
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": siteUrl },
+          { "@type": "ListItem", "position": 2, "name": categoryName, "item": `${siteUrl}category/${catSlug}.html` },
+          { "@type": "ListItem", "position": 3, "name": tool.name, "item": toolUrl }
+        ]
+      });
+    } catch (e) {
+      console.warn("tool.html SEO init failed:", e);
+    }
+    return; // IMPORTANT: stop here so index-page code doesn't run on tool.html
+  }
+  // === end tool.html SEO router ===
     // Suggest form
     elSuggest.href = CONFIG.GOOGLE_FORM_URL || "#";
 
