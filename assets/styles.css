@@ -279,3 +279,24 @@ hr.sep { border:0; border-top:1px solid var(--border); margin:14px 0; }
   border: 1px solid var(--border);
   background: #fff;
 }
+
+/* ================================
+   Book Banner: Note styling
+   -------------------------------
+   This styles the "living appendix"
+   message that appears above the
+   book title in the banner.
+   ================================ */
+.book-banner__note {
+  margin: 0 0 14px;     /* add bottom spacing before the title */
+  font-size: 1rem;      /* keep text at a readable base size */
+  color: #111;          /* dark neutral text color for emphasis */
+}
+
+/* When the note text is wrapped in <strong><em>...</em></strong>,
+   apply a branded highlight style (blue, italic, bold). */
+.book-banner__note strong em {
+  color: #0b57d0;       /* brand blue highlight */
+  font-style: italic;   /* italic for emphasis */
+  font-weight: 600;     /* semi-bold weight for visibility */
+}
