@@ -300,3 +300,26 @@ hr.sep { border:0; border-top:1px solid var(--border); margin:14px 0; }
   font-style: italic;   /* italic for emphasis */
   font-weight: 600;     /* semi-bold weight for visibility */
 }
+
+/* Reserve space for logos so cards don't jump when images load */
+.card .logo,
+.logo-link .logo,
+img.logo {
+  width: 64px;
+  height: 64px;
+  flex: 0 0 64px;
+  object-fit: contain;
+}
+
+/* Chip count bubble: reserve space so chip width doesn't jump */
+.chip .chip-count {
+  display: inline-block;
+  min-width: 1.8em;
+  text-align: center;
+}
+
+/* Paint large lists faster; the browser can skip offscreen cards */
+.card {
+  content-visibility: auto;
+  contain-intrinsic-size: 200px;
+}
