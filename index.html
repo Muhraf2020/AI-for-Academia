@@ -2,18 +2,61 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <!-- Basics -->
   <meta charset="utf-8" />
-  <title>AI Tools Directory</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="A static, fast directory of AI tools for the academic research lifecycle — search, filter, and explore." />
-  <meta property="og:title" content="AI Tools Directory" />
-  <meta property="og:description" content="Search and explore AI tools by category, pricing, and tags." />
+
+  <!-- Title & Description -->
+  <title>AI Tools Directory for Scholars | Academia with AI</title>
+  <meta name="description" content="Discover curated AI tools for research, literature mapping, writing, data analysis, teaching, ethics, and more—built for academics and PhD students." />
+
+  <!-- Canonical (always your absolute custom domain) -->
+  <link rel="canonical" href="https://academiawithai.com/" />
+
+  <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="" id="og-url" />
-  <meta property="og:image" content="" />
-  <link rel="icon" href="favicon.ico" />
-  <link rel="stylesheet" href="assets/styles.css?v=5">
+  <meta property="og:title" content="AI Tools Directory for Scholars | Academia with AI" />
+  <meta property="og:description" content="Browse and compare AI tools across the full academic lifecycle." />
+  <meta property="og:url" content="https://academiawithai.com/" />
+  <meta property="og:image" content="https://academiawithai.com/assets/og-default.jpg" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="AI Tools Directory for Scholars | Academia with AI" />
+  <meta name="twitter:description" content="Browse and compare AI tools across the full academic lifecycle." />
+  <meta name="twitter:image" content="https://academiawithai.com/assets/og-default.jpg" />
+
+  <!-- Favicon & CSS -->
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="stylesheet" href="assets/styles.css?v=5" />
+
+  <!-- JSON-LD: WebSite (with on-site search) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Academia with AI — AI Tools Directory",
+    "url": "https://academiawithai.com/",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://academiawithai.com/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Academia with AI",
+    "url": "https://academiawithai.com/",
+    "logo": "https://academiawithai.com/assets/logo.png"
+  }
+  </script>
 </head>
+
 <body>
   <header>
     <div class="wrap">
