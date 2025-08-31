@@ -29,6 +29,34 @@
     { name: "Collaboration & knowledge management", slug: "collaboration-knowledge-management" }
   ];
   const CATEGORY_SLUG_SET = new Set(CATEGORIES.map(c => c.slug));
+  // ---------- SEO HELPERS (paste START) ----------
+  function setMeta(name, content) {
+    if (!content) return;
+    let el = document.querySelector(`meta[name="${name}"]`);
+    if (!el) { el = document.createElement("meta"); el.setAttribute("name", name); document.head.appendChild(el); }
+    el.setAttribute("content", content);
+  }
+  function setOG(property, content) {
+    if (!content) return;
+    let el = document.querySelector(`meta[property="${property}"]`);
+    if (!el) { el = document.createElement("meta"); el.setAttribute("property", property); document.head.appendChild(el); }
+    el.setAttribute("content", content);
+  }
+  function setCanonical(url) {
+    let link = document.querySelector('link[rel="canonical"]');
+    if (!link) { link = document.createElement("link"); link.setAttribute("rel", "canonical"); document.head.appendChild(link); }
+    link.setAttribute("href", url);
+  }
+  function addJSONLD(obj) {
+    const s = document.createElement("script");
+    s.type = "application/ld+json";
+    s.text = JSON.stringify(obj);
+    document.head.appendChild(s);
+  }
+  function slugify(s) {
+    return (s || "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
+  }
+  // ---------- SEO HELPERS (paste END) ----------
 
   // ---------- STATE ----------
   let tools = [];                 // full list
