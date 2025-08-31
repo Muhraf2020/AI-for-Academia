@@ -143,21 +143,6 @@
         </section>
       `;
 
-      // JSON-LD for SoftwareApplication
-      const ld = {
-        "@context":"https://schema.org",
-        "@type":"SoftwareApplication",
-        "name": tool.name,
-        "description": tool.description || tool.tagline || "",
-        "applicationCategory": (tool.categories||[])[0] || "AIApplication",
-        "operatingSystem": "Web",
-        "offers": {"@type":"Offer","price": tool.pricing=="free"?"0":"0","priceCurrency":"USD"},
-        "url": tool.url
-      };
-      const s = document.createElement("script");
-      s.type="application/ld+json";
-      s.textContent = JSON.stringify(ld);
-      document.head.appendChild(s);
     })();
   </script>
 </body>
