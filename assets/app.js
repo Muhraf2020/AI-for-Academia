@@ -117,7 +117,7 @@
     if (t.beta)          arr.push("🧪");
     return arr.length? `<span class="icons" title="✅ cites • 🔒 local/on-prem • 🏫 EDU • 🔁 free tier • 🧪 beta">${arr.join(" ")}</span>` : "";
   }
-  function slugify(s) { return String(s||"").toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/(^-|-$)/g,""); }
+  
 
   /* =======================
    LOGO FALLBACK HELPERS
