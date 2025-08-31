@@ -5,7 +5,7 @@
     GOOGLE_FORM_URL: "https://docs.google.com/forms/d/e/1FAIpQLScUEGeF_jxL3oNwCTrBh1OX-WRlsauQksUJjV_Z3uiY9k9pYA/viewform", // <-- replace
     ITEMS_PER_PAGE: 12,
     SITE_URL: "https://academiawithai.com/", // <-- replace when you publish
-    ASSET_VERSION: "2" // bump to "2", "3", ... whenever you update logos
+    ASSET_VERSION: "1" // bump to "2", "3", ... whenever you update logos
   };
 
   // ---------- CATEGORY DEFINITIONS ----------
@@ -591,16 +591,15 @@ async function init() {
   }
 
   function cardHTML(t) {
-  const detailUrl  = `tool.html?slug=${encodeURIComponent(t.slug)}`;
-  const websiteUrl = t.url ? esc(t.url) : "";
-  const domain     = t.url ? hostnameFromUrl(t.url) : "";
+  const detailsHref = `tool.html?slug=${encodeURIComponent(t.slug)}`;
+  const domain = t.url ? hostnameFromUrl(t.url) : "";
 
-  // Logo -> details (alt, lazy, async)
-  const logo = t.logo
+  // Logo: linked to details, proper alt, lazy, async decode
+  const logoHTML = t.logo
     ? (() => {
         const withV = `${t.logo}${t.logo.includes('?') ? '&' : '?'}v=${CONFIG.ASSET_VERSION}`;
         return `
-          <a href="${detailUrl}" class="logo-link" aria-label="${esc(t.name)} details">
+          <a href="${detailsHref}" class="logo-link" aria-label="${esc(t.name)} details">
             <img class="logo"
                  src="${esc(withV)}"
                  alt="${esc(t.name)} logo"
@@ -611,7 +610,7 @@ async function init() {
           </a>`;
       })()
     : `
-      <a href="${detailUrl}" class="logo-link" aria-label="${esc(t.name)} details">
+      <a href="${detailsHref}" class="logo-link" aria-label="${esc(t.name)} details">
         <div class="logo" role="img" aria-label="${esc(t.name)} logo">
           ${esc(initials(t.name) || "AI")}
         </div>
@@ -621,13 +620,16 @@ async function init() {
   const tagChips = t.tags.slice(0,5).map(c=>`<span class="tag">${esc(c)}</span>`).join(" ");
   const icons = iconRow(t);
 
+  // External CTA falls back to details if url missing
+  const extHref = t.url || detailsHref;
+
   return `
     <article class="card">
-      ${logo}
+      ${logoHTML}
       <div style="flex:1">
         <div class="title">
           <h2 style="font-size:1.05rem; margin:0">
-            <a href="${detailUrl}" title="${esc(t.name)} details" style="text-decoration:none; color:inherit">${esc(t.name)}</a>
+            <a href="${detailsHref}" title="${esc(t.name)} details">${esc(t.name)}</a>
           </h2>
           ${icons}
           <span class="right">${pricingBadge(t.pricing)}</span>
@@ -638,9 +640,9 @@ async function init() {
         <div class="badges">${cats}</div>
         <div class="tags">${tagChips}</div>
       </div>
-      <div class="cta" style="display:flex; gap:8px; align-items:center">
-        <a href="${detailUrl}" class="details-link" title="View ${esc(t.name)} details">Details →</a>
-        ${websiteUrl ? `<a href="${websiteUrl}" aria-label="Visit ${esc(t.name)} website" target="_blank" rel="noopener">Website ↗</a>` : ""}
+      <div class="cta">
+        <a href="${detailsHref}" class="details-link" title="View ${esc(t.name)} details">Details →</a>
+        <a href="${extHref}" aria-label="Visit ${esc(t.name)} website" target="_blank" rel="noopener">Website ↗</a>
       </div>
     </article>
   `;
@@ -681,4 +683,3 @@ async function init() {
 }
 
 })();
-
