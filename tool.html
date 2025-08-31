@@ -2,16 +2,36 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <!-- Basics -->
   <meta charset="utf-8" />
-  <title>Tool • AI Tools Directory</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Tool details • AI Tools Directory" />
+
+  <!-- ✅ Placeholders for per-tool SEO (will be updated dynamically via JS) -->
+  <title>Tool — Academia with AI</title>
+  <meta name="description" content="" />
+
+  <link rel="canonical" href="" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="" />
+  <meta property="og:description" content="" />
+  <meta property="og:url" content="" />
+  <meta property="og:image" content="https://academiawithai.com/assets/og-default.jpg" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="" />
+  <meta name="twitter:description" content="" />
+  <meta name="twitter:image" content="https://academiawithai.com/assets/og-default.jpg" />
+
+  <!-- Favicon & CSS -->
   <link rel="icon" href="favicon.ico" />
   <link rel="stylesheet" href="assets/styles.css" />
+
+  <!-- Keep your existing helper scripts -->
   <script>
     // Simple utility to get query string param
     function qp(name){ const u=new URL(location.href); return u.searchParams.get(name); }
-    function esc(s){ return String(s||"").replace(/[&<>\"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',\"'\":'&#39;'}[c])); }
+    function esc(s){ return String(s||"").replace(/[&<>\"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
     function pricingBadge(p) {
       const color = p==="free"?"#22a559": p==="freemium"?"#ff8c00": "#6c6c6c";
       return `<span class="badge" style="background:${color}1a;border-color:${color}4d;color:${color}">${esc(p)}</span>`;
@@ -27,6 +47,7 @@
     }
   </script>
 </head>
+
 <body>
   <header>
     <div class="wrap">
