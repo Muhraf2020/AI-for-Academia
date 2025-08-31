@@ -5,7 +5,7 @@
     GOOGLE_FORM_URL: "https://docs.google.com/forms/d/e/1FAIpQLScUEGeF_jxL3oNwCTrBh1OX-WRlsauQksUJjV_Z3uiY9k9pYA/viewform", // <-- replace
     ITEMS_PER_PAGE: 12,
     SITE_URL: "https://academiawithai.com/", // <-- replace when you publish
-    ASSET_VERSION: "1" // bump to "2", "3", ... whenever you update logos
+    ASSET_VERSION: "2" // bump to "2", "3", ... whenever you update logos
   };
 
   // ---------- CATEGORY DEFINITIONS ----------
