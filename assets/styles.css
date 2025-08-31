@@ -230,3 +230,58 @@ hr.sep { border:0; border-top:1px solid var(--border); margin:14px 0; }
   overflow: hidden;
 }
 */
+
+/* === LAYOUT TWEAK: make description span under the logo === */
+/* We’ll reuse your existing 64px logo size and gap between logo & text. */
+:root {
+  /* --gap already exists in your file; leaving for clarity */
+  --logo-size: 64px;   /* matches .logo width/height in your CSS */
+}
+
+/* Keep card content aligned nicely when things wrap */
+.card { align-items: flex-start; }
+
+/* Turn description into a rounded rectangle (not a pill), allow wrapping,
+   and expand it to use the area below the logo. */
+.card > div > p {
+  /* visual styling */
+  background: var(--chip, #eef2f7);
+  color: #1f2937;
+  border: 1px solid var(--border);
+  border-radius: 12px;          /* <-- less oval, slightly rounded */
+  padding: 10px 14px;
+  line-height: 1.35;
+
+  /* make long text wrap cleanly */
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+
+  /* span underneath the logo:
+     pull the paragraph left and widen it by (logo + gap) */
+  margin-left: calc(-1 * (var(--logo-size) + var(--gap)));
+  width: calc(100% + var(--logo-size) + var(--gap));
+}
+
+/* Make category chips/tags also less oval */
+.badge, .tag {
+  border-radius: 10px;           /* <-- less oval */
+  display: inline-block;
+  max-width: 100%;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  line-height: 1.25;
+  padding: 4px 10px;
+}
+
+/* Slightly larger spacing for multi-line chips/tags */
+.badges, .tags { gap: 8px; }
+
+/* Mobile safety: on very narrow screens, keep the paragraph in its column */
+@media (max-width: 420px) {
+  .card > div > p {
+    margin-left: 0;
+    width: 100%;
+  }
+}
