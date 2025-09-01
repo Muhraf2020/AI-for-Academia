@@ -1,94 +1,240 @@
-<!--
-  Best Muscat Homepage
-
-  This is a completely redesigned homepage for the Best Muscat project.  
-  The goal of this static site is to provide a clear, modern directory of 
-  Muscat’s best restaurants, hotels, malls, attractions, schools, spas and 
-  fitness centres.  
-  The layout takes inspiration from bestdubai.com – clean typography, a simple 
-  navigation bar with an explore dropdown, a prominent search box and easy 
-  access to different categories.  
-  All functionality is handled client‑side via the accompanying `script.js`.  
-  You can add or edit places in `data/places.json` without touching any HTML.
--->
-<!DOCTYPE html>
+<!-- FILE: index.html -->
+<!doctype html>
 <html lang="en">
 <head>
+  <!-- Basics -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Best Muscat – #1 Guide for the Best Places to Visit and Things to Do in Muscat</title>
-  <meta name="description" content="Discover top‑rated restaurants, hotels, malls, attractions, schools, spas and fitness centres in Muscat. Each place is expertly rated to bring you the ultimate Muscat guide." />
-  <!-- Favicon -->
-  <link rel="icon" href="favicon.ico" />
-  <!-- Fonts & Icons -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <!-- Use Inter for a clean, modern look -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <!-- Font Awesome for icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-o8Cz+SYihTN78rWgK4dkJp4qY8wV+6sa4Z5V7SsHGMpIjS5rRZJyjxozmMsQ7aXem6Z5ZU80xLyC30Da2w7V0Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <!-- Stylesheet -->
-  <link rel="stylesheet" href="assets/styles.css" />
+
+  <!-- Title & Description -->
+  <title>AI Tools Directory for Scholars | Academia with AI</title>
+  <meta name="description" content="Discover curated AI tools for research, literature mapping, writing, data analysis, teaching, ethics, and more—built for academics and PhD students." />
+
+  <!-- Canonical (always your absolute custom domain) -->
+  <link rel="canonical" href="https://academiawithai.com/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="AI Tools Directory for Scholars | Academia with AI" />
+  <meta property="og:description" content="Browse and compare AI tools across the full academic lifecycle." />
+  <meta property="og:url" content="https://academiawithai.com/" />
+  <meta property="og:image" content="https://academiawithai.com/assets/og-default.jpg" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="AI Tools Directory for Scholars | Academia with AI" />
+  <meta name="twitter:description" content="Browse and compare AI tools across the full academic lifecycle." />
+  <meta name="twitter:image" content="https://academiawithai.com/assets/og-default.jpg" />
+
+  <!-- Favicon & CSS -->
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="stylesheet" href="assets/styles.css?v=5" />
+
+  <!-- Performance: preconnect/dns-prefetch to icon providers -->
+  <link rel="preconnect" href="https://icon.horse" crossorigin>
+  <link rel="preconnect" href="https://www.google.com" crossorigin>
+  <link rel="dns-prefetch" href="//icon.horse">
+  <link rel="dns-prefetch" href="//www.google.com">
+
+
+  <!-- JSON-LD: WebSite (with on-site search) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Academia with AI — AI Tools Directory",
+    "url": "https://academiawithai.com/",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://academiawithai.com/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Academia with AI",
+    "url": "https://academiawithai.com/",
+    "logo": "https://academiawithai.com/assets/logo.png"
+  }
+  </script>
 </head>
+
 <body>
-  <!-- Navigation Bar -->
-  <nav class="navbar">
-    <div class="container">
-      <!-- Logo -->
-      <a href="index.html" class="logo" aria-label="Best Muscat Home">
-        <img src="assets/logo.png" alt="Best Muscat logo" />
-      </a>
-      <!-- Explore dropdown -->
-      <div class="dropdown">
-        <button id="explore-toggle" class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">
-          Explore <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
-        </button>
-        <ul class="dropdown-menu" id="explore-menu" role="menu">
-          <!-- Filled dynamically via script.js -->
-        </ul>
+  <header>
+    <div class="wrap">
+      <h1>AI Tools Directory</h1>
+      <p class="lead">Search and filter AI tools across the academic research lifecycle. 100% static — easy to host on GitHub Pages.</p>
+
+      <div class="toolbar">
+        <div class="bar" role="search">
+          <label for="search" class="visually-hidden" aria-hidden="true">Search tools</label>
+          <input id="search" type="search" placeholder="Search tools by name, purpose, or tag…" aria-label="Search tools" />
+          <select id="pricing" aria-label="Pricing filter">
+            <option value="all">All pricing</option>
+            <option value="free">Free</option>
+            <option value="freemium">Freemium</option>
+            <option value="paid">Paid</option>
+          </select>
+          <a id="suggest-link"
+   class="link-btn"
+   href="https://docs.google.com/forms/d/e/1FAIpQLScUEGeF_jxL3oNwCTrBh1OX-WRlsauQksUJjV_Z3uiY9k9pYA/viewform"
+   target="_blank"
+   rel="noopener noreferrer">Suggest a tool</a>
+        </div>
+        <div class="meta">
+          <span id="page-info" aria-live="polite"></span>
+        </div>
       </div>
-      <!-- Search -->
-      <div class="search-container">
-        <label for="search-input" class="sr-only">Search Muscat</label>
-        <input type="text" id="search-input" placeholder="Search Muscat…" />
-        <i class="fa-solid fa-magnifying-glass search-icon" aria-hidden="true"></i>
-      </div>
-      <!-- Buttons -->
-      <div class="nav-buttons">
-        <a href="#" class="btn submit" aria-label="Submit your business">Submit</a>
-        <a href="#" class="btn login" aria-label="Login">Login</a>
-      </div>
-    </div>
-  </nav>
-  <!-- Hero Section -->
-  <header class="hero">
-    <div class="container">
-      <h1>Explore Muscat’s Best Places</h1>
-      <p>Discover top‑rated restaurants, hotels, malls, attractions, schools, spas and more.</p>
+
+      <div id="chips" class="chips" aria-label="Filter by category"></div>
+      <div id="count" class="count" aria-live="polite"></div>
     </div>
   </header>
-  <!-- Category overview -->
-  <section class="category-section">
-    <div class="container">
-      <h2>Popular Categories</h2>
-      <!-- The category cards will be populated via script.js -->
-      <div id="category-cards" class="category-cards"></div>
+
+  <main>
+    <div class="wrap">
+      <section id="results" class="grid" aria-live="polite"></section>
+      <nav id="pagination" class="pagination" aria-label="Pagination" hidden>
+        <button id="prev">◀ Prev</button>
+        <span id="page" aria-live="polite"></span>
+        <button id="next">Next ▶</button>
+      </nav>
+
+      <!-- ===========================
+           Subscribe (Systeme.io, opens in new tab)
+           =========================== -->
+      <section class="subscribe" id="subscribe">
+        <h2>Get new AI research tools, weekly</h2>
+        <p class="small">Curated additions across the academic workflow—no spam, unsubscribe anytime.</p>
+
+        <!-- IMPORTANT:
+             - action: your Systeme.io embedded endpoint
+             - target: "_blank" so the thank-you page opens in a new tab
+             - method: POST
+        -->
+        <form id="sub-form"
+              action="https://systeme.io/embedded/32713651/subscription"
+              method="POST"
+              target="_blank"
+              rel="noopener"
+              novalidate>
+
+          <!-- Name (Systeme.io example uses `surname`; keep it unless you've mapped a different field name) -->
+          <label for="sub-name" class="sr-only">Your name</label>
+          <input type="text"
+                 id="sub-name"
+                 name="surname"
+                 placeholder="Your name (optional)">
+
+          <!-- Email -->
+          <label for="sub-email" class="sr-only">Email address</label>
+          <input type="email"
+                 id="sub-email"
+                 name="email"
+                 placeholder="you@university.edu"
+                 autocomplete="email"
+                 required>
+
+          <!-- Honeypot to deter bots -->
+          <input type="text" name="_gotcha" style="display:none">
+
+          <!-- Consent checkbox -->
+          <label class="consent">
+            <input type="checkbox" name="consent" required>
+            I agree to receive weekly updates about new tools and site changes.
+          </label>
+
+          <button type="submit" aria-label="Subscribe to weekly updates">Subscribe</button>
+        </form>
+
+        <p class="small" style="margin-top:8px;">
+          We’ll only use your email to send updates about this directory. See our
+          <a href="privacy.html">privacy notice</a>.
+        </p>
+      </section>
+      <!-- ===========================
+     Book banner: The AI-Powered Scholar
+     =========================== -->
+<section class="book-banner" id="ai-powered-scholar">
+  <div class="book-banner__inner">
+    <!-- Left: text -->
+    <div class="book-banner__content">
+      <h2 class="book-banner__title">The AI-Powered Scholar</h2>
+      <p class="book-banner__subtitle">
+        Transform Every Stage of Your Research With Cutting-edge AI
+        <br>(PhD Success Blueprint Series)
+      </p>
+
+      <!-- NOTE now sits right after title & subtitle -->
+      <p class="book-banner__note">
+        <strong><em>
+          This website is the living, regularly updated appendix to the book. Prefer to see which tools
+          map to each stage of the academic cycle? You’ll find it inside the book—and linked throughout this directory.
+        </em></strong>
+      </p>
+
+      <p class="book-banner__blurb">
+        Work smarter from first brainstorm to public impact. <em>The AI-Powered Scholar</em>
+        gives you a chapter-by-chapter playbook that mirrors the full academic lifecycle—ideation,
+        literature mapping, data, writing, publication, and impact—with hands-on tutorials for tools
+        like Semantic Scholar, ResearchRabbit, ChatGPT, Elicit, and GitHub Copilot. No jargon, just results.
+      </p>
+
+      <ul class="book-banner__points">
+        <li><strong>A Roadmap from Chaos to Clarity:</strong> plug in exactly where you need help today.</li>
+        <li><strong>Your Personal AI Toolbox:</strong> prompts, screenshots, and real-world case studies.</li>
+        <li><strong>Who It’s For:</strong> graduate students, postdocs, faculty, and R&amp;D teams.</li>
+      </ul>
+
+      <div class="book-banner__ctas">
+        <!-- TODO: replace the # with your Amazon Kindle link -->
+        <a class="btn primary" href="https://www.amazon.com/dp/B0F5S4WWVS" target="_blank" rel="noopener">Get the Book on Amazon</a>
+        <a class="btn subtle" href="./index.html">Browse the Tools Directory</a>
+      </div>
     </div>
-  </section>
-  <!-- Featured Places / Search Results -->
-  <section class="featured-section">
-    <div class="container">
-      <h2 id="listing-title">Featured Places</h2>
-      <div class="place-cards"></div>
+
+    <!-- Right: visual -->
+    <div class="book-banner__visual">
+      <img
+        src="https://m.media-amazon.com/images/I/71Qfin+xmsL._SY522_.jpg"
+        alt="Cover of The AI-Powered Scholar by Rafiq Muhammad, PhD" />
     </div>
-  </section>
-  <!-- Footer -->
+  </div>
+</section>
+      <!-- =========================== -->
+
+      <details class="checklist">
+        <summary><strong>60-Second Tool Selection Checklist</strong></summary>
+        <ul>
+          <li><strong>Data Sensitivity:</strong> Prefer 🔒 local/on-prem for sensitive data.</li>
+          <li><strong>Evidence & Transparency:</strong> Favor tools that provide citations (✅).</li>
+          <li><strong>Academic Integration:</strong> Exports and compatibility (RIS/BibTeX/CSV/PDF; Zotero/Overleaf/LMS).</li>
+          <li><strong>Cost & Access:</strong> Look for 🔁 free tiers or 🏫 EDU plans.</li>
+          <li><strong>Maturity & Support:</strong> Stable projects vs 🧪 betas.</li>
+          <li><strong>Ethics & Compliance:</strong> Verify outputs; disclose AI assistance.</li>
+        </ul>
+      </details>
+    </div>
+  </main>
+
   <footer>
-    <div class="container">
-      <p>&copy; 2025 Best Muscat. All rights reserved.</p>
+    <div class="wrap">
+      <small class="disclaimer">
+        <strong>Tools & Links Disclaimer.</strong> The tools and external links referenced are provided solely for informational purposes. Inclusion does not constitute endorsement or preference; no affiliate relationships. Features, pricing, availability, and policies may change; verify current details and comply with your institution’s policies on AI use, research integrity, data privacy, and security. External websites are not under our control; links may change. All trademarks belong to their owners. No warranty is expressed or implied.
+      </small>
     </div>
   </footer>
-  <!-- Scripts -->
-  <script src="assets/script.js"></script>
+
+  <!-- Fuse.js (only external script allowed) -->
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script src="assets/app.js?v=3"></script>
+  <script id="jsonld-list" type="application/ld+json"></script>
+
+  <noscript>Your browser needs JavaScript enabled to use search and filters.</noscript>
 </body>
 </html>
