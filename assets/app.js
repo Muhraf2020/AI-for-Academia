@@ -10,7 +10,7 @@
 
   // ---------- CATEGORY DEFINITIONS ----------
   const CATEGORIES = [
-    { name: "General research assistants & chatbots", slug: "general-assistants" },
+    { name: "General research assistants & chatbots", slug: "general-research-assistants-chatbots" },
     { name: "Discover & map literature", slug: "discover-map-literature" },
     { name: "Read, summarize, & extract", slug: "read-summarize-extract" },
     { name: "Evaluate claims & citations", slug: "evaluate-claims-citations" },
